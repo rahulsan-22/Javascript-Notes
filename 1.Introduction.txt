@@ -1,0 +1,17 @@
+Introduction:
+-->Initially, websites were static (only HTML & CSS).
+-->JavaScript adds behavior to web pages.
+-->JavaScript is high-level, interpreted programming language used to make web pages interactive and dynamic.
+Ex:<button onclick="alert('Hello Student!')">Click Me</button>
+   When the button is clicked, JavaScript runs and shows a popup.
+
+Note:
+i)High-Level: Easy for humans to read and write
+ii)Intepreted: Runs line by line in the browser and No need to compile before running
+iii)Interactive: User can interact with the page (Clicking a button,Filling a form,Playing a video etc)
+iv)Dynamic: Content changes without reloading the page (Live search results,Updating cart count etc)
+
+Where JavaScript is Used:
+-->Web development (Frontend & Backend)
+-->Mobile apps
+-->Game development etc..

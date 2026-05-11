@@ -1,0 +1,65 @@
+JavaScript Engine:
+-->A JavaScript Engine is a program that executes JavaScript code.
+-->It converts your JavaScript code into something the computer understands and runs it.
+
+Real-Time Examples of JS Engines:
+i)V8 → Used in Chrome & Node.js
+ii)SpiderMonkey → Used in Firefox
+iii)JavaScriptCore → Used in Safari
+
+Why JS Engine is Needed?
+-->Browsers don’t understand JavaScript directly, so JS Engine acts as a translator + executor.
+
+How JS Engine Works?
+
+JavaScript Source Code
+        │
+        ▼
+ ┌──────────────────────┐
+ │   JavaScript Engine        │
+ │                            │
+ │  ┌───────────────┐    │
+ │  │   Parser          │
+ │  │ (Code → AST)      │
+ │  └───────────────┘
+ │          │
+ │          ▼
+ │  ┌───────────────┐
+ │  │ Interpreter       │
+ │  │ (AST → Bytecode)
+ │  └───────────────┘
+ │          │
+ │          ▼
+ │  ┌───────────────┐
+ │  │ JIT Compiler      │
+ │  │ (Optimizes →      │
+ │  │ Machine Code)     │
+ │  └───────────────┘
+ │
+ │  ┌───────────────┐
+ │  │ Call Stack        │ ← Execution
+ │  └───────────────┘
+ │
+ │  ┌───────────────┐
+ │  │ Memory Heap       │ ← Storage
+ │  └───────────────┘
+ │
+ └──────────────────────┘
+        │
+        ▼
+     CPU executes
+        │
+        ▼
+     Output
+
+i)You write code in a file or browser.
+ii)Browser sends code to JS Engine where engine starts processing
+iii)Parser → Code is read line by line,Syntax is checked and Converted into AST (Abstract Syntax Tree)
+iv)Interpreter → AST → converted into Bytecode and Execution starts immediately
+v)JIT Compiler → Optimized into Machine Code
+vi)Memory Allocation → Variables & objects stored in Heap while Functions are pushed into Call Stack and Executes in order (LIFO)
+vii)Machine code is sent to CPU and CPU performs operations
+viii)Result shown in: Browser console or Webpage UI.
+
+Final Flow:
+JavaScript code → Parsed → Converted to AST → Interpreted to Bytecode → Optimized by JIT → Stored in Memory → Executed using Call Stack → Output shown

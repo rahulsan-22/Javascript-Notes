@@ -1,0 +1,123 @@
+Datatypes:
+-->A Data Type specifies the type of value a variable can store.
+
+Classification of Data Types:
+-->JavaScript data types are mainly divided into:
+1) Primitive Data Types
+2) Non-Primitive (Reference) Data Types
+
+1) Primitive Data Types
+-->Primitive data types store single/simple values.
+-->They are immutable (cannot be changed directly).
+
+Types of Primitive Data Types
+-->JavaScript has 7 primitive data types:
+i)Number
+ii)String
+iii)Boolean
+iv)Undefined
+v)Null
+vi)BigInt
+vii)Symbol
+
+1. Number
+-->Used to store numeric values.
+-->Both integers and decimal numbers come under Number type.
+Examples:
+let age = 25;
+let price = 99.99;
+console.log(typeof 100); //number
+
+Note:JavaScript does not have separate types for int,float,double everything is treated as Number.
+
+2. String:
+-->Used to store textual data.
+-->Strings are written inside:
+   Single quotes ''
+   Double quotes ""
+   Backticks ``
+Examples:
+let name = "Rahul";
+let city = 'Hyderabad';
+let msg = `Hello`;
+console.log(typeof "JavaScript"); //string
+
+3. Boolean
+-->Stores only two logical values i.e true or false.
+-->Mostly used in conditions and decision making.
+Examples:
+let isLoggedIn = true;
+let isAdmin = false;
+console.log(typeof true); //Boolean
+
+4. Undefined
+-->When a variable is declared but not assigned a value, JavaScript automatically assigns undefined.
+-->In simple words,it represents uninitialized variable.
+Example:
+let age;
+console.log(age); //undefined
+console.log(typeof undefined); //undefined
+
+5. Null
+-->Represents intentional absence of value.
+Example:
+let data = null;
+console.log(typeof null); //object (This is a historical bug in JavaScript).
+
+6. BigInt
+-->Used to store very large integers beyond Number limit(2^53-1).
+Note: The n at the end represents BigInt.
+Example:
+let accountNo = 12345678912345612345n
+console.log(accountNo) //12345678912345612345n
+console.log(typeof accountNo) //bigint
+
+7. Symbol
+-->Used to create unique values.
+Example:
+let name = Symbol("Pavan")
+let coreJavaTrainer = Symbol("Pavan")
+console.log(name) //Symbol(Pavan)
+console.log(typeof name) //symbol
+console.log(name == coreJavaTrainer) //false
+
+Non-Primitive Data Types
+-->Non-primitive data types can store multiple values or complex data.
+-->Mutable
+-->They are also called Reference Types Because they store reference/address.
+
+Types of Non-Primitive Data Types:
+i)Object
+ii)Array
+iii)Function
+
+1. Object
+-->Objects store data in key-value pairs.
+Example:
+let student = {
+   name: "Rahul",
+   age: 25
+};
+console.log(typeof student); //object
+
+2. Array
+-->Array stores multiple values in a single variable.
+Example:
+let colors = ["red", "blue", "green"];
+console.log(typeof colors); //object (Because arrays are internally objects)
+
+3. Function
+-->Functions are reusable blocks of code used to perform a specific task.
+Example:
+function greet() {
+   console.log("Hello");
+}
+console.log(typeof greet); //function (In JavaScript, functions are treated as objects).
+
+Note:
+typeof Operator
+-->typeof operator is used to check the data type of a value.
+Example:
+typeof 10 //number
+typeof "Hello" //string
+typeof true //boolean

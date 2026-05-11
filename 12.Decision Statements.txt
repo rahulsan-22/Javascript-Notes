@@ -1,0 +1,120 @@
+Decision Statements in JavaScript:
+-->Decision Statements are used to make decisions and control the flow of execution based on conditions.
+-->They execute different blocks of code depending on whether the condition is true or false.
+
+Types of Decision Statements in JavaScript:
+There are mainly 5 types of Decision Statements:
+i)if Statement
+ii)if else Statement
+iii)else if Ladder
+iv)Nested if Statement
+v)switch Statement
+
+1) if Statement:
+-->The if statement is used to execute a block of code only when the condition is true.
+Syntax:
+if(condition){
+    //code
+}
+Example:
+let age = 18
+if(age >= 18){
+    console.log("Eligible to vote")
+}
+
+2) if else Statement:
+-->The if else statement is used to execute one block when the condition is true and another block when the condition is false.
+Syntax:
+if(condition){
+    //true block
+}
+else{
+    //false block
+}
+Example:
+let num = 10
+if(num % 2 == 0){
+    console.log("Even Number")
+}
+else{
+    console.log("Odd Number")
+}
+
+3) else if Ladder:
+-->The else if ladder is used when multiple conditions need to be checked.
+Syntax:
+if(condition1){
+    //code
+}
+else if(condition2){
+    //code
+}
+else if(condition3){
+    //code
+}
+else{
+    //default block
+}
+Example:
+let marks = 75
+if(marks >= 90){
+    console.log("Grade A")
+}
+else if(marks >= 75){
+    console.log("Grade B")
+}
+else if(marks >= 50){
+    console.log("Grade C")
+}
+else{
+    console.log("Fail")
+}
+
+4) Nested if Statement:
+-->Nested if means writing one if statement inside another if statement.
+Syntax:
+if(condition1){
+    if(condition2){
+        //code
+    }
+}
+Example:
+let age = 20
+let hasLicense = true
+if(age >= 18){
+    if(hasLicense){
+        console.log("Can drive")
+    }
+}
+
+5) switch Statement:
+-->The switch statement is used to execute one block of code from multiple cases.
+-->break is used to stop the execution after matching a case.
+-->default block executes when no case matches.
+Syntax:
+switch(expression){
+    case value1:
+        //code
+        break
+    case value2:
+        //code
+        break
+    default:
+        //code
+}
+Example:
+let day = 2
+switch(day){
+    case 1:
+        console.log("Monday")
+        break
+    case 2:
+        console.log("Tuesday")
+        break
+    case 3:
+        console.log("Wednesday")
+        break
+    default:
+        console.log("Invalid Day")
+}
+

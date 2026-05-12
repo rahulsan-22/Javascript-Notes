@@ -154,14 +154,85 @@ It returns: the first falsy value or the last truthy value
 -->|| does NOT always return true or false.
 It returns: the first truthy value or the last falsy value
 
+let x = 10
+let y = 20
+let z = "10"
+
+//* LOGICAL AND (&&)
+console.log(x < y && y > x) //true
+console.log(x === z && y > x) //false
+console.log(true && true && true) //true
+console.log(true && false) //false
+console.log(10 && 20) //20
+console.log(0 && 20) //0
+console.log("" && "JS") //""
+
+//* LOGICAL OR (||)
+console.log(x > y || y > x) //true
+console.log(x === z || y < x) //false
+console.log(10 || 20) //10 
+console.log(0 || 20) //20
+console.log("" || "JavaScript") //"Javascript"
+
+//* LOGICAL NOT (!)
+console.log(!true) //false
+console.log(!false) //true
+console.log(!(10 > 5)) //false
+console.log(!(10 < 5)) //true
+
 5.Assignment Operators
 -->Used to assign values.
 Ex: =,+=,-=,*=,/=,%=
+
+//* +=
+let num = 10
+num += 5
+console.log(num) //15
+num += "10"
+console.log(num) //1510
+
+//* -=
+let num4 = 20
+num4 -= 5
+console.log(num4) //15
+num4 -= "5"
+console.log(num4) //10
+
+//* *=
+let num5 = 5
+num5 *= 2
+console.log(num5) //10
+num5 *= "2"
+console.log(num5) //20
+
+//* /=
+let num6 = 20
+num6 /= 2
+console.log(num6) //10
+num6 /= "2"
+console.log(num6) //5
+
+//* %=
+let num7 = 10
+num7 %= 3
+console.log(num7) //1
+num7 %= "2"
+console.log(num7) //1
+
 
 6.Ternary Operator
 -->Shortcut for if...else.
 Syntax:
 condition ? trueBlock : falseBlock
+
+//* EXAMPLE 1
+let trainer = "Pavan"
+trainer==="Rahul" ? console.log("Sleep in the class") : console.log("Respond Properly") //Respond Properly
+
+//* EXAMPLE 2
+let amount = 100
+let result = amount>=250 ? "Eat Pista House Chicken Biryani" : "Mooskoni PG lo Tinnu"
+console.log(result) //Eat Pista House Chicken Biryani
 
 7.Unary Operators
 -->Unary operators work with single operand.
@@ -170,13 +241,14 @@ Ex:+,-
 Unary Plus (+)
 -->Converts value into number.
 console.log(+"10") //10
-console.log(typeof +"10") //"number"
+console.log(typeof +"10") //number
+console.log(+"100abc") //NaN
 
 Unary Minus (-)
 -->Converts value into negative number.
 console.log(-"10") //-10
 console.log(-true) //-1
-console.log(-false) //0
+console.log(-false) //-0
 
 Note:
 What is NaN?
@@ -190,7 +262,7 @@ Ex:
 console.log(10 == "10") //true
 console.log(10 === "10") //false
 
-Falsy Values:
+Falsy Values IN Javascript:
 false
 0
 ""

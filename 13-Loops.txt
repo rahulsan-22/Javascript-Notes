@@ -1,0 +1,67 @@
+LOOPS:
+-->Loops are used to execute a block of code repeatedly until a condition becomes false.
+-->They help reduce code repetition and make programs shorter and easier to manage.
+
+Types of Loops in JavaScript:
+There are mainly 5 types of Loops:
+i)for Loop
+ii)while Loop
+iii)do while Loop
+iv)for in Loop
+v)for of Loop
+
+1) for Loop:
+-->The for loop is used when the number of iterations is known.
+-->It contains 3 parts:
+i)Initialization
+ii)Condition
+iii)Updation
+Syntax:
+for(initialization; condition; updation){
+    //code
+}
+Flow:
+Initialization --> Condition --> Code --> Updation
+
+2) while Loop:
+-->The while loop is used when the number of iterations is not known.
+-->The condition is checked first.
+-->If the condition is true, the code executes.
+Syntax:
+initialization
+while(condition){
+    //code
+    updation
+}
+Flow:
+Initialization --> Condition --> Code --> Updation
+
+3) do while Loop:
+-->The do while loop executes the code at least one time even if the condition is false.
+-->Condition is checked after execution.
+Syntax:
+initialization
+do{
+    //code
+    updation
+}
+while(condition)
+Flow:
+Initialization --> Code --> Updation --> Condition
+
+4)for in Loop:
+-->The for in loop is used to iterate over object properties (keys).
+Syntax:
+for(variable in object){
+    //code
+}
+
+5)for of Loop:
+-->The for of loop is used to iterate over iterable values like:
+i)Arrays
+ii)Strings
+Syntax:
+for(variable of iterable){
+    //code
+}
+               

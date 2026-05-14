@@ -22,6 +22,10 @@ for(initialization; condition; updation){
 }
 Flow:
 Initialization --> Condition --> Code --> Updation
+Example:
+for(let i=1;i<=5;i++){
+  document.writeln("<h1>I LOVE YOU 💖</h1>")
+}
 
 2) while Loop:
 -->The while loop is used when the number of iterations is not known.
@@ -35,6 +39,11 @@ while(condition){
 }
 Flow:
 Initialization --> Condition --> Code --> Updation
+Example:
+let j = 1;
+while(j<=3){
+   document.writeln("<h2>I LOVE YOU TOO 💝</h2>")
+   j++
 
 3) do while Loop:
 -->The do while loop executes the code at least one time even if the condition is false.
@@ -48,12 +57,28 @@ do{
 while(condition)
 Flow:
 Initialization --> Code --> Updation --> Condition
+Example:
+let k = 0;
+do{
+  document.writeln("<h3>Lets Breakup💔</h3>")
+  k++
+}while(k>=2)
 
 4)for in Loop:
--->The for in loop is used to iterate over object properties (keys).
+-->The for in loop is used to iterate over object keys.
 Syntax:
 for(variable in object){
     //code
+}
+Example:
+let details = {
+   name:"Pavan",
+   age:26,
+   isEmployee:true
+}
+for(let keys in details){
+  console.log(keys) //name //age //isEmployee
+  console.log(details[keys]) //'Pavan' //26 //true
 }
 
 5)for of Loop:
@@ -64,4 +89,16 @@ Syntax:
 for(variable of iterable){
     //code
 }
+Example:
+//*String
+let str = "Monty"
+for (let values of str) {
+  console.log(values) //M //o //n //t //y
+}
+//*Array
+let arr = ["Html", "Css", "Js"]
+for (let values of arr) {
+  console.log(values) //Html //Css //Js
+}
+
                

@@ -1,0 +1,270 @@
+FUNCTIONS:
+-->Functions are reusable blocks of code used to perform a specific task.
+-->They help reduce code repetition and improve code reusability.
+-->A function executes only when it is called/invoked.
+
+Categories of Functions:
+There are mainly 2 categories of Functions in JavaScript:
+i)Function Declaration
+ii)Function Expression
+
+FUNCTION DECLARATION:
+-->Function Declaration is one of the most commonly used ways to create functions in JavaScript.
+-->A function declared using the function keyword with a function name is called Function Declaration.
+
+Types of Function Declaration:
+There are mainly 3 types of Function Declaration:
+i)Normal Function
+ii)Parameterized Function
+iii)Return Function
+
+i)Normal Function:
+-->A function without parameters and return value is called Normal Function.
+-->It is mainly used to perform a simple task.
+
+Syntax:
+function functionName(){
+   //code
+}
+
+Example:
+function greet(){
+   console.log("Good Morning ☀️")
+}
+greet()
+
+Output:
+Good Morning ☀️
+
+ii)Parameterized Function:
+-->A function that accepts values through parameters is called Parameterized Function.
+-->Parameters are variables used to receive values from the function call.
+-->Arguments are the actual values passed during function calling.
+
+Syntax:
+function functionName(parameter1, parameter2){
+   //code
+}
+
+Example:
+function add(a,b){
+   console.log(a+b)
+}
+add(10,20)
+
+Output:
+30
+
+iii)Return Function:
+-->A function that sends back a value using the return keyword is called Return Function.
+-->The return statement ends the function execution.
+-->Returned values can be stored inside variables or used later.
+
+Syntax:
+function functionName(){
+   return value
+}
+
+Example:
+function square(num){
+   return num*num
+}
+let result = square(5)
+console.log(result)
+
+Output:
+25
+
+FUNCTION EXPRESSION:
+-->When a function is stored inside a variable, it is called Function Expression.
+-->In Function Expression, functions are treated as values.
+
+Types of Function Expression:
+There are mainly 3 types of Function Expression:
+i)Anonymous Function
+ii)Arrow Function
+iii)Immediately Invoked Function Expression (IIFE)
+
+i)Anonymous Function:
+-->A function without a function name is called Anonymous Function.
+-->It is mostly stored inside variables or used as callback functions.
+
+Syntax:
+let variableName = function(){
+   //code
+}
+
+Example:
+let greet = function(){
+   console.log("Welcome to JavaScript 🚀")
+}
+greet()
+
+Output:
+Welcome to JavaScript 🚀
+
+ii)Arrow Function:
+-->Arrow Functions were introduced in ES6.
+-->They provide a shorter syntax for writing functions.
+-->Arrow Functions do not use the function keyword.
+-->Mostly used in modern JavaScript and ReactJS.
+
+Syntax:
+let variableName = ()=>{
+   //code
+}
+
+Example:
+let msg = ()=>{
+   console.log("Happy Learning 📚")
+}
+msg()
+
+Output:
+Happy Learning 📚
+
+Arrow Function with Parameters:
+Example:
+let add = (a,b)=>{
+   console.log(a+b)
+}
+add(10,20)
+
+Output:
+30
+
+Types of Arrow Function based on Return:
+There are mainly 2 types of Arrow Functions:
+i)Explicit Return Arrow Function
+ii)Implicit Return Arrow Function
+
+Explicit Return Arrow Function:
+-->When we use the return keyword explicitly(directly) inside the function body, it is called Explicit Return Arrow Function.
+
+Example:
+let add = (a,b)=>{
+   return a+b
+}
+console.log(add(10,20))
+
+Output:
+30
+
+Implicit Return Arrow Function:
+-->When the return keyword is not written manually and JavaScript automatically returns the value, it is called Implicit Return Arrow Function.
+-->Curly braces are not required.
+-->Mostly used for single-line expressions.
+
+Example:
+let multiply = (a,b)=> a*b
+console.log(multiply(5,4))
+
+Output:
+20
+
+iii)Immediately Invoked Function Expression (IIFE)
+-->An IIFE is a function that executes immediately after creation.
+-->The function is wrapped inside parentheses () and called immediately using another pair of parentheses.
+-->IIFE executes only one time immediately after it is created.
+-->Used to avoid global scope pollution.
+
+Syntax:
+(function(){
+   //code
+})()
+
+Example:
+(function(){
+   console.log("I am IIFE Function ⚡")
+})()
+
+Output:
+I am IIFE Function ⚡
+
+IIFE with Parameters:
+(function(name){
+   console.log("Welcome " + name)
+})("Rahul")
+
+Output:
+Welcome Rahul
+
+IIFE with Parameters and Return Keyword:
+let result = (function(a,b){
+   return a+b
+})(10,20)
+
+console.log(result)
+
+Output:
+30
+
+HIGHER ORDER FUNCTION (HOF):
+-->A function that accepts another function as an argument or returns another function is called Higher Order Function.
+
+Types of Higher Order Functions
+There are mainly 2 types:
+i) Function accepting another function as argument
+ii) Function returning another function
+
+i) Function Accepting Another Function as Argument
+-->When a function accepts another function as a parameter, it becomes a Higher Order Function.
+-->A function passed as an argument to another function is called Callback Function.
+
+Example:
+function greet(){
+   console.log("Good Morning ☀️")
+}
+function processUser(callback){
+   callback()
+}
+processUser(greet)
+
+Output:
+Good Morning ☀️
+
+ii) Function Returning Another Function
+-->When a function returns another function, it is also called Higher Order Function.
+-->Used in closures, currying, and advanced JavaScript concepts.
+
+Example:
+function outerFunction(){
+   return function(){
+      console.log("Inner Function Executed 🚀")
+   }
+}
+let result = outerFunction()
+result()
+
+Output:
+Inner Function Executed 🚀
+
+FUNCTION CURRYING:
+-->It is the process of transforming a function taking multiple arguments into a nested series of functions, each taking a single argument.
+
+Normal Function:
+function add(a,b,c){
+   return a+b+c
+}
+console.log(add(10,20,30))
+Output:
+60
+
+Curried Function:
+function add(a){
+   return function(b){
+      return function(c){
+         return a+b+c
+      }
+   }
+}
+console.log(add(10)(20)(30))
+Output:
+60
+
+Function Currying using Arrow Function:
+let add = a => b => c => a+b+c
+console.log(add(10)(20)(30))
+Output:
+60
+

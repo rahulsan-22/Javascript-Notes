@@ -47,13 +47,19 @@ function functionName(parameter1, parameter2){
 }
 
 Example:
-function add(a,b){
-   console.log(a+b)
+function add(a, b) {
+  console.log(a + b)
 }
-add(10,20)
-
+add(2, 3)
+add(3, undefined)
+add(1)
+add(1,"Hello",2)
+ 
 Output:
-30
+5
+NaN
+NaN
+1Hello
 
 iii)Return Function:
 -->A function that sends back a value using the return keyword is called Return Function.

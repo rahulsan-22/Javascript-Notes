@@ -101,13 +101,34 @@ let variableName = function(){
 }
 
 Example:
-let greet = function(){
-   console.log("Welcome to JavaScript 🚀")
+Normal Anonymous function
+let anonymous1 = function () {
+  console.log("Good Morning....")
 }
-greet()
-
+anonymous1()
 Output:
-Welcome to JavaScript 🚀
+Good Morning....
+
+Parameterized Anonymous Function
+let anonymous2 = function (name) {
+   console.log("Good Morning "+name)
+}
+anonymous2("Pavan")
+anonymous2("Monty")
+Output:
+Good Morning Pavan
+Good Morning Monty
+
+Return Anonymous Function
+let anonymous3 = function (num1,num2) {
+  return num1**num2
+}
+let result = anonymous3(2, 3)
+console.log(result)
+console.log(anonymous3(5,5))
+Output:
+8
+3125
 
 ii)Arrow Function:
 -->Arrow Functions were introduced in ES6.
@@ -121,23 +142,23 @@ let variableName = ()=>{
 }
 
 Example:
-let msg = ()=>{
-   console.log("Happy Learning 📚")
+Normal Arrow Function
+let arrow1 = () => {
+  console.log("I am Normal Arrow Function")
 }
-msg()
-
+arrow1()
 Output:
-Happy Learning 📚
+I am Normal Arrow Function
 
-Arrow Function with Parameters:
-Example:
-let add = (a,b)=>{
-   console.log(a+b)
+Parameterized Arrow Function
+let arrow2 = (a,b) => {
+   console.log(a*b)
 }
-add(10,20)
-
+arrow2(2,4)
+arrow2(2, undefined)
 Output:
-30
+8
+NaN
 
 Types of Arrow Function based on Return:
 There are mainly 2 types of Arrow Functions:
@@ -152,7 +173,6 @@ let add = (a,b)=>{
    return a+b
 }
 console.log(add(10,20))
-
 Output:
 30
 
@@ -164,7 +184,6 @@ Implicit Return Arrow Function:
 Example:
 let multiply = (a,b)=> a*b
 console.log(multiply(5,4))
-
 Output:
 20
 

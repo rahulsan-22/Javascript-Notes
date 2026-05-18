@@ -1,0 +1,68 @@
+JAVASCRIPT PART-1 TEST
+1.What is JavaScript? Mention any 4 features of JavaScript.
+2.What is the difference between ==  and  === ?
+3.What are Primitive and Non-Primitive Datatypes in JavaScript? List the types
+4.What is the difference between null  and undefined?
+5.Define Global Scope, Function Scope, and Block Scope.
+6.What are Tokens in JavaScript? Explain any 4 types.
+7.Explain for in  and  for of with examples.
+8.What is NaN in JavaScript ? Write Examples
+9.Explain the working of JavaScript Engine in simple words.
+10.Predict the output:
+console.log(10 + "20")
+console.log("10" - 5)
+console.log(10 + true)
+11.Predict the output:
+console.log(false == 0)
+console.log(false === 0)
+console.log(null == undefined)
+12.Predict the output:
+let a = 10
+console.log(++a)
+console.log(a++)
+console.log(a)
+13.Predict the output:
+console.log(10 && 20)
+console.log(0 && 20)
+console.log(0 || 50)
+14.Predict the output:
+console.log(typeof null)
+console.log(typeof undefined)
+console.log(typeof "JavaScript")
+15.Predict the output:
+console.log(10 / false)
+console.log(10 % false)
+console.log(10 + undefined)
+16.Predict the output:
+for(let i=1;i<=3;i++){
+   console.log(i)
+}
+17.Predict the output:
+let str = "JS"
+for(let value of str){
+   console.log(value)
+}
+18.Predict the output:
+let x
+console.log(x)
+console.log(typeof x)
+19.Predict the output:
+let age = 20
+let result = age >= 18 ? "Eligible" : "Not Eligible"
+console.log(result)
+20.Write a JavaScript program to check whether a number is Even or Odd using if else.
+21.Write a JavaScript program to print numbers from 1 to 10 using:
+* for loop
+* while loop
+22.Write a JavaScript program to print all elements of an array ["HTML","CSS","JavaScript"] using for of
+23.Write a JavaScript program using switch statement to display weekday names based on user input.
+1 → Monday
+2 → Tuesday
+24.Write a JavaScript program to:
+* Create an object named student
+* Store:
+  * name
+  * age
+  * course
+* Print all keys and values using for in
+

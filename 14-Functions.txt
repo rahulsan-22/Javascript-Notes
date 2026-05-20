@@ -199,28 +199,25 @@ Syntax:
 })()
 
 Example:
-(function(){
-   console.log("I am IIFE Function ⚡")
-})()
-
+Normal IIFE
+(function () {
+  console.log("I AM IIFE")
+})();
 Output:
-I am IIFE Function ⚡
-
-IIFE with Parameters:
-(function(name){
-   console.log("Welcome " + name)
-})("Rahul")
-
+I AM IIFE
+  
+Parameterized IIFE
+((msg) => {
+  console.log(msg)
+})("Good Morning..");
 Output:
-Welcome Rahul
+Good Morning
 
-IIFE with Parameters and Return Keyword:
-let result = (function(a,b){
-   return a+b
-})(10,20)
-
+Return IIFE
+let result = (function (a, b) {
+  return a + b
+})(10, 20);
 console.log(result)
-
 Output:
 30
 
@@ -236,17 +233,26 @@ i) Function Accepting Another Function as Argument
 -->When a function accepts another function as a parameter, it becomes a Higher Order Function.
 -->A function passed as an argument to another function is called Callback Function.
 
-Example:
-function greet(){
-   console.log("Good Morning ☀️")
+Example 1
+function user(name, msg, fn) {
+  return fn(name,msg)  //greet("Monty","Good Morning")
 }
-function processUser(callback){
-   callback()
+function greet(name,msg) {
+   console.log(msg+" "+name) 
 }
-processUser(greet)
-
+user("Monty", "Good Morning", greet)
 Output:
-Good Morning ☀️
+Good Morning Monty
+
+Example 2
+let add = (a,b) => a+b
+let sub = (a,b) => a-b
+let calculator = (a,b,fn) => fn(a,b) //add(10,20) //30 //sub(20,50) //-30
+console.log(calculator(10,20,add)) 
+console.log(calculator(20,50,sub)) 
+Output:
+30
+-30
 
 ii) Function Returning Another Function
 -->When a function returns another function, it is also called Higher Order Function.

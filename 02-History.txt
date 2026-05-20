@@ -9,7 +9,7 @@ Why “JavaScript”?
 -->But JavaScript and Java are completely different
 
 Standardization
--->Standardized as ECMAScript (ES) and Managed by ECMA International
+-->Standardized as ECMAScript (ES) and Managed by ECMA International(European Computer Manufacturing Association) 
 
-Note: ES6 (2015) → Major update (let, const, arrow functions)
+Note: ES6 (2015) → Major update (let, const, arrow functions....)
 

@@ -22,7 +22,7 @@ Ex:<!DOCTYPE html>
 
 3)External JavaScript:
 -->JavaScript is written in a separate .js file
-Ex: HTML File:
+Ex: HTML File (index.html):
        <script src="script.js"></script>
     JS File (script.js):
        console.log("Hello External JS");

@@ -55,7 +55,7 @@ JavaScript Source Code
 i)You write code in a file or browser.
 ii)Browser sends code to JS Engine where engine starts processing
 iii)Parser → Code is read line by line,Syntax is checked and Converted into AST (Abstract Syntax Tree)
-iv)Interpreter → AST → converted into Bytecode and Execution starts immediately
+iv)Interpreter → AST converted into Bytecode and Execution starts immediately
 v)JIT Compiler → Optimized into Machine Code
 vi)Memory Allocation → Variables & objects stored in Heap while Functions are pushed into Call Stack and Executes in order (LIFO)
 vii)Machine code is sent to CPU and CPU performs operations

@@ -1,0 +1,316 @@
+//!1
+function bike(){
+   console.log("Royal Enfield")
+}
+bike()
+//!Output ?
+
+//! ---------------------------------------------
+
+//! 2
+function student(name){
+   console.log("Welcome "+name)
+}
+student("Rahul")
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 3
+function total(a,b){
+   console.log(a+b)
+}
+total(15,25)
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 4
+function total(a,b){
+   console.log(a+b)
+}
+total(10)
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 5
+function check(a,b){
+   console.log(a+b)
+}
+check("10",5)
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 6
+function power(num){
+   return num*num
+}
+console.log(power(6))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 7
+function message(){
+   return "JavaScript"
+}
+console.log(message())
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 8
+let course = function(){
+   console.log("ReactJS")
+}
+course()
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 9
+let trainer = function(name){
+   console.log("Trainer : "+name)
+}
+trainer("Monty")
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 10
+let marks = function(a,b){
+   return a+b
+}
+console.log(marks(40,50))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 11
+let food = ()=>{
+   console.log("Biryani")
+}
+food()
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 12
+let multiply = (a,b)=>{
+   return a*b
+}
+console.log(multiply(5,6))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 13
+let divide = (a,b)=> a/b
+console.log(divide(20,5))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 14
+let square = n => n*n
+console.log(square(8));
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 15
+(function () {
+  console.log("IIFE Executed")
+})();
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 16
+((city)=>{
+   console.log("Welcome to "+city)
+})("Hyderabad")
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 17
+let result = (function(a,b){
+   return a-b
+})(50,20)
+
+console.log(result)
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 18
+function office(name,msg,fn){
+   return fn(name,msg)
+}
+
+function greet(name,msg){
+   console.log(msg+" "+name)
+}
+
+office("Rahul","Good Evening",greet)
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 19
+let add = (a,b)=>a+b
+
+let calculate = (a,b,fn)=> fn(a,b)
+
+console.log(calculate(100,200,add))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 20
+function outer(){
+   console.log("Outer Running")
+
+   return function(){
+      console.log("Inner Running")
+   }
+}
+
+outer()()
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 21
+function price(a){
+   return function(b){
+      return function(c){
+         return a+b+c
+      }
+   }
+}
+
+console.log(price(100)(200)(300))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 22
+let sum = a => b => c => a+b+c
+
+console.log(sum(1)(2)(3))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 23
+function movie(name){
+   console.log("Now Playing : "+name)
+}
+
+movie()
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 24
+let demo = function(a,b){
+   return a*b
+}
+
+console.log(demo(2))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 25
+let test = (a,b)=>{
+   console.log(a-b)
+}
+
+test(30, 10);
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 26
+((a, b) => {
+  console.log(a + b)
+})(5, 10);
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 27
+function login(user,fn){
+   fn(user)
+}
+
+function welcome(user){
+   console.log("Welcome "+user)
+}
+
+login("Pavan",welcome)
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 28
+function mobile(){
+   return function(){
+      return "Samsung"
+   }
+}
+
+console.log(mobile()())
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 29
+let cube = n => n*n*n
+
+console.log(cube(3))
+
+//! Output ?
+
+//! ---------------------------------------------
+
+//! 30
+function add1(a,b){
+   return a+b
+}
+
+console.log(add1(10,"20"))
+
+//! Output ?

@@ -259,43 +259,50 @@ ii) Function Returning Another Function
 -->Used in closures, currying, and advanced JavaScript concepts.
 
 Example:
-function outerFunction(){
-   return function(){
-      console.log("Inner Function Executed 🚀")
-   }
+function outer() {
+  console.log("Outer Function Executed")
+  return function inner () {
+    console.log("Inner Function Executed")
+  }
 }
-let result = outerFunction()
-result()
+1st way of Executing:
+let result = outer()
+result()  
+2nd Way of Executing:
+outer()()
 
 Output:
-Inner Function Executed 🚀
+Outer Function Executed
+Inner Function Executed
+Outer Function Executed
+Inner Function Executed
 
 FUNCTION CURRYING:
 -->It is the process of transforming a function taking multiple arguments into a nested series of functions, each taking a single argument.
 
 Normal Function:
-function add(a,b,c){
+function add1(a,b,c){
    return a+b+c
 }
-console.log(add(10,20,30))
+console.log(add1(10,20,30))
 Output:
 60
 
 Curried Function:
-function add(a){
+function add2(a){
    return function(b){
       return function(c){
          return a+b+c
       }
    }
 }
-console.log(add(10)(20)(30))
+console.log(add2(10)(20)(30))
 Output:
 60
 
 Function Currying using Arrow Function:
-let add = a => b => c => a+b+c
-console.log(add(10)(20)(30))
+let add3 = a => b => c => a+b+c
+console.log(add3(10)(20)(30))
 Output:
 60
 

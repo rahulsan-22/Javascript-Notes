@@ -19,7 +19,7 @@ undefined
 
 Explanation:
 --> The variable declaration var a is moved to the top.
---> But the value assignment = 10 stays in the same place.
+--> But the value assignment a = 10 stays in the same place.
 --> Therefore before assignment, the value becomes undefined.
 
 2) Hoisting with let

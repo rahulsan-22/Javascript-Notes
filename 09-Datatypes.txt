@@ -83,7 +83,7 @@ console.log(name == coreJavaTrainer) //false
 
 Non-Primitive Data Types
 -->Non-primitive data types can store multiple values or complex data.
--->Mutable
+-->Mutable (can be changed)
 -->They are also called Reference Types Because they store reference/address.
 
 Types of Non-Primitive Data Types:

@@ -24,7 +24,7 @@ Ex:name,age,skills,salary etc...
 
 3) Literals:
 -->Literals are values directly written in the program.
-Ex:10,"Hello",true etc...
+Ex:10,"Hello",true etc
 
 4) Operators:
 -->Operators are predefined symbols used to perform operations.

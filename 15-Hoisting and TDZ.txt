@@ -1,6 +1,6 @@
 HOISTING:
 --> Hoisting is JavaScript's default behavior of moving declarations to the top of their scope before code execution.
---> In JavaScript, variables and functions are processed first before executing the code line by line.
+--> In JavaScript,  and functionsvariables are processed first before executing the code line by line.
 --> Because of hoisting, we can sometimes use variables or functions before they are declared.
 
 Variable Hoisting
@@ -106,7 +106,7 @@ ReferenceError
 Arrow Function Hoisting
 Example:
 sum()
-let sum = ()=>{
+const sum = ()=>{
    console.log("Arrow Function")
 }
 Output:
@@ -118,3 +118,17 @@ Explanation:
 TEMPORAL DEAD ZONE (TDZ)
 --> The time period between variable creation and variable initialization is called Temporal Dead Zone (TDZ).
 --> During this period, variables declared with let and const cannot be accessed.
+
+==============================
+HOISTING & TDZ FINAL SUMMARY
+==============================
+
+| Type                              | Hoisted? | Initial Value During Hoisting | Can Access Before Declaration? | TDZ Applies? | Output Before Declaration |
+|-----------------------------------|-----------|-------------------------------|--------------------------------|--------------|---------------------------|
+| var Variable                      | Yes       | undefined                     | Yes                            | No           | undefined                 |
+| let Variable                      | Yes       | Uninitialized                 | No                             | Yes          | ReferenceError            |
+| const Variable                    | Yes       | Uninitialized                 | No                             | Yes          | ReferenceError            |
+| Function Declaration              | Yes       | Entire Function Stored        | Yes                            | No           | Function Executes         |
+| Function Expression with var      | Yes       | undefined                     | NO                             | No           | TypeError                 |
+| Function Expression with let      | Yes       | Uninitialized                 | No                             | Yes          | ReferenceError            |
+| Function Expression with const    | Yes       | Uninitialized                 | No                             | Yes          | ReferenceError            |

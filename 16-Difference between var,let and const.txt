@@ -1,0 +1,14 @@
+Difference Between var, let, and const in JavaScript:
+-->var, let, and const are used to declare variables in JavaScript.
+
+| Feature                              | `var`           | `let`        | `const`      |
+| ------------------------------------ | --------------- | ------------ | ------------ |
+| Scope                                | Function Scoped | Block Scoped | Block Scoped |
+| Hoisted                              | Yes             | Yes          | Yes          |
+| Initialized During Hoisting          | `undefined`     | No           | No           |
+| Temporal Dead Zone (TDZ)             | No              | Yes          | Yes          |
+| Can Re-declare                       | Yes             | No           | No           |
+| Can Re-assign                        | Yes             | Yes          | No           |
+| Must Initialize While Declaration    | No              | No           | Yes          |
+| Attached to `window` Object (Global) | Yes             | No           | No           |
+| Introduced In                        | ES5             | ES6          | ES6          |

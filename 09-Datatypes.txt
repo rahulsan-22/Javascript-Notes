@@ -37,7 +37,7 @@ Note:JavaScript does not have separate types for int,float,double everything is 
    Double quotes ""
    Backticks ``
 Examples:
-let name = "Rahul";
+let name = "Monty";
 let city = 'Hyderabad';
 let msg = `Hello`;
 console.log(typeof "JavaScript"); //string
@@ -52,7 +52,7 @@ console.log(typeof true); //Boolean
 
 4. Undefined
 -->When a variable is declared but not assigned a value, JavaScript automatically assigns undefined.
--->In simple words,it represents uninitialized variable.
+-->In simple words, it represents uninitialized variable.
 Example:
 let age;
 console.log(age); //undefined
@@ -95,13 +95,13 @@ iii)Function
 -->Objects store data in key-value pairs.
 Example:
 let student = {
-   name: "Rahul",
+   name: "Pavan",
    age: 25
 };
 console.log(typeof student); //object
 
 2. Array
--->Array stores multiple values in a single variable.
+-->Array stores multiple values into [].
 Example:
 let colors = ["red", "blue", "green"];
 console.log(typeof colors); //object (Because arrays are internally objects)
@@ -112,6 +112,7 @@ Example:
 function greet() {
    console.log("Hello");
 }
+greet()4
 console.log(typeof greet); //function (In JavaScript, functions are treated as objects).
 
 Note:

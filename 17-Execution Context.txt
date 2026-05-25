@@ -1,0 +1,38 @@
+EXECUTION CONTEXT:
+--> Execution Context is the environment in which JavaScript code is executed.
+--> It contains: Variable declarations,Function declarations,Scope chain etc..
+--> JavaScript creates an Execution Context whenever:
+   i)The global code runs
+  ii)A function is invoked
+
+TYPES OF EXECUTION CONTEXT:
+
+| Type                             | Description                                    |
+| -------------------------------- | ---------------------------------------------- |
+| Global Execution Context (GEC)   | Created when JavaScript file starts execution  |
+| Function Execution Context (FEC) | Created whenever a function is called          |
+
+PHASES OF EXECUTION CONTEXT
+
+Every Execution Context is created in 2 phases:
+| Phase                                  | Description                                     |
+| -------------------------------------- | ----------------------------------------------- |
+| Memory Creation Phase                  | Memory is allocated for variables and functions |
+| Code Execution Phase                   | Code executes line by line                      |
+
+1) MEMORY CREATION PHASE
+During this phase:
+| Item                  | Behavior                           |
+| --------------------- | ---------------------------------- |
+| `var` variables       | Initialized with `undefined`       |
+| `let` & `const`       | Stored in TDZ (Temporal Dead Zone) |
+| Function declarations | Entire function stored in memory   |
+
+2) CODE EXECUTION PHASE
+--> JavaScript executes code line by line.
+--> Variable values are assigned.
+--> Functions are invoked.
+--> New Function Execution Context gets created for every function call.
+
+
+

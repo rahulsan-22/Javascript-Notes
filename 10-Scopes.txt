@@ -1,4 +1,4 @@
-Scopes:
+Scope:
 -->The area or region where a variable can be accessed or used.
 
 Types of Scope in JavaScript

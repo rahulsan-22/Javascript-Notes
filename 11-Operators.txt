@@ -31,7 +31,7 @@ Rules of +
 >Result becomes string if concatenation happens.
 
 Rules of - , * , / , %
-> Always tries to convert values into numbers and Invalid conversion gives NaN.
+>Always tries to convert values into numbers and Invalid conversion gives NaN.
 >Division by 0 gives Infinity.
 
 //* ADDITION (+)

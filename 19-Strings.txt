@@ -1,5 +1,6 @@
 STRINGS:
 --> A String is a sequence of characters used to represent text in JavaScript.
+--> Strings are immutable in JavaScript (original string cannot be changed).
 Examples:
 let name = "Rahul";
 let city = 'Hyderabad';
@@ -23,7 +24,7 @@ let message = `Hello ${name}`;
 console.log(message); //Hello Rahul
 Note:
 --> ${} is called interpolation.
---> It allows inserting variables inside strings.
+--> It allows inserting variables or expressions inside strings..
 
 Accessing Characters in String:
 Using Index:
@@ -50,20 +51,60 @@ Note:
 
 BUILT-IN METHODS:
 
-1)toUpperCase()
+1) toUpperCase()
 --> Converts string into uppercase.
-Example:
-let str = "javascript";
-console.log(str.toUpperCase()); //JAVASCRIPT
 
-2)toLowerCase()
+2) toLowerCase()
 --> Converts string into lowercase.
-Example:
-let str = "JAVASCRIPT";
-console.log(str.toLowerCase()); //javascript
 
 3) trim()
 --> Removes spaces from beginning and ending.
-Example:
-let str = "   hello   ";
-console.log(str.trim()); //hello
+Note:
+--> Does not remove spaces between words.
+
+4) at(index)
+--> Returns character at specified index.
+--> Supports negative indexing.
+
+5) slice(startIndex, endIndex)
+--> Extracts part of string.
+--> Supports Negative Indexing: values start from end.
+--> If StartIndex > EndIndex returns empty string.
+Note:
+--> Start index included whereas End index excluded.
+--> If only Start Index specified extracts from that start index till end.
+--> Original string does not change.
+
+6) substring(startIndex, endIndex)
+--> Similar to slice() but does not support negative indexing.
+--> Negative index values become 0.
+--> If StartIndex > EndIndex swaps values.
+
+7) includes(searchValue, startIndex)
+--> Checks whether substring exists.
+--> Returns boolean value i.e true if exists and false if not exists
+
+8) indexOf(searchValue, startIndex)
+--> Returns first occurrence index.
+--> If value not found returns -1.
+
+9) replace(oldValue, newValue)
+--> Replace Only First Occurrence.
+Note:
+--> To replace all occurrences use replaceAll().
+
+10) split(separator, limit)
+--> Converts string into array by splitting it based on the separator.
+
+11) startsWith(searchValue, startIndex)
+--> Checks whether string starts with specified value.
+
+12) endsWith(searchValue, length)
+--> Checks whether string ends with specified value.
+
+Note:
+--> String methods are case-sensitive.
+--> [] does not support negative indexing.
+
+
+

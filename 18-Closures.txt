@@ -1,0 +1,22 @@
+Closures:
+--> A Closure is a function that remembers and can access variables from its outer scope(lexical scope) even after the outer function has finished executing.
+--> In simple words:
+A closure allows an inner function to access the variables of its parent function even after the parent function is completed.
+
+Example:
+function counter() {
+    let count = 0;
+    return function () {
+        count++;
+        console.log(count);
+    };
+}
+const increment = counter();
+increment();
+increment();
+increment();
+
+Output:
+1
+2
+3

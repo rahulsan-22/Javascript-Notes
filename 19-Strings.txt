@@ -1,0 +1,69 @@
+STRINGS:
+--> A String is a sequence of characters used to represent text in JavaScript.
+Examples:
+let name = "Rahul";
+let city = 'Hyderabad';
+let message = `Welcome`;
+
+Ways to Create Strings:
+
+1) Using Double Quotes
+let name = "Rahul";
+console.log(name); //Rahul
+
+2) Using Single Quotes
+let city = 'Hyderabad';
+console.log(city); //Hyderabad
+
+3) Using Template Literals (Backticks)
+--> Used for multi-line strings and interpolation.
+Example:
+let name = "Rahul";
+let message = `Hello ${name}`;
+console.log(message); //Hello Rahul
+Note:
+--> ${} is called interpolation.
+--> It allows inserting variables inside strings.
+
+Accessing Characters in String:
+Using Index:
+let str = "JavaScript";
+console.log(str[0]); //J
+console.log(str[4]); //S
+console.log(str[20]); //undefined
+console.log(str[-1]); //undefined
+
+Note:
+--> String indexing starts from 0.
+--> str[0] means first character.
+--> If index does not exist, JavaScript returns undefined.
+--> JavaScript strings DO NOT support negative indexing using [] returns undefined.
+
+Length Property:
+--> length returns total number of characters including spaces.
+let str = "JavaScript";
+console.log(str.length); //10
+console.log(str[str.length - 1]); //t
+console.log(str[str.length - 2]); //p
+Note:
+-->length - 1 always gives last index.
+
+BUILT-IN METHODS:
+
+1)toUpperCase()
+--> Converts string into uppercase.
+Example:
+let str = "javascript";
+console.log(str.toUpperCase()); //JAVASCRIPT
+
+2)toLowerCase()
+--> Converts string into lowercase.
+Example:
+let str = "JAVASCRIPT";
+console.log(str.toLowerCase()); //javascript
+
+3) trim()
+--> Removes spaces from beginning and ending.
+Example:
+let str = "   hello   ";
+console.log(str.trim()); //hello

@@ -30,7 +30,7 @@ Rules of +
 >null behaves like 0 whereas undefined converts into NaN.
 >Result becomes string if concatenation happens.
 
-Rules of - , * , %
+Rules of - , * , / , %
 > Always tries to convert values into numbers and Invalid conversion gives NaN.
 >Division by 0 gives Infinity.
 

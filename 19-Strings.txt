@@ -8,31 +8,38 @@ let message = `Welcome`;
 
 Ways to Create Strings:
 
-1) Using Double Quotes
-let name = "Rahul";
-console.log(name); //Rahul
+1) Using Single Quotes
+let str1 = 'Something'
+console.log(str1) //Something
+console.log(typeof str1) //string
 
-2) Using Single Quotes
-let city = 'Hyderabad';
-console.log(city); //Hyderabad
+2) Using Double Quotes
+let str2 = "Breakfast"
+console.log(str2) //Breakfast
+console.log(typeof str2) //string
 
 3) Using Template Literals (Backticks)
---> Used for multi-line strings and interpolation.
+--> Used for interpolation and multi-line strings.
 Example:
-let name = "Rahul";
-let message = `Hello ${name}`;
-console.log(message); //Hello Rahul
+let str3 = `Pavan`
+console.log(`My name is ${str3} and my age is ${20 + 5 + 1}`)
+console.log(`My 
+name 
+is 
+Pavan`)
+console.log(str3) //Pavan
+console.log(typeof str3) //string
 Note:
 --> ${} is called interpolation.
 --> It allows inserting variables or expressions inside strings..
 
 Accessing Characters in String:
 Using Index:
-let str = "JavaScript";
-console.log(str[0]); //J
-console.log(str[4]); //S
-console.log(str[20]); //undefined
-console.log(str[-1]); //undefined
+let subject = "JAVASCRIPT"
+console.log(subject[0]) //J
+console.log(subject[4]) //S
+console.log(subject[10]) //undefined
+console.log(subject[-1]) //undefined
 
 Note:
 --> String indexing starts from 0.

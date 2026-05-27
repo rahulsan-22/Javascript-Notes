@@ -265,10 +265,12 @@ console.log(10 === "10") //false
 Falsy Values IN Javascript:
 false
 0
+-0
+0n
 ""
 null
 undefined
-NaN   
+NaN  
 
 
 

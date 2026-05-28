@@ -1,12 +1,12 @@
-STRINGS:
+//!STRINGS:
 --> A String is a sequence of characters used to represent text in JavaScript.
 --> Strings are immutable in JavaScript (original string cannot be changed).
-Examples:
+//*Examples:
 let name = "Rahul";
 let city = 'Hyderabad';
 let message = `Welcome`;
 
-Ways to Create Strings:
+//!Ways to Create Strings:
 
 1) Using Single Quotes
 let str1 = 'Something'
@@ -33,21 +33,21 @@ Note:
 --> ${} is called interpolation.
 --> It allows inserting variables or expressions inside strings..
 
-Accessing Characters in String:
-Using Index:
+//!Accessing Characters in String:
+-->Using Index:
 let subject = "JAVASCRIPT"
 console.log(subject[0]) //J
 console.log(subject[4]) //S
 console.log(subject[10]) //undefined
 console.log(subject[-1]) //undefined
 
-Note:
+//*Note:
 --> String indexing starts from 0.
 --> str[0] means first character.
 --> If index does not exist, JavaScript returns undefined.
 --> JavaScript strings DO NOT support negative indexing using [] returns undefined.
 
-Length Property:
+//!Length Property:
 --> length returns total number of characters including spaces.
 let str = "JavaScript";
 console.log(str.length); //10
@@ -56,7 +56,7 @@ console.log(str[str.length - 2]); //p
 Note:
 -->length - 1 always gives last index.
 
-BUILT-IN METHODS:
+//!BUILT-IN METHODS:
 
 1) toUpperCase()
 --> Converts string into uppercase.

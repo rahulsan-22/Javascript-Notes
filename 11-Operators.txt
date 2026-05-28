@@ -1,4 +1,4 @@
-Operators:
+//!Operators:
 -->Operators are special symbols used to perform operations on values and variables.
 -->An operand is the value or variable on which an operator performs an operation.
 Ex:10 + 20
@@ -8,7 +8,7 @@ Here:
 + → Operator
 -->An expression is a combination of operands and operators that produces a result.
 
-Types of Operators in JavaScript:
+//!Types of Operators in JavaScript:
 i)Arithmetic Operators
 ii)Increment & Decrement Operators
 iii)Comparison / Relational Operators
@@ -17,7 +17,7 @@ v)Assignment Operators
 vi)Ternary Operator
 vii)Unary Operator
 
-1. Arithmetic Operators:
+//!1. Arithmetic Operators:
 -->Arithmetic operators are used to perform mathematical calculations.
 Ex: +,-,*,/,%,**
 
@@ -92,14 +92,16 @@ console.log(10 % undefined) //NaN
 console.log(2 ** 2) //4
 console.log(10 ** 2) //100
 
-2.Increment & Decrement Operators:
+//!2.Increment & Decrement Operators:
 -->Used to increase or decrease value by 1.
 | Operator | Meaning   |
 | -------- | --------- |
 | `++`     | Increment |
 | `--`     | Decrement |
--->PRE INCREMENT (++a): First increments then returns value where as POST INCREMENT (a++): First returns value then increments.
--->PRE DECREMENT (--a):First decrements then returns value where as POST DECREMENT (a--):First returns value then decrements.
+-->PRE INCREMENT (++a): First increments then returns value 
+-->POST INCREMENT (a++): First returns value then increments.
+-->PRE DECREMENT (--a):First decrements then returns value 
+-->POST DECREMENT (a--):First returns value then decrements.
 
 //* PRE INCREMENT
 let a = 10
@@ -122,7 +124,7 @@ console.log(d--) //25
 console.log(d) //24
 
 
-3.Comparison / Relational Operators:
+//!3.Comparison / Relational Operators:
 -->Used to compare values.
 Ex: >,<,>=,<=,==,===,!=,!==
 
@@ -144,11 +146,17 @@ console.log(null === undefined) //false
 console.log("" == 0) //true
 console.log("" === 0) //false
 
-4. Logical Operators
+| Operator  | Checks Value   | Checks Datatype   | Type Conversion |
+| -------- | ------------ | --------------- | --------------- |
+| `!=`       | ✅              | ❌                 | ✅               |
+| `!==`      | ✅              | ✅                 | ❌               |
+
+
+//!4. Logical Operators
 -->Used to combine conditions.
 Ex:&&,||,!
 
-Note:
+//!Note:
 -->&& does NOT always return true or false.
 It returns: the first falsy value or the last truthy value
 -->|| does NOT always return true or false.
@@ -180,7 +188,7 @@ console.log(!false) //true
 console.log(!(10 > 5)) //false
 console.log(!(10 < 5)) //true
 
-5.Assignment Operators
+//!5.Assignment Operators
 -->Used to assign values.
 Ex: =,+=,-=,*=,/=,%=
 
@@ -220,7 +228,7 @@ num7 %= "2"
 console.log(num7) //1
 
 
-6.Ternary Operator
+//!6.Ternary Operator
 -->Shortcut for if...else.
 Syntax:
 condition ? trueBlock : falseBlock
@@ -234,23 +242,23 @@ let amount = 100
 let result = amount>=250 ? "Eat Pista House Chicken Biryani" : "Mooskoni PG lo Tinnu"
 console.log(result) //Eat Pista House Chicken Biryani
 
-7.Unary Operators
+//!7.Unary Operators
 -->Unary operators work with single operand.
 Ex:+,-
 
-Unary Plus (+)
+//*Unary Plus (+)
 -->Converts value into number.
 console.log(+"10") //10
 console.log(typeof +"10") //number
 console.log(+"100abc") //NaN
 
-Unary Minus (-)
+//*Unary Minus (-)
 -->Converts value into negative number.
 console.log(-"10") //-10
 console.log(-true) //-1
 console.log(-false) //-0
 
-Note:
+//!Note:
 What is NaN?
 -->NaN = Not A Number
 -->Occurs when JavaScript fails to convert value into valid number.
@@ -262,7 +270,8 @@ Ex:
 console.log(10 == "10") //true
 console.log(10 === "10") //false
 
-Falsy Values IN Javascript:
+//!Falsy Values IN Javascript:
+-->Falsy values are values that become false when converted to a Boolean.
 false
 0
 -0

@@ -60,23 +60,54 @@ BUILT-IN METHODS:
 
 1) toUpperCase()
 --> Converts string into uppercase.
+Example:
+let str1 = "MaRkER"
+console.log(str1.toUpperCase()) //MARKER
 
 2) toLowerCase()
 --> Converts string into lowercase.
+Example:
+let str2 = "ReMoTE"
+console.log(str2.toLowerCase()) //remote
 
 3) trim()
 --> Removes spaces from beginning and ending.
+Example:
+let str3 = "         hello    everyone      "
+console.log(str3) //         hello    everyone      
+console.log(str3.length) //32
+console.log(str3.trim()) //hello    everyone
+console.log((str3.trim()).length) //17
 Note:
 --> Does not remove spaces between words.
 
 4) at(index)
 --> Returns character at specified index.
 --> Supports negative indexing.
+Example:
+let str4 = "JAVASCRIPT"
+console.log(str4.at(0)) //J
+console.log(str4.at(7)) //I
+console.log(str4.at(10)) //undefined
+console.log(str4.at(-1)) //T
 
 5) slice(startIndex, endIndex)
 --> Extracts part of string.
 --> Supports Negative Indexing: values start from end.
 --> If StartIndex > EndIndex returns empty string.
+Example:
+let str5 = "GOOD MORNING"
+console.log(str5.slice(3)) //D MORNING
+console.log(str5.slice(0, 3)) //GOO
+console.log(str5.slice(6, 8)) //OR
+console.log(str5.slice(-4)) //NING
+console.log(str5.slice(-7, -2)) //MORNI
+console.log(str5.slice(3, -3)) //D MORN
+console.log(str5.slice(-1, -4)) //""
+console.log(str5.slice(-10, 7)) //OD MO
+console.log(str5.slice(10,2)) //""
+console.log(str5.slice(100, 2)) //""
+console.log(str5) //GOOD MORNING
 Note:
 --> Start index included whereas End index excluded.
 --> If only Start Index specified extracts from that start index till end.
@@ -86,17 +117,56 @@ Note:
 --> Similar to slice() but does not support negative indexing.
 --> Negative index values become 0.
 --> If StartIndex > EndIndex swaps values.
+Example:
+let str6 = "GOOD MORNING"
+console.log(str6.substring(3)) //D MORNING
+console.log(str6.substring(0, 3)) //GOO
+console.log(str6.substring(6, 8)) //OR
+console.log(str6.substring(-4)) //GOOD MORNING
+console.log(str6.substring(-7, -2)) //""
+console.log(str6.substring(3, -3)) //GOO
+console.log(str6.substring(-1, -4)) //""
+console.log(str6.substring(-10, 7)) //GOOD MO
+console.log(str6.substring(10,2)) //OD MORNI
+console.log(str6.substring(100, 2)) //OD MORNING
+console.log(str6) //GOOD MORNING
 
 7) includes(searchValue, startIndex)
 --> Checks whether substring exists.
+--> Negative index values become 0.
 --> Returns boolean value i.e true if exists and false if not exists
+Example:
+let str7 = "PAVAN SIR"
+console.log(str7.includes("A")) //true
+console.log(str7.includes("Z")) //false
+console.log(str7.includes("A",1)) //true
+console.log(str7.includes("A", 4)) //false
+console.log(str7.includes("VA")) //true
+console.log(str7.includes("VA", 3)) //false
+console.log(str7.includes("SIR",-7)) //true
+console.log(str7.includes("SIR",-2)) //true
 
 8) indexOf(searchValue, startIndex)
 --> Returns first occurrence index.
+--> Negative index values become 0.
 --> If value not found returns -1.
+Example:
+let str8 = "PAVAN SIR"
+console.log(str8.indexOf("A")) //1
+console.log(str8.indexOf("Z")) //-1
+console.log(str8.indexOf("A",1)) //1
+console.log(str8.indexOf("A", 4)) //-1
+console.log(str8.indexOf("VA")) //2
+console.log(str8.indexOf("VA", 3)) //-1
+console.log(str8.indexOf("SIR",-7)) //6
+console.log(str8.indexOf("SIR", -2)) //6
 
 9) replace(oldValue, newValue)
 --> Replace Only First Occurrence.
+Example:
+let str9 = "BIRYANI BIRYANI BIRYANI"
+console.log(str9.replace("BIRYANI","SHAWARMA")) //SHAWARMA BIRYANI BIRYANI
+console.log(str9.replaceAll("BIRYANI","SHAWARMA")) //SHAWARMA SHAWARMA SHAWARMA
 Note:
 --> To replace all occurrences use replaceAll().
 

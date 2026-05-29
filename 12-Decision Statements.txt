@@ -1,8 +1,8 @@
-Decision Statements in JavaScript:
+//!Decision Statements in JavaScript:
 -->Decision Statements are used to make decisions and control the flow of execution based on conditions.
 -->They execute different blocks of code depending on whether the condition is true or false.
 
-Types of Decision Statements in JavaScript:
+//!Types of Decision Statements in JavaScript:
 There are mainly 5 types of Decision Statements:
 i)if Statement
 ii)if else Statement
@@ -10,28 +10,28 @@ iii)else if Ladder
 iv)Nested if Statement
 v)switch Statement
 
-1) if Statement:
+//!1) if Statement:
 -->The if statement is used to execute a block of code only when the condition is true.
-Syntax:
+//*Syntax:
 if(condition){
-    //code
+    code
 }
-Example:
+//*Example:
 let age = 18
 if(age >= 18){
     console.log("Eligible to vote")
 }
 
-2) if else Statement:
+//!2) if else Statement:
 -->The if else statement is used to execute one block when the condition is true and another block when the condition is false.
-Syntax:
+//*Syntax:
 if(condition){
-    //true block
+    true block
 }
-else{
-    //false block
+//*else{
+    false block
 }
-Example:
+//*Example:
 let num = 10
 if(num % 2 == 0){
     console.log("Even Number")
@@ -40,22 +40,22 @@ else{
     console.log("Odd Number")
 }
 
-3) else if Ladder:
+//!3) else if Ladder:
 -->The else if ladder is used when multiple conditions need to be checked.
-Syntax:
+//*Syntax:
 if(condition1){
-    //code
+    code
 }
 else if(condition2){
-    //code
+    code
 }
 else if(condition3){
-    //code
+    code
 }
 else{
-    //default block
+    default block
 }
-Example:
+//*Example:
 let marks = 75
 if(marks >= 90){
     console.log("Grade A")
@@ -70,15 +70,15 @@ else{
     console.log("Fail")
 }
 
-4) Nested if Statement:
+//!4) Nested if Statement:
 -->Nested if means writing one if statement inside another if statement.
 Syntax:
 if(condition1){
     if(condition2){
-        //code
+        code
     }
 }
-Example:
+//*Example:
 let age = 20
 let hasLicense = true
 if(age >= 18){
@@ -87,22 +87,22 @@ if(age >= 18){
     }
 }
 
-5) switch Statement:
+//!5) switch Statement:
 -->The switch statement is used to execute one block of code from multiple cases.
 -->break is used to stop the execution after matching a case.
 -->default block executes when no case matches.
-Syntax:
+//*Syntax:
 switch(expression){
     case value1:
-        //code
+        code
         break
     case value2:
-        //code
+        code
         break
     default:
-        //code
+        code
 }
-Example:
+//*Example 1:
 let day = 2
 switch(day){
     case 1:
@@ -117,4 +117,14 @@ switch(day){
     default:
         console.log("Invalid Day")
 }
-
+//*Example 2
+let amount = 250
+switch (true) {
+  case (amount >= 350): console.log("Eat Pista House Biryani")
+    break;
+  case (amount >= 250 && amount<350): console.log("Eat Mehfil Biryani")
+    break;
+  case (amount >= 150 && amount<250): console.log("Eat Sai Krupa Biryani")
+    break;
+  default:console.log("Drink Water n Sleep")
+}

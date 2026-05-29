@@ -8,13 +8,12 @@ let arr = [10, 20, 30];
 let data = ["Rahul", 25, true, null];
 
 //!Ways to Create Arrays
-
-1) Using Array Literal
+//*1) Using Array Literal
 let fruits = ["Apple", "Mango", "Orange"];
 console.log(fruits) //['Apple', 'Mango', 'Orange']
 console.log(typeof fruits) //object
 
-2) Using Array Constructor
+//*2) Using Array Constructor
 let nums = new Array(10, 20, 30);
 console.log(nums) //[10,20,30]
 console.log(typeof nums) //object

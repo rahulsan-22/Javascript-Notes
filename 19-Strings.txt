@@ -170,16 +170,42 @@ console.log(str9.replaceAll("BIRYANI","SHAWARMA")) //SHAWARMA SHAWARMA SHAWARMA
 Note:
 --> To replace all occurrences use replaceAll().
 
-10) split(separator, limit)
+//!10) split(separator, limit)
 --> Converts string into array by splitting it based on the separator.
+//*Example:
+let str10 = "RCB GT RR"
+console.log(str10.split(" ")) //['RCB','GT','RR']
+console.log(str10.split(" ", 1)) //['RCB']
+console.log(str10.split("-")) //['RCB GT RR']
+console.log(str10.split("")) //['R', 'C', 'B', ' ', 'G', 'T', ' ', 'R', 'R']
+console.log(str10.split("R")) //['','CB GT ','','']
 
-11) startsWith(searchValue, startIndex)
+//!11) startsWith(searchValue, startIndex)
 --> Checks whether string starts with specified value.
+//*Example:
+let str11 = "SOMETHING"
+console.log(str11.startsWith("S")) //true
+console.log(str11.startsWith("O")) //false
+console.log(str11.startsWith("SO")) //true
+console.log(str11.startsWith("SOP")) //false
+console.log(str11.startsWith("SO",4)) //false
+console.log(str11.startsWith("SO",-4)) //true
+console.log(str11.startsWith("SO",-100)) //true
+console.log(str11.startsWith("TH", 4)) //true
 
-12) endsWith(searchValue, length)
+//!12) endsWith(searchValue, length)
 --> Checks whether string ends with specified value.
+//*Example:
+let str12 = "ANYTHING"
+console.log(str12.endsWith("NG")) //true
+console.log(str12.endsWith("NI")) //false
+console.log(str12.endsWith("NG",8)) //true
+console.log(str12.endsWith("TH",5)) //true
+console.log(str12.endsWith("TH",-1)) //false
+console.log(str12.endsWith("A",-10)) //false
+console.log(str12.endsWith("",-100)) //true
 
-Note:
+//*Note:
 --> String methods are case-sensitive.
 --> [] does not support negative indexing.
 

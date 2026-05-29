@@ -74,678 +74,309 @@ let arr = [10, 20, 30];
 arr.shift();
 console.log(arr); //[20, 30]
 
-//!GENERAL BUILT-IN METHODS
-# 9) splice()
-
-## Definition
-
---> Used to add, remove, or replace elements
-
-## Syntax
-
-```js
-array.splice(start, deleteCount, items)
-```
-
----
-
-## Removing Elements
-
-```js
-let arr = [10, 20, 30, 40];
-
-arr.splice(1, 2);
-
-console.log(arr);
-```
-
-Output:
-
-```js
-[10, 40]
-```
-
----
-
-## Adding Elements
-
-```js
-let arr = [10, 40];
-
-arr.splice(1, 0, 20, 30);
-
-console.log(arr);
-```
-
-Output:
-
-```js
-[10, 20, 30, 40]
-```
-
----
-
-## Replacing Elements
-
-```js
-let arr = [10, 20, 30];
-
-arr.splice(1, 1, 100);
-
-console.log(arr);
-```
-
-Output:
-
-```js
-[10, 100, 30]
-```
-
----
-
-# 10) slice()
-
-## Definition
-
---> Returns a portion of array
---> Original array will not change
-
-```js
-let arr = [10, 20, 30, 40];
-
-let result = arr.slice(1, 3);
-
-console.log(result);
-```
-
-Output:
-
-```js
-[20, 30]
-```
-
----
-
-# 11) Searching Methods
-
-# includes()
-
-```js
-let fruits = ["Apple", "Mango"];
-
-console.log(fruits.includes("Mango"));
-```
-
-Output:
-
-```js
-true
-```
-
----
-
-# indexOf()
-
-```js
-let arr = [10, 20, 30];
-
-console.log(arr.indexOf(20));
-```
-
-Output:
-
-```js
-1
-```
-
----
-
-# lastIndexOf()
-
-```js
-let arr = [10, 20, 10, 30];
-
-console.log(arr.lastIndexOf(10));
-```
-
-Output:
-
-```js
-2
-```
-
----
-
-# find()
-
-## Definition
-
---> Returns first matching element
-
-```js
-let nums = [10, 20, 30, 40];
-
-let result = nums.find((val) => val > 20);
-
-console.log(result);
-```
-
-Output:
-
-```js
-30
-```
-
----
-
-# findIndex()
-
-## Definition
-
---> Returns index of first matching element
-
-```js
-let nums = [10, 20, 30];
-
-let result = nums.findIndex((val) => val === 20);
-
-console.log(result);
-```
-
-Output:
-
-```js
-1
-```
-
----
-
-# 12) Joining & Converting Methods
-
-# join()
-
-```js
-let arr = ["HTML", "CSS", "JS"];
-
-console.log(arr.join("-"));
-```
-
-Output:
-
-```js
-HTML-CSS-JS
-```
-
----
-
-# toString()
-
-```js
-let arr = [10, 20, 30];
-
-console.log(arr.toString());
-```
-
-Output:
-
-```js
-10,20,30
-```
-
----
-
-# 13) Reversing & Sorting
-
-# reverse()
-
-```js
-let arr = [10, 20, 30];
-
-arr.reverse();
-
-console.log(arr);
-```
-
-Output:
-
-```js
-[30, 20, 10]
-```
-
----
-
-# sort()
-
-## Definition
-
---> Sorts elements alphabetically by default
-
-```js
-let arr = [100, 2, 25];
-
-arr.sort();
-
-console.log(arr);
-```
-
-Output:
-
-```js
-[100, 2, 25]
-```
-
----
-
-## Numeric Sorting
-
-```js
-let arr = [100, 2, 25];
-
-arr.sort((a, b) => a - b);
-
-console.log(arr);
-```
-
-Output:
-
-```js
-[2, 25, 100]
-```
-
----
-
-# 14) concat()
-
-## Definition
-
---> Combines arrays
-
-```js
-let a = [1, 2];
-let b = [3, 4];
-
-let result = a.concat(b);
-
-console.log(result);
-```
-
-Output:
-
-```js
-[1, 2, 3, 4]
-```
-
----
-
-# 15) spread operator (...)
-
-## Definition
-
---> Expands elements
-
-```js
-let arr1 = [10, 20];
-let arr2 = [30, 40];
-
-let result = [...arr1, ...arr2];
-
-console.log(result);
-```
-
-Output:
-
-```js
-[10, 20, 30, 40]
-```
-
----
-
-# 16) Higher Order Array Methods
-
-## Definition
-
---> Methods that accept another function as argument
-
----
-
-# forEach()
-
-## Definition
-
---> Used for iteration
---> Does not return new array
-
-```js
-let nums = [10, 20, 30];
-
-nums.forEach((val) => {
-  console.log(val);
-});
-```
-
----
-
-# map()
-
-## Definition
-
---> Returns new transformed array
-
-```js
-let nums = [1, 2, 3];
-
-let result = nums.map((val) => val * 2);
-
-console.log(result);
-```
-
-Output:
-
-```js
-[2, 4, 6]
-```
-
----
-
-# filter()
-
-## Definition
-
---> Returns filtered array
-
-```js
-let nums = [10, 20, 30, 40];
-
-let result = nums.filter((val) => val > 20);
-
-console.log(result);
-```
-
-Output:
-
-```js
-[30, 40]
-```
-
----
-
-# reduce()
-
-## Definition
-
---> Reduces array to single value
-
-```js
-let nums = [1, 2, 3, 4];
-
-let sum = nums.reduce((acc, val) => acc + val, 0);
-
-console.log(sum);
-```
-
-Output:
-
-```js
-10
-```
-
----
-
-# some()
-
-## Definition
-
---> Returns true if at least one condition is true
-
-```js
-let nums = [10, 20, 30];
-
-let result = nums.some((val) => val > 25);
-
-console.log(result);
-```
-
-Output:
-
-```js
-true
-```
-
----
-
-# every()
-
-## Definition
-
---> Returns true if all conditions are true
-
-```js
-let nums = [10, 20, 30];
-
-let result = nums.every((val) => val > 5);
-
-console.log(result);
-```
-
-Output:
-
-```js
-true
-```
-
----
-
-# 17) Array Destructuring
-
-## Definition
-
---> Extract values easily from array
-
-```js
-let colors = ["Red", "Blue", "Green"];
-
-let [a, b, c] = colors;
-
-console.log(a);
-console.log(b);
-```
-
-Output:
-
-```js
-Red
-Blue
-```
-
----
-
-# 18) Nested Arrays
-
-## Definition
-
---> Array inside another array
-
-```js
-let arr = [10, 20, [30, 40]];
-
-console.log(arr[2][1]);
-```
-
-Output:
-
-```js
-40
-```
-
----
-
-# 19) Array.from()
-
-## Definition
-
---> Converts iterable/string into array
-
-```js
-let str = "Hello";
-
-let result = Array.from(str);
-
-console.log(result);
-```
-
-Output:
-
-```js
-["H", "e", "l", "l", "o"]
-```
-
----
-
-# 20) Array.isArray()
-
-## Definition
-
---> Checks whether value is array or not
-
-```js
-let arr = [10, 20];
-
-console.log(Array.isArray(arr));
-```
-
-Output:
-
-```js
-true
-```
-
----
-
-# 21) Important Interview Questions
-
-# Difference Between slice() and splice()
-
-| slice()                        | splice()                |
-| ------------------------------ | ----------------------- |
-| Does not modify original array | Modifies original array |
-| Returns portion of array       | Adds/removes/replaces   |
-| Non-destructive                | Destructive             |
-
----
-
-# Difference Between map() and forEach()
-
-| map()                   | forEach()             |
-| ----------------------- | --------------------- |
-| Returns new array       | Does not return array |
-| Used for transformation | Used for iteration    |
-
----
-
-# Difference Between filter() and find()
-
-| filter()                      | find()                         |
-| ----------------------------- | ------------------------------ |
-| Returns all matching elements | Returns first matching element |
-| Returns array                 | Returns single value           |
-
----
-
-# Difference Between some() and every()
-
-| some()             | every()             |
-| ------------------ | ------------------- |
-| One condition true | All conditions true |
-| OR logic           | AND logic           |
-
----
-
-# 22) Important Notes
-
---> Arrays are objects internally
---> typeof array returns object
---> Arrays are mutable
---> const arrays can still be modified
---> Arrays are reference types
---> push() and pop() are faster than shift() and unshift()
-
----
-
-# 23) Real-Time Example
-
-```js
-let cart = [
-  {name: "Shoes", price: 2000},
-  {name: "Watch", price: 3000},
-  {name: "Bag", price: 1500}
-];
-
-let total = cart.reduce((acc, item) => {
-  return acc + item.price;
-}, 0);
-
-console.log(total);
-```
-
-Output:
-
-```js
-6500
-```
-
----
-
-# 24) Most Important Interview Methods
-
---> push()
---> pop()
---> shift()
---> unshift()
---> splice()
---> slice()
---> map()
---> filter()
---> reduce()
---> find()
---> some()
---> every()
---> sort()
---> includes()
-
----
-
-# 25) Final Summary
-
-## Basic Methods
-
---> push()
---> pop()
---> shift()
---> unshift()
-
-## Searching Methods
-
---> includes()
---> indexOf()
---> find()
---> findIndex()
-
-## Transformation Methods
-
---> map()
---> filter()
---> reduce()
-
-## Utility Methods
-
---> join()
---> concat()
---> reverse()
---> sort()
-
-## Important Concepts
-
---> Destructuring
---> Spread Operator
---> Nested Arrays
---> Higher Order Methods
+//!Methods
+
+//!1) Array.isArray()
+--> Used to check whether a value is an array or not.
+--> Returns true if the value is an array.
+--> Returns false for any other datatype.
+--> Commonly used for validation before applying array methods.
+//*Example:
+console.log(Array.isArray([10,20])) //true
+console.log(Array.isArray("Rahul")) //false
+console.log(Array.isArray([])) //true
+console.log(Array.isArray(new Array(1,2,3))) //true
+
+
+//!2) toString()
+--> Converts all array elements into a single string.
+--> Elements are separated by commas (,).
+--> Original array remains unchanged.
+--> Return type is string.
+//*Example:
+let arr2 = ["Red","Green","Blue"]
+console.log(arr2.toString()) //Red,Green,Blue
+console.log(typeof arr2.toString()) //string
+
+
+//!3) concat(...arr)
+--> Used to merge two or more arrays.
+--> Does not modify the original arrays.
+--> Returns a new array.
+--> Can also add normal values while concatenating.
+//*Example:
+let sub1 = ["Html","Css"]
+let sub2 = ["Js"]
+console.log(sub1.concat(sub2)) //['Html', 'Css', 'Js']
+console.log(sub2.concat(sub1,"React")) //['Js', 'Html', 'Css', 'React']
+
+//!4) join(separator)
+--> Converts array elements into a string.
+--> Custom separator can be provided.
+--> Original array remains unchanged.
+--> If no separator is provided, comma (,) is used by default.
+//*Example:
+let arr4 = ["rcb","srh","csk","dc"]
+console.log(arr4.join("☠️")) //rcb☠️srh☠️csk☠️dc
+console.log(arr4.join("-")) //rcb-srh-csk-dc
+
+
+//!5) reverse()
+--> Reverses the order of elements in an array.
+--> Modifies the original array.
+--> Returns the reversed array.
+--> It is a mutable method.
+//*Example:
+let arr5 = ["Marker","Laptop","Remote"]
+console.log(arr5.reverse()) //['Remote', 'Laptop', 'Marker']
+
+//!6) includes(searchElement,startIndex)
+--> Checks whether an element exists in an array.
+--> Returns true if found.
+--> Returns false if not found.
+--> Search starts from startIndex if provided.
+--> Supports negative indexing for startIndex.
+//*Example:
+let arr6 = ["Html","Css","Js","React","Java","Css","Sql"]
+console.log(arr6.includes("Js")) //true
+console.log(arr6.includes("Python")) //false
+console.log(arr6.includes("Js",4)) //false
+console.log(arr6.includes("Css",3)) //true
+console.log(arr6.includes("React",-5)) //true
+console.log(arr6.includes("Java",-500)) //true
+
+
+//!7) indexOf(searchElement,startIndex)
+--> Returns the index of the first matching element.
+--> Returns -1 if the element is not found.
+--> Search starts from startIndex if provided.
+--> Supports negative indexing.
+--> Useful for finding positions of elements.
+//*Example:
+let arr7 = ["Html","Css","Js","React","Java","Css","Sql"]
+console.log(arr7.indexOf("Js")) //2
+console.log(arr7.indexOf("Python")) //-1
+console.log(arr7.indexOf("Js",4)) //-1
+console.log(arr7.indexOf("Css",3)) //5
+console.log(arr7.indexOf("Css",1)) //1
+console.log(arr7.indexOf("React",-5)) //3
+console.log(arr7.indexOf("Java",-500)) //4
+
+//!8) slice(startIndex,endIndex)
+--> Used to extract a portion of an array.
+--> Start index is inclusive.
+--> End index is exclusive.
+--> Does not modify the original array.
+--> Supports negative indexing.
+--> Returns a new array.
+//*Example:
+let arr8 = ["Maroon","Red","Green","Blue","Yellow"]
+console.log(arr8.slice(2)) //['Green', 'Blue', 'Yellow']
+console.log(arr8.slice(1,4)) //['Red', 'Green', 'Blue']
+console.log(arr8.slice(2,3)) //['Green']
+console.log(arr8.slice(0,0)) //[]
+console.log(arr8.slice(-4,-2)) //['Red', 'Green']
+console.log(arr8.slice(-4,4)) //['Red', 'Green','Blue']
+console.log(arr8.slice(-4,-5)) //[]
+console.log(arr8.slice(5,2)) //[]
+
+//*Note:
+--> Original array remains unchanged.
+--> If startIndex > endIndex, returns empty array.
+--> Commonly used for copying arrays.
+
+
+//!9) splice(startIndex,deleteCount,elementsToBeAdded)
+--> Used to add, remove, or replace elements.
+--> Modifies the original array.
+--> Start index specifies where operation begins.
+--> deleteCount specifies number of elements to remove.
+--> Supports negative indexing.
+--> It is a mutable method.
+//*Example:
+let arr9 = ["Kingfisher","Budwiser","OC"]
+
+//*Insert Elements
+arr9.splice(1,0,"Tuborg","Corona")
+console.log(arr9) //['Kingfisher', 'Tuborg', 'Corona', 'Budwiser', 'OC']
+
+//*Delete Elements
+arr9.splice(3,2)
+console.log(arr9) //['Kingfisher', 'Tuborg', 'Corona']
+
+//*Replace Elements
+arr9.splice(1,2,"MansionHouse","BroCode")
+console.log(arr9) //['Kingfisher', 'MansionHouse', 'BroCode']
+
+//*Negative Indexing
+arr9.splice(-3,2,"RedLabel","BlueLabel","BlackLabel")
+console.log(arr9) //['RedLabel', 'BlueLabel', 'BlackLabel', 'BroCode']
+
+
+//!slice() vs splice()
+
+//*slice()
+--> Original array remains unchanged.
+--> Used to extract elements.
+--> Returns extracted portion.
+
+//*splice()
+--> Original array gets modified.
+--> Used to insert, delete, and replace elements.
+--> Returns deleted elements.
+
+
+//!Higher Order Methods
+--> Higher Order Methods accept callback functions as arguments.
+--> They reduce the need for traditional loops.
+--> Widely used in modern JavaScript and React applications.
+
+
+//!1) forEach(fn(element,index,array))
+--> Executes callback for every element.
+--> Used for iteration.
+--> Does not return anything.
+--> Return value is always undefined.
+--> Cannot create a new array.
+//*Example:
+let trainers = ["Monty","Pavan"]
+trainers.forEach((element,index,array)=>{
+   console.log(element+"🔥")
+   console.log(element.length)
+   console.log(element.toUpperCase())
+   console.log(element.charAt(0))
+   console.log(index)
+   console.log(array)
+})
+
+
+//!2) map(fn(element,index,array))
+--> Executes callback for every element.
+--> Returns a new transformed array.
+--> Original array remains unchanged.
+--> Most commonly used for data transformation.
+//*Example:
+trainers.map((element,index,array)=>{
+    console.log(element+"🔥")
+    console.log(element.length)
+    console.log(element.toUpperCase())
+    console.log(element.charAt(0))
+    console.log(index)
+    console.log(array)
+ })
+
+
+//*forEach() vs map()
+let num = [1,2,3]
+
+let forEachOutput = num.forEach((ele)=>{
+  return ele*2
+})
+console.log(forEachOutput) //undefined
+
+let mapOutput = num.map((ele)=>{
+   return ele*2
+})
+console.log(mapOutput) //[2,4,6]
+
+//!3) filter(fn(element,index,array))
+--> Returns all elements that satisfy a condition.
+--> Returns a new array.
+--> Original array remains unchanged.
+--> If no element matches, returns empty array.
+//*Example:
+let marks = [65,35,80,45,49]
+let filteredOutput = marks.filter((ele)=>{
+   return ele>45
+})
+console.log(filteredOutput) //[65,80,49]
+
+
+//!4) find(fn(element,index,array))
+--> Returns the first matching element.
+--> Stops searching after first match.
+--> Returns undefined if no match is found.
+--> Does not return an array.
+//*Example:
+let findOutput = marks.find((ele)=>{
+   return ele>55
+ })
+console.log(findOutput) //65
+
+
+//!find() vs filter()
+
+//*find()
+--> Returns first matching element.
+--> Stops after first match.
+--> Return type is element or undefined.
+
+//*filter()
+--> Returns all matching elements.
+--> Searches entire array.
+--> Return type is array.
+
+
+//!5) some(fn(element,index,array))
+--> Returns true if at least one element satisfies the condition.
+--> Returns false if no element satisfies the condition.
+--> Stops execution once condition becomes true.
+//*Example:
+let someOutput = marks.some((ele)=>{
+  return ele>45
+})
+console.log(someOutput) //true
+
+
+//!6) every(fn(element,index,array))
+--> Returns true only if all elements satisfy the condition.
+--> Returns false if any one element fails.
+--> Stops execution once condition becomes false.
+//*Example:
+let everyOutput = marks.every((ele)=>{
+  return ele>45
+})
+console.log(everyOutput) //false
+
+
+//!some() vs every()
+
+//*some()
+--> At least one element must satisfy the condition.
+--> Logical OR behavior.
+
+//*every()
+--> All elements must satisfy the condition.
+--> Logical AND behavior.
+
+
+//!7) reduce(fn(accumulator,element,index,array),initialValue)
+--> Used to reduce an array into a single value.
+--> Can perform sum, product, average, counting, grouping etc.
+--> Accumulator stores the previous result.
+--> Initial value is optional but recommended.
+//*Example:
+let arr7 = [1,2,3,4,5]
+let reducedOutput = arr7.reduce((accumulator,element,index,array)=>{
+   return accumulator += element
+},0)
+console.log(reducedOutput) //15
+
+
+//!8) sort(compareFn)
+--> Used to sort array elements.
+--> Modifies the original array.
+--> By default converts values into strings.
+--> Performs lexicographical sorting by default.
+--> For numbers always use compare function.
+//*Note
+a-b => Ascending Order
+b-a => Descending Order
+--> If compareFunction returns a negative value, 'a' comes before 'b'.
+--> If compareFunction returns a positive value, 'b' comes before 'a'.
+--> If compareFunction returns 0, positions remain unchanged.
+//*Example
+let arr8 = [4,2,20,40]
+console.log(arr8.sort()) //[2,20,4,40]
+console.log(arr8.sort((a,b)=>a-b)) // [2,4,20,40]
+console.log(arr8.sort((a,b)=>b-a)) // [40,20,4,2]

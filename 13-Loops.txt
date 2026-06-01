@@ -1,8 +1,8 @@
-LOOPS:
+//!LOOPS:
 -->Loops are used to execute a block of code repeatedly until a condition becomes false.
 -->They help reduce code repetition and make programs shorter and easier to manage.
 
-Types of Loops in JavaScript:
+//!Types of Loops in JavaScript:
 There are mainly 5 types of Loops:
 i)for Loop
 ii)while Loop
@@ -10,67 +10,67 @@ iii)do while Loop
 iv)for in Loop
 v)for of Loop
 
-1) for Loop:
+//!1) for Loop:
 -->The for loop is used when the number of iterations is known.
 -->It contains 3 parts:
 i)Initialization
 ii)Condition
 iii)Updation
-Syntax:
+//*Syntax:
 for(initialization; condition; updation){
-    //code
+    code
 }
-Flow:
+//*Flow:
 Initialization --> Condition --> Code --> Updation
-Example:
-for(let i=1;i<=5;i++){
-  document.writeln("<h1>I LOVE YOU 💖</h1>")
+//*Example:
+for (let i = 1; i <= 5; i++) {
+  document.writeln("<h1>NENU NINNU PREMISTUNANU 💖</h1>")
 }
 
-2) while Loop:
+//!2) while Loop:
 -->The while loop is used when the number of iterations is not known.
 -->The condition is checked first.
 -->If the condition is true, the code executes.
-Syntax:
+//*Syntax:
 initialization
 while(condition){
-    //code
+    code
     updation
 }
-Flow:
+//*Flow:
 Initialization --> Condition --> Code --> Updation
-Example:
+//*Example:
 let j = 1;
 while(j<=3){
    document.writeln("<h2>I LOVE YOU TOO 💝</h2>")
    j++
 
-3) do while Loop:
+//!3) do while Loop:
 -->The do while loop executes the code at least one time even if the condition is false.
 -->Condition is checked after execution.
-Syntax:
+//*Syntax:
 initialization
 do{
-    //code
+    code
     updation
 }
 while(condition)
-Flow:
+//*Flow:
 Initialization --> Code --> Updation --> Condition
-Example:
+//*Example:
 let k = 0;
 do{
   document.writeln("<h3>Lets Breakup💔</h3>")
   k++
 }while(k>=2)
 
-4)for in Loop:
+//!4)for in Loop:
 -->The for in loop is used to iterate over object keys.
-Syntax:
+//*Syntax:
 for(variable in object){
-    //code
+    code
 }
-Example:
+//*Example:
 let details = {
    name:"Pavan",
    age:26,
@@ -81,15 +81,15 @@ for(let keys in details){
   console.log(details[keys]) //'Pavan' //26 //true
 }
 
-5)for of Loop:
+//!5)for of Loop:
 -->The for of loop is used to iterate over iterable values like:
 i)Arrays
 ii)Strings
-Syntax:
+//*Syntax:
 for(variable of iterable){
-    //code
+    code
 }
-Example:
+//*Example:
 //*String
 let str = "Monty"
 for (let values of str) {

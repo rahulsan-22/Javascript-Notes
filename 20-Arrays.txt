@@ -52,13 +52,13 @@ console.log(fruits); //["Apple", "Orange"]
 --> Adds element at end of an array
 let arr = [10, 20];
 arr.push(30);
-console.log(arr); //[10, 20, 30]
+console.log(arr); //[10,20,30]
 
 //*2)unshift()
 --> Adds element at beginning of an array
 let arr = [20, 30];
 arr.unshift(10);
-console.log(arr); //[10, 20, 30]
+console.log(arr); //[10,20,30] 
 
 //!Methods for Removing Elements
 
@@ -66,13 +66,15 @@ console.log(arr); //[10, 20, 30]
 --> Removes last element from an array
 let arr = [10, 20, 30];
 arr.pop();
-console.log(arr); //[10, 20]
+console.log(arr); //[10,20]
 
 //*2)shift()
 --> Removes first element from an array
 let arr = [10, 20, 30];
 arr.shift();
-console.log(arr); //[20, 30]
+console.log(arr); //[20,30]
+
+
 
 //!Methods
 
@@ -86,7 +88,6 @@ console.log(Array.isArray([10,20])) //true
 console.log(Array.isArray("Rahul")) //false
 console.log(Array.isArray([])) //true
 console.log(Array.isArray(new Array(1,2,3))) //true
-
 
 //!2) toString()
 --> Converts all array elements into a single string.

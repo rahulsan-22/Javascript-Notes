@@ -242,12 +242,12 @@ console.log(arr9) //['RedLabel', 'BlueLabel', 'BlackLabel', 'BroCode']
 //*Example:
 let trainers = ["Monty","Pavan"]
 trainers.forEach((element,index,array)=>{
-   console.log(element+"🔥")
-   console.log(element.length)
-   console.log(element.toUpperCase())
-   console.log(element.charAt(0))
-   console.log(index)
-   console.log(array)
+   console.log(element+"🔥") //Monty🔥 //Pavan🔥
+   console.log(element.length) //5 //5
+   console.log(element.toUpperCase()) //MONTY //PAVAN
+   console.log(element.at(0)) //M //P
+   console.log(index) //0 //1
+   console.log(array) //["Monty","Pavan"] * 2
 })
 
 
@@ -258,23 +258,25 @@ trainers.forEach((element,index,array)=>{
 --> Most commonly used for data transformation.
 //*Example:
 trainers.map((element,index,array)=>{
-    console.log(element+"🔥")
-    console.log(element.length)
-    console.log(element.toUpperCase())
-    console.log(element.charAt(0))
-    console.log(index)
-    console.log(array)
+   console.log(element+"🔥") //Monty🔥 //Pavan🔥
+   console.log(element.length) //5 //5
+   console.log(element.toUpperCase()) //MONTY //PAVAN
+   console.log(element.at(0)) //M //P
+   console.log(index) //0 //1
+   console.log(array) //["Monty","Pavan"] * 2
  })
 
 
 //*forEach() vs map()
 let num = [1,2,3]
 
+--> Return value is always undefined.
 let forEachOutput = num.forEach((ele)=>{
   return ele*2
 })
 console.log(forEachOutput) //undefined
 
+--> Returns a new transformed array.
 let mapOutput = num.map((ele)=>{
    return ele*2
 })
@@ -356,19 +358,26 @@ console.log(everyOutput) //false
 --> Can perform sum, product, average, counting, grouping etc.
 --> Accumulator stores the previous result.
 --> Initial value is optional but recommended.
-//*Example:
-let arr7 = [1,2,3,4,5]
-let reducedOutput = arr7.reduce((accumulator,element,index,array)=>{
-   return accumulator += element
-},0)
-console.log(reducedOutput) //15
+//*Example 1
+let arr7 = [10, 20, 30, 40, 50]
+let total = arr7.reduce((accumulator,element,index,array) => {
+   return accumulator+=element
+}, 0)
+console.log(total) //150
+
+//*Example 2
+let result = arr7.reduce((sum,ele) => {
+   return sum+=ele
+}, 0)
+let avg = result / arr7.length
+console.log(avg) //30
 
 
 //!8) sort(compareFn)
 --> Used to sort array elements.
 --> Modifies the original array.
 --> By default converts values into strings.
---> Performs lexicographical sorting by default.
+--> Performs lexicographical (dictionary order) sorting by default.
 --> For numbers always use compare function.
 //*Note
 a-b => Ascending Order
@@ -376,8 +385,16 @@ b-a => Descending Order
 --> If compareFunction returns a negative value, 'a' comes before 'b'.
 --> If compareFunction returns a positive value, 'b' comes before 'a'.
 --> If compareFunction returns 0, positions remain unchanged.
-//*Example
-let arr8 = [4,2,20,40]
-console.log(arr8.sort()) //[2,20,4,40]
-console.log(arr8.sort((a,b)=>a-b)) // [2,4,20,40]
-console.log(arr8.sort((a,b)=>b-a)) // [40,20,4,2]
+
+//*Example 1:
+let num = [7, 2, 1, 4, 5]
+console.log(num.sort()) //[1,2,4,5,7]
+
+//*Example 2:
+let marks = [1, 10, 5, 25, 2]
+console.log(marks.sort((a,b)=>a-b)) //[1, 2, 5, 10, 25]
+console.log(marks.sort((a,b)=>b-a)) //[25, 10, 5, 2, 1]
+
+//*Example 3:
+let random = ["Banana", "Orange", true ,"Apple","Apricot"]
+console.log(random.sort()) //['Apple', 'Apricot', 'Banana', 'Orange', true]

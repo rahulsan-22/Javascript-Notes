@@ -1,52 +1,54 @@
-FUNCTIONS:
+//!FUNCTIONS:
 -->Functions are reusable blocks of code used to perform a specific task.
 -->They help reduce code repetition and improve code reusability.
 -->A function executes only when it is called/invoked.
 
-Categories of Functions:
+//!Categories of Functions:
 There are mainly 2 categories of Functions in JavaScript:
 i)Function Declaration
-ii)Function Expression
+ii)Function Expression  
 
-FUNCTION DECLARATION:
+//!FUNCTION DECLARATION:
 -->Function Declaration is one of the most commonly used ways to create functions in JavaScript.
 -->A function declared using the function keyword with a function name is called Function Declaration.
 
-Types of Function Declaration:
+//!Types of Function Declaration:
 There are mainly 3 types of Function Declaration:
 i)Normal Function
 ii)Parameterized Function
 iii)Return Function
 
-i)Normal Function:
+//!i)Normal Function:
 -->A function without parameters and return value is called Normal Function.
 -->It is mainly used to perform a simple task.
 
-Syntax:
+//*Syntax:
 function functionName(){
-   //code
+   code
 }
+functionName()
 
-Example:
+//*Example:
 function greet(){
    console.log("Good Morning ☀️")
 }
 greet()
 
-Output:
+//*Output:
 Good Morning ☀️
 
-ii)Parameterized Function:
+//!ii)Parameterized Function:
 -->A function that accepts values through parameters is called Parameterized Function.
 -->Parameters are variables used to receive values from the function call.
 -->Arguments are the actual values passed during function calling.
 
-Syntax:
+//*Syntax:
 function functionName(parameter1, parameter2){
-   //code
+   code
 }
+functionName(argument1,argument2)
 
-Example:
+//*Example:
 function add(a, b) {
   console.log(a + b)
 }
@@ -55,94 +57,95 @@ add(3, undefined)
 add(1)
 add(1,"Hello",2)
  
-Output:
+//*Output:
 5
 NaN
 NaN
 1Hello
 
-iii)Return Function:
+//!iii)Return Function:
 -->A function that sends back a value using the return keyword is called Return Function.
 -->The return statement ends the function execution.
 -->Returned values can be stored inside variables or used later.
 
-Syntax:
+//*Syntax:
 function functionName(){
    return value
 }
+console.log(functionName())
 
-Example:
+//*Example:
 function square(num){
    return num*num
 }
 let result = square(5)
 console.log(result)
 
-Output:
+//*Output:
 25
 
-FUNCTION EXPRESSION:
+//!FUNCTION EXPRESSION:
 -->When a function is stored inside a variable, it is called Function Expression.
 -->In Function Expression, functions are treated as values.
 
-Types of Function Expression:
+//!Types of Function Expression:
 There are mainly 3 types of Function Expression:
 i)Anonymous Function
 ii)Arrow Function
 iii)Immediately Invoked Function Expression (IIFE)
 
-i)Anonymous Function:
+//!i)Anonymous Function:
 -->A function without a function name is called Anonymous Function.
 -->It is mostly stored inside variables or used as callback functions.
 
-Syntax:
+//*Syntax:
 let variableName = function(){
-   //code
+   code
 }
 
-Example:
-Normal Anonymous function
+//*Example:
+//*Normal Anonymous function
 let anonymous1 = function () {
   console.log("Good Morning....")
 }
 anonymous1()
-Output:
+//*Output:
 Good Morning....
 
-Parameterized Anonymous Function
+//*Parameterized Anonymous Function
 let anonymous2 = function (name) {
    console.log("Good Morning "+name)
 }
 anonymous2("Pavan")
 anonymous2("Monty")
-Output:
+//*Output:
 Good Morning Pavan
 Good Morning Monty
 
-Return Anonymous Function
+//*Return Anonymous Function
 let anonymous3 = function (num1,num2) {
   return num1**num2
 }
 let result = anonymous3(2, 3)
 console.log(result)
 console.log(anonymous3(5,5))
-Output:
+//*Output:
 8
 3125
 
-ii)Arrow Function:
+//!ii)Arrow Function:
 -->Arrow Functions were introduced in ES6.
 -->They provide a shorter syntax for writing functions.
--->Arrow Functions do not use the function keyword.
+-->Arrow Functions do not use the function keyword and function name
 -->Mostly used in modern JavaScript and ReactJS.
 
-Syntax:
+//*Syntax:
 let variableName = ()=>{
-   //code
+   code
 }
 
-Example:
-Normal Arrow Function
+//*Example:
+//*Normal Arrow Function
 let arrow1 = () => {
   console.log("I am Normal Arrow Function")
 }
@@ -150,25 +153,25 @@ arrow1()
 Output:
 I am Normal Arrow Function
 
-Parameterized Arrow Function
+//*Parameterized Arrow Function
 let arrow2 = (a,b) => {
    console.log(a*b)
 }
 arrow2(2,4)
 arrow2(2, undefined)
-Output:
+//*Output:
 8
 NaN
 
-Types of Arrow Function based on Return:
+//!Types of Arrow Function based on Return:
 There are mainly 2 types of Arrow Functions:
 i)Explicit Return Arrow Function
 ii)Implicit Return Arrow Function
 
-Explicit Return Arrow Function:
+//*Explicit Return Arrow Function:
 -->When we use the return keyword explicitly(directly) inside the function body, it is called Explicit Return Arrow Function.
 
-Example:
+//*Example:
 let add = (a,b)=>{
    return a+b
 }
@@ -176,7 +179,7 @@ console.log(add(10,20))
 Output:
 30
 
-Implicit Return Arrow Function:
+//*Implicit Return Arrow Function:
 -->When the return keyword is not written manually and JavaScript automatically returns the value, it is called Implicit Return Arrow Function.
 -->Curly braces are not required.
 -->Mostly used for single-line expressions.
@@ -187,53 +190,48 @@ console.log(multiply(5,4))
 Output:
 20
 
-iii)Immediately Invoked Function Expression (IIFE)
+//!iii)Immediately Invoked Function Expression (IIFE)
 -->An IIFE is a function that executes immediately after creation.
 -->The function is wrapped inside parentheses () and called immediately using another pair of parentheses.
 -->IIFE executes only one time immediately after it is created.
 -->Used to avoid global scope pollution.
 
-Syntax:
+//*Syntax:
 (function(){
-   //code
+   code
 })()
 
-Example:
-Normal IIFE
+//*Example:
+//*Normal IIFE
 (function () {
   console.log("I AM IIFE")
 })();
-Output:
+//*Output:
 I AM IIFE
   
-Parameterized IIFE
+//*Parameterized IIFE
 ((msg) => {
   console.log(msg)
 })("Good Morning..");
-Output:
+//*Output:
 Good Morning
 
-Return IIFE
+//*Return IIFE
 let result = (function (a, b) {
   return a + b
 })(10, 20);
 console.log(result)
-Output:
+//*Output:
 30
 
-HIGHER ORDER FUNCTION (HOF):
+//!HIGHER ORDER FUNCTION (HOF):
 -->A function that accepts another function as an argument or returns another function is called Higher Order Function.
 
-Types of Higher Order Functions
-There are mainly 2 types:
-i) Function accepting another function as argument
-ii) Function returning another function
-
-i) Function Accepting Another Function as Argument
--->When a function accepts another function as a parameter, it becomes a Higher Order Function.
+//! i) Function Accepting Another Function as Argument
+-->When a function accepts another function as a argument, it becomes a Higher Order Function.
 -->A function passed as an argument to another function is called Callback Function.
 
-Example 1
+//*Example 1
 function user(name, msg, fn) {
   return fn(name,msg)  //greet("Monty","Good Morning")
 }
@@ -241,54 +239,54 @@ function greet(name,msg) {
    console.log(msg+" "+name) 
 }
 user("Monty", "Good Morning", greet)
-Output:
+//*Output:
 Good Morning Monty
 
-Example 2
+//*Example 2
 let add = (a,b) => a+b
 let sub = (a,b) => a-b
 let calculator = (a,b,fn) => fn(a,b) //add(10,20) //30 //sub(20,50) //-30
 console.log(calculator(10,20,add)) 
 console.log(calculator(20,50,sub)) 
-Output:
+//*Output:
 30
 -30
 
-ii) Function Returning Another Function
+//! ii) Function Returning Another Function
 -->When a function returns another function, it is also called Higher Order Function.
 -->Used in closures, currying, and advanced JavaScript concepts.
 
-Example:
+//*Example:
 function outer() {
   console.log("Outer Function Executed")
   return function inner () {
     console.log("Inner Function Executed")
   }
 }
-1st way of Executing:
+//*1st way of Executing:
 let result = outer()
 result()  
-2nd Way of Executing:
+//*2nd Way of Executing:
 outer()()
 
-Output:
+//*Output:
 Outer Function Executed
 Inner Function Executed
 Outer Function Executed
 Inner Function Executed
 
-FUNCTION CURRYING:
+//!FUNCTION CURRYING:
 -->It is the process of transforming a function taking multiple arguments into a nested series of functions, each taking a single argument.
 
-Normal Function:
+//*Normal Function:
 function add1(a,b,c){
    return a+b+c
 }
 console.log(add1(10,20,30))
-Output:
+//*Output:
 60
 
-Curried Function:
+//*Curried Function:
 function add2(a){
    return function(b){
       return function(c){
@@ -297,12 +295,12 @@ function add2(a){
    }
 }
 console.log(add2(10)(20)(30))
-Output:
+//*Output:
 60
 
-Function Currying using Arrow Function:
+//*Function Currying using Arrow Function:
 let add3 = a => b => c => a+b+c
 console.log(add3(10)(20)(30))
-Output:
+//*Output:
 60
 

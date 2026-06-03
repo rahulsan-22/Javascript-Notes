@@ -1,0 +1,247 @@
+//!Objects
+--> Object is a non-primitive datatype used to store data in the form of key-value pairs.
+--> A property is a key-value pair inside an object.
+--> Objects can store different datatypes.
+--> Objects are mutable.
+--> Objects are dynamic in size.
+--> Objects are widely used for representing real-world entities.
+
+//*Example:
+let student = {
+  name: "Rahul",
+  age: 25,
+  isPlaced: true
+}
+
+//!Ways to Create Objects
+
+//*1) Using Object Literal
+let bioData1 = {
+  name: "Pavan",
+  age: 27,
+  isEmployee: true,
+  hasGirlfriends: undefined,
+  hasAttitude: null,
+  skills: ["Core Java", "Singing", "Motivation"],
+  fun: () => "Core Java Trainer",
+  address: {
+    place: "Mysore",
+    pincode: 500065
+  }
+}
+
+//*2) Using Object Constructor
+let bioData2 = new Object()
+bioData2.name = "Monty"
+bioData2.age = 28
+bioData2.isEmployee = true
+bioData2.hasGirlfriends = undefined
+bioData2.hasAttitude = null
+bioData2.skills = ["Python", "Singing", "Dance"]
+bioData2.fun = () => "Python Trainer"
+bioData2.address = {
+  place: "Gulbarga",
+  pincode: 500065
+}
+
+//!Accessing Properties
+
+//*1) Dot Notation
+
+//*2) Bracket Notation
+
+//*Note:
+--> If property does not exist, JavaScript returns undefined.
+--> Dot notation is commonly used.
+--> Bracket notation is useful when property name is dynamic.
+
+//!Adding Properties
+let emp3 = {
+  id:101
+}
+emp3.ename = "Smith"
+emp3.sal = 50000
+console.log(emp3)
+
+//*Output:
+{
+  id:101,
+  ename:"Smith",
+  sal:50000
+}
+
+
+//!Updating Properties
+let emp4 = {
+  id:101,
+  sal:50000
+}
+emp4.sal = 70000
+console.log(emp4)
+
+//*Output:
+{
+  id:101,
+  sal:70000
+}
+
+//!Deleting Properties
+let emp5 = {
+  id:101,
+  ename:"Scott",
+  sal:50000
+}
+delete emp5.sal
+console.log(emp5)
+
+//*Output:
+{
+  id:101,
+  ename:"Scott"
+}
+
+
+//!Objects are Mutable
+let student2 = {
+  name:"Rahul"
+}
+student2.name = "Monty"
+console.log(student2) //{name:"Monty"}
+
+
+//!Methods
+
+//!1) Object.keys(obj)
+--> Returns all keys of an object.
+--> Return type is array.
+--> Does not modify original object.
+//*Example:
+let student3 = {
+  name:"Rahul",
+  age:25,
+  city:"Hyderabad"
+}
+console.log(Object.keys(student3)) //['name','age','city']
+
+//!2) Object.values(obj)
+--> Returns all values of an object.
+--> Return type is array.
+--> Does not modify original object.
+//*Example:
+console.log(Object.values(student3)) //['Rahul',25,'Hyderabad']
+
+
+//!3) Object.entries(obj)
+--> Converts object into array of arrays.
+--> Each inner array contains key and value.
+--> Return type is array.
+//*Example:
+console.log(Object.entries(student3))
+//*Output
+[
+  ['name','Rahul'],
+  ['age',25],
+  ['city','Hyderabad']
+]
+
+//!4) Object.fromEntries(arr)
+--> Converts array of key-value pairs into object.
+--> Opposite of Object.entries().
+//*Example:
+let arr = [
+  ["name","Rahul"],
+  ["age",25]
+]
+console.log(Object.fromEntries(arr)) //{name:"Rahul",age:25}
+
+//!5) Object.assign(target,...sources)
+--> Used to copy or merge objects.
+--> Returns merged object.
+//*Example:
+let obj1 = {
+  name:"Rahul"
+}
+let obj2 = {
+  age:25
+}
+console.log(Object.assign({},obj1,obj2)) //{ name:"Rahul",age:25}
+
+//!6) Object.freeze(obj)
+--> Prevents adding new properties.
+--> Prevents updating existing properties.
+--> Prevents deleting properties.
+--> Makes object immutable.
+//*Example:
+let student4 = {
+  name:"Rahul"
+}
+Object.freeze(student4)
+student4.name = "Monty"
+student4.age = 25
+delete student4.name
+console.log(student4) //{name:"Rahul"}
+
+//!7) Object.seal(obj)
+--> Prevents adding new properties.
+--> Prevents deleting properties.
+--> Existing properties can be updated.
+//*Example:
+let student5 = {
+  name:"Rahul"
+}
+Object.seal(student5)
+student5.name = "Monty"
+student5.age = 25
+delete student5.name
+
+console.log(student5) //{name:"Monty" }
+
+
+//!freeze() vs seal()
+
+//*Object.freeze()
+--> Cannot add properties.
+--> Cannot update properties.
+--> Cannot delete properties.
+
+//*Object.seal()
+--> Cannot add properties.
+--> Can update properties.
+--> Cannot delete properties.
+
+
+//!Checking Property Existence
+
+//!1) in Operator
+--> Returns true if property exists.
+--> Returns false if property does not exist.
+//*Example:
+let student6 = {
+  name:"Rahul",
+  age:25
+}
+console.log("name" in student6) //true
+console.log("city" in student6) //false
+
+//!2) hasOwnProperty()
+--> Checks whether property belongs to object.
+--> Returns true or false.
+//*Example:
+console.log(student6.hasOwnProperty("name")) //true
+console.log(student6.hasOwnProperty("city")) //false
+
+//*in
+-->Checks Own + Inherited Properties
+//*hasOwnProperty()
+-->Checks Only Own Properties 
+
+
+//!Optional Chaining (?.)
+--> Prevents errors while accessing nested properties.
+--> Returns undefined if property does not exist.
+
+let student11 = {
+  name:"Rahul"
+}
+console.log(student11.address?.city) //undefined
+

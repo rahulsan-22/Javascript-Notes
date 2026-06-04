@@ -1,0 +1,142 @@
+//! Math Object
+--> Math is a built-in object in JavaScript used to perform mathematical operations.
+--> Math is not a constructor function, so we cannot create objects using new Math().
+--> All properties and methods of Math are accessed directly using Math.
+--> Math methods return values and do not modify existing data.
+
+//! Important Math Properties
+
+//* Math.PI
+--> Returns the value of π (pi).
+
+console.log(Math.PI); // 3.141592653589793
+
+//* Math.E
+--> Returns Euler's number.
+
+console.log(Math.E); // 2.718281828459045
+
+//* Math.SQRT2
+--> Returns square root of 2.
+
+console.log(Math.SQRT2); // 1.4142135623730951
+
+//! Math Methods
+
+//* Math.round(number)
+--> Rounds a number to the nearest integer.
+
+console.log(Math.round(4.4)); // 4
+console.log(Math.round(4.5)); // 5
+console.log(Math.round(4.9)); // 5
+
+//* Math.floor(number)
+--> Returns the greatest integer less than or equal to the given number.
+--> Always rounds down.
+
+console.log(Math.floor(4.9)); // 4
+console.log(Math.floor(4.1)); // 4
+console.log(Math.floor(-4.1)); // -5
+
+//* Math.ceil(number)
+--> Returns the smallest integer greater than or equal to the given number.
+--> Always rounds up.
+
+console.log(Math.ceil(4.1)); // 5
+console.log(Math.ceil(4.9)); // 5
+console.log(Math.ceil(-4.9)); // -4
+
+//* Math.trunc(number)
+--> Removes the decimal part and returns only the integer part.
+
+console.log(Math.trunc(4.9)); // 4
+console.log(Math.trunc(4.1)); // 4
+console.log(Math.trunc(-4.9)); // -4
+
+//* Math.abs(number)
+--> Returns the absolute (positive) value.
+
+console.log(Math.abs(-100)); // 100
+console.log(Math.abs(100)); // 100
+
+//* Math.sqrt(number)
+--> Returns the square root of a number.
+
+console.log(Math.sqrt(25)); // 5
+console.log(Math.sqrt(81)); // 9
+
+//* Math.cbrt(number)
+--> Returns the cube root of a number.
+
+console.log(Math.cbrt(27)); // 3
+console.log(Math.cbrt(125)); // 5
+
+//* Math.pow(base, exponent)
+--> Returns base raised to the power exponent.
+
+console.log(Math.pow(2, 3)); // 8
+console.log(Math.pow(5, 2)); // 25
+
+//* Exponentiation Operator (**)
+--> Modern alternative to Math.pow().
+
+console.log(2 ** 3); // 8
+console.log(5 ** 2); // 25
+
+//* Math.max(values)
+--> Returns the largest value.
+
+console.log(Math.max(10, 20, 30)); // 30
+
+//* Math.min(values)
+--> Returns the smallest value.
+
+console.log(Math.min(10, 20, 30)); // 10
+
+//* Math.sign(number)
+--> Returns:
+    1  => Positive number
+    -1 => Negative number
+    0  => Zero
+
+console.log(Math.sign(10)); // 1
+console.log(Math.sign(-10)); // -1
+console.log(Math.sign(0)); // 0
+
+//* Math.random()
+--> Returns a random decimal number between 0 and 1.
+--> 0 is inclusive and 1 is exclusive.
+
+console.log(Math.random());
+
+//! Generating Random Numbers
+
+//* Random number between 0 and 9
+
+console.log(Math.floor(Math.random() * 10));
+
+//* Random number between 1 and 10
+
+console.log(Math.floor(Math.random() * 10) + 1);
+
+//* Random number between 1 and 100
+
+console.log(Math.floor(Math.random() * 100) + 1);
+
+//* Random number between min and max
+
+let min = 50;
+let max = 100;
+
+console.log(
+  Math.floor(Math.random() * (max - min + 1)) + min
+);
+
+//! Number Formatting
+
+//* toFixed(n)
+--> Returns a string with n digits after decimal point.
+
+let num = 12.34567;
+console.log(num.toFixed(2)); // "12.35"
+console.log(num.toFixed(3)); // "12.346"

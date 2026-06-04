@@ -256,17 +256,17 @@ console.log(calculator(20,50,sub))
 -->When a function returns another function, it is also called Higher Order Function.
 -->Used in closures, currying, and advanced JavaScript concepts.
 
-//*Example:
+//*Example 1
 function outer() {
   console.log("Outer Function Executed")
-  return function inner () {
+  return function inner() {
     console.log("Inner Function Executed")
   }
 }
-//*1st way of Executing:
+//@1st Way of Executing
 let result = outer()
-result()  
-//*2nd Way of Executing:
+result()
+//@2nd Way of Executing (Currying)
 outer()()
 
 //*Output:
@@ -274,6 +274,24 @@ Outer Function Executed
 Inner Function Executed
 Outer Function Executed
 Inner Function Executed
+
+//*Example 2
+let anything = () => {
+  const name = "Yasin";
+  return () => {
+    const subject = "Sql"
+    return () => {
+      const duration = 30
+      return () => {
+        return "My name is "+name+" ,I teach "+subject+" within "+duration+" days"
+      }
+    }
+  }
+}
+console.log(anything()()()())
+
+//*Output:
+My name is Yasin ,I teach Sql within 30 days
 
 //!FUNCTION CURRYING:
 -->It is the process of transforming a function taking multiple arguments into a nested series of functions, each taking a single argument.

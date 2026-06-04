@@ -47,8 +47,16 @@ bioData2.address = {
 //!Accessing Properties
 
 //*1) Dot Notation
+console.log(bioData1.name) //Pavan
+console.log(bioData2.skills) //['Python', 'Singing', 'Dance']
+console.log(bioData1.fun()) //Core Java Trainer
+console.log(bioData2.address.place) //Gulbarga
 
 //*2) Bracket Notation
+console.log(bioData1["name"]) //Pavan
+console.log(bioData2["skills"]) //['Python', 'Singing', 'Dance']
+console.log(bioData1["fun"]()) //Core Java Trainer
+console.log(bioData2["address"]["place"]) //Gulbarga
 
 //*Note:
 --> If property does not exist, JavaScript returns undefined.
@@ -56,58 +64,41 @@ bioData2.address = {
 --> Bracket notation is useful when property name is dynamic.
 
 //!Adding Properties
-let emp3 = {
-  id:101
+let movie = {
+  title:"Peddi"
 }
-emp3.ename = "Smith"
-emp3.sal = 50000
-console.log(emp3)
+movie.hero = "Ramcharan"
+console.log(movie) //{title: 'Peddi', hero: 'Ramcharan'}
 
-//*Output:
-{
-  id:101,
-  ename:"Smith",
-  sal:50000
+//!Updating Properties (Mutable)
+let restaurant = {
+  name: "Mehfil",
+  food: "Biryani",
+  price:300
 }
-
-
-//!Updating Properties
-let emp4 = {
-  id:101,
-  sal:50000
-}
-emp4.sal = 70000
-console.log(emp4)
-
-//*Output:
-{
-  id:101,
-  sal:70000
-}
+restaurant.name = "Pista House"
+console.log(restaurant) //{name: 'Pista House', food: 'Biryani', price: 300}
 
 //!Deleting Properties
-let emp5 = {
-  id:101,
-  ename:"Scott",
-  sal:50000
+let vehicle = {
+  name: "Auto",
+  startPoint: "Dilsukhnagar", 
+  endPoint:"LB Nagar"
 }
-delete emp5.sal
-console.log(emp5)
+delete vehicle.name
+console.log(vehicle) //startPoint: 'Dilsukhnagar', endPoint: 'LB Nagar'}
 
-//*Output:
-{
-  id:101,
-  ename:"Scott"
+//!Why Box / Bracket Notation
+let simpleObj = {
+  name: "Someone",
+  age:18
 }
-
-
-//!Objects are Mutable
-let student2 = {
-  name:"Rahul"
+for (let keys in simpleObj) {
+  console.log(keys) //name //age
+  console.log(typeof keys) //string //string
+  console.log(simpleObj[keys]) //Someone //18
 }
-student2.name = "Monty"
-console.log(student2) //{name:"Monty"}
-
+//*Answer: Bracket notation is useful when property name is dynamic.
 
 //!Methods
 

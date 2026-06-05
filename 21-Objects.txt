@@ -148,14 +148,26 @@ console.log(Object.fromEntries(arr)) //{name:"Rahul",age:25}
 //!5) Object.assign(target,...sources)
 --> Used to copy or merge objects.
 --> Returns merged object.
-//*Example:
-let obj1 = {
-  name:"Rahul"
+
+//*Example 1
+let jsClass = {
+  trainer: "Rahul"
 }
-let obj2 = {
-  age:25
+let strength = {
+  count:20
 }
-console.log(Object.assign({},obj1,obj2)) //{ name:"Rahul",age:25}
+console.log(Object.assign({}, jsClass, strength)) //{trainer: 'Rahul', count: 20}
+
+//*Example 2
+let str = "Hi"
+console.log(Object.assign({}, str)) //{0: 'H', 1: 'i'}
+
+//*Example 3
+let arr = ["Paper", "Pencil","Rock"]
+console.log(Object.assign({}, arr)) //{0: 'Paper', 1: 'Pencil', 2: 'Rock'}
+
+//*Example 4
+console.log(Object.assign({},arr,str,jsClass,strength)) //{0: 'H', 1: 'i', 2: 'Rock', trainer: 'Rahul', count: 20}
 
 //!6) Object.freeze(obj)
 --> Prevents adding new properties.
@@ -163,30 +175,32 @@ console.log(Object.assign({},obj1,obj2)) //{ name:"Rahul",age:25}
 --> Prevents deleting properties.
 --> Makes object immutable.
 //*Example:
-let student4 = {
-  name:"Rahul"
+let car = {
+  brand: "BMW",
+  color: "black",
+  price: 5000000
 }
-Object.freeze(student4)
-student4.name = "Monty"
-student4.age = 25
-delete student4.name
-console.log(student4) //{name:"Rahul"}
+Object.freeze(car)
+car.topSpeed = "250km/h"
+car.color = "white"
+delete car.price
+console.log(car) //{brand: 'BMW', color: 'black', price: 5000000}
 
 //!7) Object.seal(obj)
 --> Prevents adding new properties.
 --> Prevents deleting properties.
 --> Existing properties can be updated.
 //*Example:
-let student5 = {
-  name:"Rahul"
+let breakfast = {
+  name: "Poori",
+  qty: 4,
+  price:40
 }
-Object.seal(student5)
-student5.name = "Monty"
-student5.age = 25
-delete student5.name
-
-console.log(student5) //{name:"Monty" }
-
+Object.seal(breakfast)
+breakfast.place = "Raghavendra"
+breakfast.qty = 5
+delete breakfast.price
+console.log(breakfast) //{name: 'Poori', qty: 5, price: 40}
 
 //!freeze() vs seal()
 
@@ -207,32 +221,31 @@ console.log(student5) //{name:"Monty" }
 --> Returns true if property exists.
 --> Returns false if property does not exist.
 //*Example:
-let student6 = {
-  name:"Rahul",
-  age:25
+let juice = {
+  fruit: "Mango",
+  price: 30,
+  sugar: "less",
+  ice:2
 }
-console.log("name" in student6) //true
-console.log("city" in student6) //false
+console.log("fruit" in juice) //true
+console.log("sugar" in juice) //true
+console.log("place" in juice) //false
+console.log("toString" in juice) //true
 
 //!2) hasOwnProperty()
 --> Checks whether property belongs to object.
 --> Returns true or false.
 //*Example:
-console.log(student6.hasOwnProperty("name")) //true
-console.log(student6.hasOwnProperty("city")) //false
+console.log(juice.hasOwnProperty("fruit")) //true
+console.log(juice.hasOwnProperty("sugar")) //true
+console.log(juice.hasOwnProperty("place")) //false
+console.log(juice.hasOwnProperty("toString")) //false
+
+//!Difference
 
 //*in
 -->Checks Own + Inherited Properties
 //*hasOwnProperty()
 -->Checks Only Own Properties 
 
-
-//!Optional Chaining (?.)
---> Prevents errors while accessing nested properties.
---> Returns undefined if property does not exist.
-
-let student11 = {
-  name:"Rahul"
-}
-console.log(student11.address?.city) //undefined
 

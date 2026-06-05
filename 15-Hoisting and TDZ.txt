@@ -1,50 +1,51 @@
-HOISTING:
+//!HOISTING:
 --> Hoisting is JavaScript's default behavior of moving declarations to the top of their scope before code execution.
---> In JavaScript,  and functionsvariables are processed first before executing the code line by line.
+--> In JavaScript, functions and variables are processed first before executing the code line by line.
 --> Because of hoisting, we can sometimes use variables or functions before they are declared.
 
-Variable Hoisting
-1) Hoisting with var
+//!Variable Hoisting
+
+//!1) Hoisting with var
 --> Variables declared using var are hoisted and initialized with undefined.
-Example:
+//*Example:
 console.log(a)
 var a = 10
 
-How JavaScript sees it internally:
+//!How JavaScript sees it internally:
 var a
 console.log(a)
 a = 10
-Output:
+//*Output:
 undefined
 
-Explanation:
+//*Explanation:
 --> The variable declaration var a is moved to the top.
 --> But the value assignment a = 10 stays in the same place.
 --> Therefore before assignment, the value becomes undefined.
 
-2) Hoisting with let
+//!2) Hoisting with let
 --> Variables declared using let are hoisted.
 --> But they are NOT initialized immediately.
 --> Accessing them before declaration gives an error.
-Example:
+//*Example:
 console.log(a)
 let a = 10
 
-Output:
+//*Output:
 ReferenceError
 
-Explanation:
+//*Explanation:
 --> let variables stay inside a special phase called Temporal Dead Zone (TDZ) until the declaration line is reached.
 
-3) Hoisting with const
+//!3) Hoisting with const
 --> const is also hoisted.
 --> But like let, it stays inside Temporal Dead Zone.
 
-Example:
+//*Example:
 console.log(pi)
 const pi = 3.14
 
-Output:
+//*Output:
 ReferenceError
 
 Function Hoisting:

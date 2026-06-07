@@ -1,0 +1,190 @@
+//! Date Object
+--> Date is a built-in object in JavaScript used to work with dates and times.
+--> Date stores date and time information in milliseconds.
+--> Internally, JavaScript counts milliseconds from:
+    January 1, 1970, 00:00:00 UTC (Unix Epoch)
+--> Date is a constructor function, so objects are created using new Date().
+
+//! Creating Date Objects
+
+//* Current Date & Time
+let currentDate = new Date();
+console.log(currentDate);
+
+//* Specific Date
+let date1 = new Date("2026-08-15");
+console.log(date1);
+
+//* Specific Date and Time
+let date2 = new Date("2026-08-15T10:30:00");
+console.log(date2);
+
+//* Using Parameters
+//@Syntax: new Date(year, month, day, hours, minutes, seconds, milliseconds)
+let date3 = new Date(2026, 7, 15, 10, 30, 0);
+console.log(date3);
+
+//!Note:
+--> Months are Zero Indexed.
+ie. January = 0 , February = 1 , March = 2 , .... , December = 11
+
+//! Date Methods (Get Methods)
+let date = new Date();
+
+//* getFullYear()
+--> Returns the year.
+console.log(date.getFullYear());
+Example:
+2026
+
+//* getMonth()
+--> Returns month (0-11).
+console.log(date.getMonth());
+Example:
+7 => August
+
+//*getDate()
+--> Returns day of the month (1-31).
+console.log(date.getDate());
+Example:
+15
+
+//* getDay()
+--> Returns day of the week.
+console.log(date.getDay());
+/*
+0 => Sunday
+1 => Monday
+2 => Tuesday
+3 => Wednesday
+4 => Thursday
+5 => Friday
+6 => Saturday
+*/
+
+//* getHours()
+--> Returns hour (0-23).
+console.log(date.getHours());
+
+//* getMinutes()
+--> Returns minutes (0-59).
+console.log(date.getMinutes());
+
+//* getSeconds()
+--> Returns seconds (0-59).
+console.log(date.getSeconds());
+
+//* getMilliseconds()
+--> Returns milliseconds (0-999).
+console.log(date.getMilliseconds());
+
+//* getTime()
+--> Returns total milliseconds from Jan 1, 1970 UTC.
+console.log(date.getTime());
+
+//! Date Methods (Set Methods)
+let d1 = new Date();
+
+//* setFullYear()
+d1.setFullYear(2030);
+console.log(d1);
+
+//* setMonth()
+d1.setMonth(11);
+console.log(d1); //December
+
+//* setDate()
+d1.setDate(25);
+console.log(d1);
+
+//* setHours()
+d1.setHours(18);
+console.log(d1);
+
+//* setMinutes()
+d1.setMinutes(45);
+console.log(d1);
+
+//* setSeconds()
+d1.setSeconds(30);
+console.log(d1);
+
+//! Date Formatting Methods
+let today = new Date();
+
+//* toDateString()
+--> Returns only date in readable format.
+console.log(today.toDateString());
+Example:
+Fri Aug 15 2026
+
+//* toTimeString()
+--> Returns only time.
+console.log(today.toTimeString());
+Example:
+10:30:25 GMT+0530
+
+//* toLocaleDateString()
+--> Returns date based on local region.
+console.log(today.toLocaleDateString());
+Example:
+15/8/2026
+
+//* toLocaleTimeString()
+--> Returns time based on local region.
+console.log(today.toLocaleTimeString());
+Example:
+10:30:25 AM
+
+//* toLocaleString()
+--> Returns both date and time.
+console.log(today.toLocaleString());
+Example:
+15/8/2026, 10:30:25 AM
+
+
+//! Static Date Methods
+
+//* Date.now()
+--> Returns current timestamp in milliseconds.
+console.log(Date.now());
+Example:
+1786789800000
+
+
+//! Common Interview Programs
+
+//* Current Timestamp
+
+console.log(Date.now());
+
+//* Calculate Age
+
+let birthYear = 2000;
+let currentYear = new Date().getFullYear();
+
+console.log(currentYear - birthYear);
+
+//* Check Current Day
+
+let day = new Date().getDay();
+
+if (day === 0 || day === 6) {
+   console.log("Weekend");
+} else {
+   console.log("Weekday");
+}
+
+//* Days Between Two Dates
+
+let dateA = new Date("2026-01-01");
+let dateB = new Date("2026-01-10");
+
+let diff =
+   dateB.getTime() - dateA.getTime();
+
+let totalDays =
+   diff / (1000 * 60 * 60 * 24);
+
+console.log(totalDays); //9
+

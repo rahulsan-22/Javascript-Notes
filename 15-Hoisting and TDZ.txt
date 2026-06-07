@@ -48,80 +48,82 @@ const pi = 3.14
 //*Output:
 ReferenceError
 
-Function Hoisting:
-1) Function Declaration Hoisting
+//!Function Hoisting:
+
+//!1) Function Declaration Hoisting
 --> Function Declarations are completely hoisted.
 --> We can call the function before declaration.
 
-Example:
+//*Example:
 greet()
 function greet(){
    console.log("Good Morning")
 }
 
-Output:
+//*Output:
 Good Morning
 
-Explanation:
+//*Explanation:
 --> Entire function definition moves to the top.
-Internally:
+//*Internally:
 function greet(){
    console.log("Good Morning")
 }
 greet()
 
-2) Function Expression Hoisting
+//!2) Function Expression Hoisting
 --> Function Expressions behave according to the variable keyword used.
 
-Function Expression using var
-Example:
+//!Function Expression using var
+//*Example:
 hello()
 var hello = function(){
    console.log("Hello")
 }
 
-Output:
+//*Output:
 TypeError
 
-Explanation:
+//*Explanation:
 --> hello becomes undefined.
 --> undefined() cannot be executed as a function.
 
-Internally:
+//*Internally:
 var hello
 hello()
 hello = function(){
    console.log("Hello")
 }
 
-Function Expression using let
-Example:
+//*Function Expression using let
+
+//*Example:
 hello()
 let hello = function(){
    console.log("Hello")
 }
 
-Output:
+//*Output:
 ReferenceError
 
-Arrow Function Hoisting
+//*Arrow Function Hoisting
 Example:
 sum()
 const sum = ()=>{
    console.log("Arrow Function")
 }
-Output:
+//*Output:
 ReferenceError
 
-Explanation:
+//*Explanation:
 --> Arrow Functions stored inside variables follow variable hoisting rules.
 
-TEMPORAL DEAD ZONE (TDZ)
+//!TEMPORAL DEAD ZONE (TDZ)
 --> The time period between variable creation and variable initialization is called Temporal Dead Zone (TDZ).
 --> During this period, variables declared with let and const cannot be accessed.
 
 ==============================
-HOISTING & TDZ FINAL SUMMARY
+//!HOISTING & TDZ FINAL SUMMARY
 ==============================
 
 | Type                              | Hoisted? | Initial Value During Hoisting | Can Access Before Declaration? | TDZ Applies? | Output Before Declaration |

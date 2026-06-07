@@ -102,6 +102,7 @@ console.log(Math.min(10, 20, 30)); // 10
 console.log(Math.sign(10)); // 1
 console.log(Math.sign(-10)); // -1
 console.log(Math.sign(0)); // 0
+console.log(Math.sign(-0)); // -0
 
 //* Math.random()
 --> Returns a random decimal number between 0 and 1.

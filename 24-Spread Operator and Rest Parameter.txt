@@ -1,0 +1,135 @@
+//! Spread Operator (...) & Rest Parameter (...)
+--> Both Spread Operator and Rest Parameter use the same syntax (...).
+--> The difference depends on where and how they are used.
+--> Introduced in ES6 (ECMAScript 2015).
+
+//! Spread Operator (...)
+--> Spread Operator expands/unpacks elements from Arrays or Objects.
+--> It breaks a collection into individual elements.
+--> Used while creating a new Array, Object, or passing arguments to a function.
+
+//! Spread Operator with Arrays
+
+//! Copying an Array
+let colors = ["Red", "Green", "Blue"];
+let copiedColors = [...colors];
+console.log(copiedColors); //["Red", "Green", "Blue"]
+
+//! Merging Arrays
+let frontend = ["HTML", "CSS"];
+let javascript = ["JavaScript", "ReactJS"];
+
+let courses = [...frontend, ...javascript];
+
+console.log(courses); //["HTML","CSS","JavaScript","ReactJS"]
+
+//! Spread Operator with Objects
+let student = {
+   name: "Rahul",
+   age: 24
+};
+
+let copiedStudent = {
+   ...student
+};
+
+console.log(copiedStudent); //{name:'Rahul',age:24}
+
+//! Merging Objects
+let personal = {
+   name: "Rahul"
+};
+
+let professional = {
+   role: "Developer"
+};
+
+let details = {
+   ...personal,
+   ...professional
+};
+
+console.log(details); //{name:"Rahul",role:"Developer"}
+
+//! Note:
+--> If duplicate keys exist, the last value overrides the previous value.
+let obj1 = {
+   name: "Rahul"
+};
+
+let obj2 = {
+   name: "Scott"
+};
+
+let result = {
+   ...obj1,
+   ...obj2
+};
+
+console.log(result); //{name:"Scott"}
+
+//! Spread Operator with Functions
+function add(a, b, c) {
+   return a + b + c;
+}
+
+let nums = [10, 20, 30];
+console.log(add(...nums)); //60
+
+//! Rest Parameter (...)
+--> Rest Parameter collects multiple values into a single Array.
+--> It packs remaining values into one variable.
+--> Mainly used in Function Parameters and Destructuring.
+
+//! Rest Parameter in Functions
+function display(...data) {
+   console.log(data); //[10,20,30,40]
+}
+display(10, 20, 30, 40); 
+
+//! Note:
+--> Rest Parameter always returns an Array.
+
+//! Example
+function sum(...numbers) {
+   let total = 0;
+   for (let num of numbers) {
+      total += num;
+   }
+   return total;
+}
+
+console.log(sum(10, 20)); //30
+console.log(sum(10, 20, 30, 40)); //100
+
+//! Rest Parameter with Normal Parameters
+function employee(name, salary, ...skills) {
+   console.log(name); //Rahul
+   console.log(salary); //50000
+   console.log(skills); //["HTML","CSS","JavaScript","ReactJS"]
+}
+employee("Rahul",50000,"HTML","CSS","JavaScript","ReactJS");
+
+//! Note:
+--> Rest Parameter must always be the last parameter.
+
+//! Rest Parameter in Array Destructuring
+let numbers1 = [10, 20, 30, 40, 50];
+
+let [a, b, ...remaining] = numbers1;
+
+console.log(a); //10
+console.log(b); //20
+console.log(remaining); //[30,40,50]
+
+//! Rest Parameter in Object Destructuring
+let mobile = {
+   brand: "Samsung",
+   model: "S25",
+   price: 90000,
+   color: "Black"
+};
+
+let { brand, ...otherDetails } = mobile;
+console.log(brand); //Samsung
+console.log(otherDetails); //{model: 'S25', price: 90000, color: 'Black'}

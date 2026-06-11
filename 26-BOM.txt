@@ -1,0 +1,196 @@
+//! Browser Object Model (BOM)
+--> BOM stands for Browser Object Model.
+--> BOM allows JavaScript to interact with the Browser.
+--> Using BOM, we can control browser windows, navigate pages, display dialogs, get browser information, and much more.
+--> BOM is provided by the Browser, not by JavaScript itself.
+
+//! BOM Hierarchy
+
+window
+│
+├── document
+├── location
+├── history
+├── navigator
+├── screen
+└── console
+
+//! Note:
+--> window is the top-level object which represents the browser window.
+--> All BOM objects are properties of the window object.
+
+//*Example
+console.log(window);
+
+
+//! Window Methods
+
+//!alert()
+--> Displays a message box with an OK button.
+//*Example:
+alert("Welcome to JavaScript");
+
+//! confirm()
+--> Displays a confirmation box with OK and Cancel buttons.
+--> Returns true or false.
+//*Example:
+let result = confirm("Are you sure?");
+console.log(result);
+//*Note:
+OK     => true
+Cancel => false
+
+//! prompt()
+--> Displays an input box.
+--> Returns user input.
+//*Example:
+let name = prompt("Enter Your Name");
+console.log(name);
+
+//! open()
+--> Opens a new browser window/tab.
+//*Example:
+window.open("https://www.google.com");
+
+//! close()
+--> Closes the current browser window.
+//*Example:
+window.close();
+
+//! print()
+--> Opens the browser print dialog.
+//*Example:
+window.print();
+
+
+//! Window Properties
+
+//!innerWidth
+--> Returns browser viewport width.
+//*Example:
+console.log(window.innerWidth);
+
+//!innerHeight
+--> Returns browser viewport height.
+//*Example
+console.log(window.innerHeight);
+
+//! Location Object
+--> location object contains information about the current URL.
+--> Used for navigation and URL manipulation.
+
+//*Example
+console.log(location);
+
+//! Common Location Properties
+
+//!href
+--> Returns complete URL.
+console.log(location.href);
+//*Example: https://www.google.com/search?q=javascript
+
+//!protocol
+--> Returns protocol.
+console.log(location.protocol);
+
+//*Example: https:
+
+//!hostname
+--> Returns domain name.
+console.log(location.hostname);
+//*Example: www.google.com
+
+//!pathname
+--> Returns page path.
+console.log(location.pathname);
+
+//*Example: /search
+
+//! Location Methods
+
+//!reload()
+--> Reloads the current page.
+//*Example:
+location.reload();
+
+//! assign()
+--> Navigates to another page.
+//*Example:
+location.assign("https://www.google.com");
+
+//! replace()
+--> Replaces current page.
+--> User cannot return using Back button.
+//*Example:
+location.replace("https://www.google.com");
+
+//! History Object
+--> Used to navigate browser history.
+//*Example
+console.log(history);
+
+//! History Methods
+
+//!back()
+--> Moves to previous page.
+//*Example:
+history.back();
+
+//! forward()
+--> Moves to next page.
+//*Example:
+history.forward();
+
+//! go()
+--> Moves to a specific history position.
+history.go(-2); //back
+history.go(3);  //forward
+
+//! Navigator Object
+--> Provides information about the browser.
+//*Example
+console.log(navigator);
+
+//! Common Navigator Properties
+
+//!language
+--> Returns browser language.
+//*Example:
+console.log(navigator.language); // en-US
+
+//!onLine
+--> Checks internet connection status.
+//*Example:
+console.log(navigator.onLine);
+//*Note:
+true  => Online
+false => Offline
+
+//! Screen Object
+--> Provides information about the user's screen.
+
+//*Example
+console.log(screen);
+
+//! Screen Properties
+
+//!width
+--> Returns screen width.
+//*Example:
+console.log(screen.width);
+
+//!height
+--> Returns screen height.
+//*Example:
+console.log(screen.height);
+
+//!availWidth
+--> Returns available screen width.
+//*Example:
+console.log(screen.availWidth);
+
+//!availHeight
+--> Returns available screen height.
+//*Example:
+console.log(screen.availHeight);
+

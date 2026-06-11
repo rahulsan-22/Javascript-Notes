@@ -1,4 +1,4 @@
-Part-1:Fundamentals
+//!Part-1:Fundamentals
 1.Introduction
 2.History
 3.Keyfeatures
@@ -13,7 +13,7 @@ Part-1:Fundamentals
 12.Decision Statements
 13.Loops
 
-Part-2:Core Concepts
+//!Part-2:Core Concepts
 14.Functions
 15.Hoisting and TDZ (Temporal Dead Zone)
 16.Difference between var,let and const
@@ -26,7 +26,7 @@ Part-2:Core Concepts
 23.Destructuring
 24.Spread Operator and Rest Parameter
 
-Part-3: Advanced and Asynchronous JavaScript
+//!Part-3: Advanced and Asynchronous JavaScript
 25.setTimeout() and setInterval()
 26.BOM (Browser Object Model)
 27.DOM (Document Object Model)

@@ -8,19 +8,19 @@ let message = `Welcome`;
 
 //!Ways to Create Strings:
 
-1) Using Single Quotes
+//*1) Using Single Quotes
 let str1 = 'Something'
 console.log(str1) //Something
 console.log(typeof str1) //string
 
-2) Using Double Quotes
+//*2) Using Double Quotes
 let str2 = "Breakfast"
 console.log(str2) //Breakfast
 console.log(typeof str2) //string
 
-3) Using Template Literals (Backticks)
+//*3) Using Template Literals (Backticks)
 --> Used for interpolation and multi-line strings.
-Example:
+//@Example:
 let str3 = `Pavan`
 console.log(`My name is ${str3} and my age is ${20 + 5 + 1}`)
 console.log(`My 
@@ -58,44 +58,44 @@ Note:
 
 //!BUILT-IN METHODS:
 
-1) toUpperCase()
+//!1) toUpperCase()
 --> Converts string into uppercase.
-Example:
+//*Example:
 let str1 = "MaRkER"
 console.log(str1.toUpperCase()) //MARKER
 
-2) toLowerCase()
+//!2) toLowerCase()
 --> Converts string into lowercase.
-Example:
+//*Example:
 let str2 = "ReMoTE"
 console.log(str2.toLowerCase()) //remote
 
-3) trim()
+//!3) trim()
 --> Removes spaces from beginning and ending.
-Example:
+//*Example:
 let str3 = "         hello    everyone      "
 console.log(str3) //         hello    everyone      
 console.log(str3.length) //32
 console.log(str3.trim()) //hello    everyone
 console.log((str3.trim()).length) //17
-Note:
+//*Note:
 --> Does not remove spaces between words.
 
-4) at(index)
+//!4) at(index)
 --> Returns character at specified index.
 --> Supports negative indexing.
-Example:
+//*Example:
 let str4 = "JAVASCRIPT"
 console.log(str4.at(0)) //J
 console.log(str4.at(7)) //I
 console.log(str4.at(10)) //undefined
 console.log(str4.at(-1)) //T
 
-5) slice(startIndex, endIndex)
+//!5) slice(startIndex, endIndex)
 --> Extracts part of string.
 --> Supports Negative Indexing: values start from end.
 --> If StartIndex > EndIndex returns empty string.
-Example:
+//*Example:
 let str5 = "GOOD MORNING"
 console.log(str5.slice(3)) //D MORNING
 console.log(str5.slice(0, 3)) //GOO
@@ -108,7 +108,7 @@ console.log(str5.slice(-10, 7)) //OD MO
 console.log(str5.slice(10,2)) //""
 console.log(str5.slice(100, 2)) //""
 console.log(str5) //GOOD MORNING
-Note:
+//*Note:
 --> Start index included whereas End index excluded.
 --> If only Start Index specified extracts from that start index till end.
 --> Original string does not change.

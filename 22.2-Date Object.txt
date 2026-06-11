@@ -142,8 +142,7 @@ console.log(today.toLocaleString());
 Example:
 15/8/2026, 10:30:25 AM
 
-
-//! Static Date Methods
+//! Common Interview Programs
 
 //* Date.now()
 --> Returns current timestamp in milliseconds.
@@ -151,22 +150,13 @@ console.log(Date.now());
 Example:
 1786789800000
 
-
-//! Common Interview Programs
-
-//* Current Timestamp
-
-console.log(Date.now());
-
 //* Calculate Age
-
 let birthYear = 2000;
-let currentYear = new Date().getFullYear();
+let currentYear = new Date().getFullYear()
 
 console.log(currentYear - birthYear);
 
 //* Check Current Day
-
 let day = new Date().getDay();
 
 if (day === 0 || day === 6) {
@@ -176,15 +166,10 @@ if (day === 0 || day === 6) {
 }
 
 //* Days Between Two Dates
-
 let dateA = new Date("2026-01-01");
 let dateB = new Date("2026-01-10");
 
-let diff =
-   dateB.getTime() - dateA.getTime();
-
-let totalDays =
-   diff / (1000 * 60 * 60 * 24);
-
+let diff = dateB.getTime() - dateA.getTime();
+let totalDays = diff / (1000 * 60 * 60 * 24);
 console.log(totalDays); //9
 

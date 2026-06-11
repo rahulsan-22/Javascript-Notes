@@ -1,0 +1,147 @@
+//! setTimeout() & setInterval()
+--> setTimeout() and setInterval() are built-in JavaScript Timer Functions.
+--> They are used to execute code after a specified delay.
+--> Time is measured in milliseconds (ms).
+
+//! Note:
+--> 1000 ms = 1 second
+
+//! setTimeout()
+--> setTimeout() executes a function only once after the specified delay.
+
+//@ Syntax:
+setTimeout(function, delay);
+
+//! Example 1
+setTimeout(() => {
+   console.log("Hello Students");
+}, 3000);
+
+Output:(after 3 seconds)
+Hello Students
+
+//! Example 2
+function greet() {
+   console.log("Welcome to JavaScript");
+}
+setTimeout(greet, 2000);
+
+Output:(after 2 seconds)
+Welcome to JavaScript
+
+//! Example 3 (Passing Parameters)
+function display(name) {
+   console.log(`Hello ${name}`);
+}
+setTimeout(display, 3000, "Rahul");
+
+Output:(after 3 seconds)
+Hello Rahul
+
+//! clearTimeout()
+--> Used to stop/cancel a setTimeout() before it executes.
+
+//!Example
+setTimeout(() => {
+  clearTimeout(plan)
+  document.writeln("<h1>Its Raining,Cricket Cancelled</h1>")
+}, 3000)
+
+let plan = setTimeout(() => {
+  document.writeln("<h1>Go out and play Cricket</h1>")
+},5000)
+
+Output:
+Its Raining,Cricket Cancelled
+
+//! setInterval()
+--> setInterval() executes a function repeatedly after every specified delay.
+
+//@ Syntax:
+setInterval(function, delay);
+
+//! Example 1
+setInterval(() => {
+   console.log("Hello");
+}, 2000);
+
+Output:
+Hello
+Hello
+Hello
+...
+(Every 2 seconds)
+
+//! Example 2
+function showTime() {
+   console.log(new Date());
+}
+setInterval(showTime, 1000);
+
+Output:
+Current Date & Time
+(Current Date & Time repeats every second)
+
+//! clearInterval()
+--> Used to stop/cancel a setInterval().
+
+let intervalId = setInterval(() => {
+   console.log("Running...");
+}, 1000);
+
+clearInterval(intervalId);
+
+//! Example
+let count = 5;
+let timer = setInterval(() => {
+  document.writeln(`<h1>${count}</h1>`)
+  count--
+  if (count < 0) {
+    clearInterval(timer)
+    document.writeln("<h1>Completed...</h1>")
+  }
+},1000)
+
+Output:
+5
+4
+3
+2
+1
+0
+Completed
+(Stops Automatically)
+
+//! Difference Between setTimeout() and setInterval()
+setTimeout()
+------------
+--> Executes only once.
+--> Runs after a specified delay.
+--> Used for one-time tasks.
+
+Example:
+setTimeout(()=>{
+   console.log("Hello");
+},2000);
+
+Output:
+Hello
+
+--------------------------------
+
+setInterval()
+-------------
+--> Executes repeatedly.
+--> Runs after every specified interval.
+--> Used for repeated tasks.
+
+Example:
+setInterval(()=>{
+   console.log("Hello");
+},2000);
+
+Output:
+Hello
+Hello
+Hello
+...

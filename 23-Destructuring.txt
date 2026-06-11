@@ -1,0 +1,120 @@
+//! Destructuring
+--> Destructuring is a JavaScript feature used to extract values from Arrays or properties from Objects and store them into variables.
+--> It provides a shorter and cleaner way of accessing data.
+--> Introduced in ES6 (ECMAScript 2015).
+
+//! Array Destructuring
+let colors = ["Red", "Green", "Blue"];
+
+//*Traditional Way
+let color1 = colors[0];
+let color2 = colors[1];
+console.log(color1, color2);
+
+//*Destructuring Way
+let [a, b, c] = colors;
+console.log(a, b, c);
+
+//!Skipping Elements
+let fruits = ["Apple", "Mango", "Orange", "Grapes"];
+let [first, , third] = fruits;
+console.log(first); // Apple
+console.log(third); // Orange
+
+//! Default Values
+let nums = [10];
+let [x, y = 20] = nums;
+console.log(x); //10
+console.log(y); //20
+
+//! Swapping Variables
+let p = 10;
+let q = 20;
+[p, q] = [q, p];
+
+console.log(p); //20
+console.log(q); //10
+
+
+//! Object Destructuring
+let student = {
+   name: "Rahul",
+   age: 24,
+   city: "Hyderabad"
+};
+
+//*Traditional Way
+let studentName = student.name;
+let studentAge = student.age;
+
+//*Destructuring Way
+let { name, age, city } = student;
+
+console.log(name);
+console.log(age);
+console.log(city);
+
+//! Note:
+--> Variable names must match property names while destructuring objects.
+
+//! Renaming Variables
+let employee = {
+   empName: "Scott",
+   salary: 50000
+};
+
+let { empName: eName, salary: empSalary } = employee;
+
+console.log(eName);
+console.log(empSalary);
+
+//! Default Values in Objects
+let user = {
+   username: "Rahul"
+};
+
+let { username, role = "Student" } = user;
+
+console.log(username); //Rahul
+console.log(role); //Student
+
+//! Nested Object Destructuring
+let person = {
+   name: "Rahul",
+   address: {
+      city: "Hyderabad",
+      state: "Telangana"
+   }
+};
+
+let {
+   address: { city, state }
+} = person;
+
+console.log(city);
+console.log(state);
+
+//! Function Parameter Destructuring
+function displayStudent({ name, age }) {
+   console.log(name);
+   console.log(age);
+}
+displayStudent({name: "Rahul",age: 24});
+
+//!NOTE:
+
+//*Array Destructuring
+-------------------
+--> Based on Position/Index.
+--> Variable names can be anything.
+
+Example:
+let [a,b] = [10,20];
+
+//*Object Destructuring
+--------------------
+--> Based on Property Names.
+--> Property names must match.
+
+Example:
+let {name, age} = obj;

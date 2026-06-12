@@ -53,7 +53,7 @@ let str = "JavaScript";
 console.log(str.length); //10
 console.log(str[str.length - 1]); //t
 console.log(str[str.length - 2]); //p
-Note:
+//*Note:
 -->length - 1 always gives last index.
 
 //!BUILT-IN METHODS:
@@ -113,11 +113,11 @@ console.log(str5) //GOOD MORNING
 --> If only Start Index specified extracts from that start index till end.
 --> Original string does not change.
 
-6) substring(startIndex, endIndex)
+//!6) substring(startIndex, endIndex)
 --> Similar to slice() but does not support negative indexing.
 --> Negative index values become 0.
 --> If StartIndex > EndIndex swaps values.
-Example:
+//*Example:
 let str6 = "GOOD MORNING"
 console.log(str6.substring(3)) //D MORNING
 console.log(str6.substring(0, 3)) //GOO
@@ -131,11 +131,11 @@ console.log(str6.substring(10,2)) //OD MORNI
 console.log(str6.substring(100, 2)) //OD MORNING
 console.log(str6) //GOOD MORNING
 
-7) includes(searchValue, startIndex)
+//!7) includes(searchValue, startIndex)
 --> Checks whether substring exists.
 --> Negative index values become 0.
 --> Returns boolean value i.e true if exists and false if not exists
-Example:
+//*Example:
 let str7 = "PAVAN SIR"
 console.log(str7.includes("A")) //true
 console.log(str7.includes("Z")) //false
@@ -146,11 +146,11 @@ console.log(str7.includes("VA", 3)) //false
 console.log(str7.includes("SIR",-7)) //true
 console.log(str7.includes("SIR",-2)) //true
 
-8) indexOf(searchValue, startIndex)
+//!8) indexOf(searchValue, startIndex)
 --> Returns first occurrence index.
 --> Negative index values become 0.
 --> If value not found returns -1.
-Example:
+//*Example:
 let str8 = "PAVAN SIR"
 console.log(str8.indexOf("A")) //1
 console.log(str8.indexOf("Z")) //-1
@@ -161,13 +161,13 @@ console.log(str8.indexOf("VA", 3)) //-1
 console.log(str8.indexOf("SIR",-7)) //6
 console.log(str8.indexOf("SIR", -2)) //6
 
-9) replace(oldValue, newValue)
+//!9) replace(oldValue, newValue)
 --> Replace Only First Occurrence.
-Example:
+//*Example:
 let str9 = "BIRYANI BIRYANI BIRYANI"
 console.log(str9.replace("BIRYANI","SHAWARMA")) //SHAWARMA BIRYANI BIRYANI
 console.log(str9.replaceAll("BIRYANI","SHAWARMA")) //SHAWARMA SHAWARMA SHAWARMA
-Note:
+//*Note:
 --> To replace all occurrences use replaceAll().
 
 //!10) split(separator, limit)
@@ -208,6 +208,4 @@ console.log(str12.endsWith("",-100)) //true
 //*Note:
 --> String methods are case-sensitive.
 --> [] does not support negative indexing.
-
-
 

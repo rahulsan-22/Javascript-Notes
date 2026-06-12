@@ -5,7 +5,6 @@
 --> BOM is provided by the Browser, not by JavaScript itself.
 
 //! BOM Hierarchy
-
 window
 │
 ├── document
@@ -17,11 +16,10 @@ window
 
 //! Note:
 --> window is the top-level object which represents the browser window.
---> All BOM objects are properties of the window object.
+--> All BOM bjects are properties of the window object.
 
 //*Example
 console.log(window);
-
 
 //! Window Methods
 
@@ -50,18 +48,17 @@ console.log(name);
 //! open()
 --> Opens a new browser window/tab.
 //*Example:
-window.open("https://www.google.com");
+open("https://www.google.com");
 
 //! close()
 --> Closes the current browser window.
 //*Example:
-window.close();
+close();
 
 //! print()
 --> Opens the browser print dialog.
 //*Example:
 window.print();
-
 
 //! Window Properties
 
@@ -166,31 +163,68 @@ console.log(navigator.onLine);
 true  => Online
 false => Offline
 
-//! Screen Object
---> Provides information about the user's screen.
+//! Geolocation API
+--> Used to get the user's current location.
+--> Available through navigator.geolocation.
+--> Requires user permission.
 
-//*Example
-console.log(screen);
+//*Syntax
+navigator.geolocation.getCurrentPosition(
+   (position) => {
+      console.log(position.coords.latitude);
+      console.log(position.coords.longitude);
+   }
+);
 
-//! Screen Properties
+//! Web Storage API (localStorage & sessionStorage)
+--> Web Storage API allows storing data in the browser.
+--> Data is stored as Key-Value pairs.
+--> Both store data as Strings.
+--> If you store Arrays or Objects, convert them using JSON.stringify().
 
-//!width
---> Returns screen width.
-//*Example:
-console.log(screen.width);
+//! Types of Storage
+1. localStorage
+2. sessionStorage
 
-//!height
---> Returns screen height.
-//*Example:
-console.log(screen.height);
+//! localStorage
+--> Stores data permanently until manually removed.
+--> Data remains even after closing the browser.
+--> Shared across tabs of the same origin.
 
-//!availWidth
---> Returns available screen width.
-//*Example:
-console.log(screen.availWidth);
+//*Store Data
+localStorage.setItem("name", "Rahul");
 
-//!availHeight
---> Returns available screen height.
-//*Example:
-console.log(screen.availHeight);
+//*Retrieve Data
+console.log(
+   localStorage.getItem("name")
+);
+
+//*Remove Specific Item
+localStorage.removeItem("name");
+
+//*Remove All Items
+localStorage.clear();
+
+//! sessionStorage
+--> Stores data only for the current browser session.
+--> Data is removed when the tab/browser is closed.
+--> Not shared between tabs.
+
+//*Store Data
+sessionStorage.setItem("username","Rahul");
+
+//*Retrieve Data
+console.log(
+   sessionStorage.getItem("username")
+);
+
+//*Remove Specific Item
+sessionStorage.removeItem(
+   "username"
+);
+
+//*Remove All Items
+sessionStorage.clear();
+
+
 

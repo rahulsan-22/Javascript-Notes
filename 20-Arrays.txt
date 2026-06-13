@@ -38,7 +38,7 @@ let arr = ["Html","Css","Js"];
 console.log(arr.length); //3
 console.log(arr[arr.length - 1]); //Js
 console.log(arr[arr.length - 2]); //Css
-Note:
+//*Note:
 -->length - 1 always gives last index.
 
 //!Arrays are mutable (Values can be changed after creation)
@@ -73,8 +73,6 @@ console.log(arr); //[10,20]
 let arr = [10, 20, 30];
 arr.shift();
 console.log(arr); //[20,30]
-
-
 
 //!Methods
 

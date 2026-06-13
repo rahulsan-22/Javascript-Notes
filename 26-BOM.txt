@@ -16,7 +16,7 @@ window
 
 //! Note:
 --> window is the top-level object which represents the browser window.
---> All BOM bjects are properties of the window object.
+--> All BOM objects are properties of the window object.
 
 //*Example
 console.log(window);
@@ -140,8 +140,8 @@ history.forward();
 
 //! go()
 --> Moves to a specific history position.
-history.go(-2); //back
-history.go(3);  //forward
+history.go(-2); //2 pages back
+history.go(3);  //3 pages forward
 
 //! Navigator Object
 --> Provides information about the browser.

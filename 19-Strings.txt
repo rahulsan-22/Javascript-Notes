@@ -182,6 +182,7 @@ console.log(str10.split("R")) //['','CB GT ','','']
 
 //!11) startsWith(searchValue, startIndex)
 --> Checks whether string starts with specified value.
+-->Negative startIndex is treated as 0
 //*Example:
 let str11 = "SOMETHING"
 console.log(str11.startsWith("S")) //true
@@ -195,6 +196,7 @@ console.log(str11.startsWith("TH", 4)) //true
 
 //!12) endsWith(searchValue, length)
 --> Checks whether string ends with specified value.
+-->Negative length is treated as 0
 //*Example:
 let str12 = "ANYTHING"
 console.log(str12.endsWith("NG")) //true

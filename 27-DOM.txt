@@ -1,0 +1,256 @@
+//! Document Object Model (DOM)
+--> DOM stands for Document Object Model.
+--> DOM represents the HTML document as a tree-like structure of objects.
+--> Using DOM, JavaScript can access, modify, add, delete, and style HTML elements dynamically.
+--> DOM is created by the Browser when a web page is loaded.
+
+//! DOM Hierarchy
+document
+│
+└── html
+    │
+    ├── head
+    │
+    └── body
+         │
+         ├── h1
+         ├── p
+         ├── div
+         └── ...
+
+//! Note:
+--> document is the root object of DOM.
+--> All HTML elements are accessible through the document object.
+
+//*Example
+console.log(document);
+
+//! Selecting Elements
+
+//! getElementById()
+--> Selects an element using its id.
+--> Returns a single element.
+
+//*Example
+let heading =
+document.getElementById("title");
+
+console.log(heading);
+
+//! getElementsByClassName()
+--> Selects elements using class name.
+--> Returns HTMLCollection.
+
+//*Example
+let items =
+document.getElementsByClassName("box");
+
+console.log(items);
+
+//! getElementsByTagName()
+--> Selects elements using tag name.
+--> Returns HTMLCollection.
+
+//*Example
+let paras =
+document.getElementsByTagName("p");
+
+console.log(paras);
+
+//! querySelector()
+--> Selects the first matching element.
+--> Uses CSS Selectors.
+
+//*Example
+let element =
+document.querySelector(".box");
+
+console.log(element);
+
+//! querySelectorAll()
+--> Selects all matching elements.
+--> Returns NodeList.
+
+//*Example
+let elements =
+document.querySelectorAll(".box");
+
+console.log(elements);
+
+//! Changing Content
+
+//! innerText
+--> Gets or sets visible text content.
+
+//*Example
+let heading =
+document.getElementById("title");
+
+heading.innerText =
+"Welcome Student";
+
+//! textContent
+--> Gets or sets all text content.
+--> Includes hidden text.
+
+//*Example
+heading.textContent =
+"JavaScript DOM";
+
+//! innerHTML
+--> Gets or sets HTML content.
+
+//*Example
+heading.innerHTML =
+"<i>Hello Student</i>";
+
+//! Changing Styles
+
+//! style Property
+--> Used to apply inline CSS styles.
+
+//*Example
+let box =
+document.querySelector(".box");
+
+box.style.color = "red";
+box.style.backgroundColor = "yellow";
+
+//! Working with Attributes
+
+//! getAttribute()
+--> Returns attribute value.
+
+//*Example
+let link =
+document.querySelector("a");
+
+console.log(
+   link.getAttribute("href")
+);
+
+//! setAttribute()
+--> Sets or updates an attribute.
+
+//*Example
+link.setAttribute(
+   "href",
+   "https://www.google.com"
+);
+
+//! removeAttribute()
+--> Removes an attribute.
+
+//*Example
+link.removeAttribute("target");
+
+//! Class Manipulation
+
+//! classList.add()
+--> Adds a class.
+
+//*Example
+box.classList.add("active");
+
+//! classList.remove()
+--> Removes a class.
+
+//*Example
+box.classList.remove("active");
+
+//! classList.toggle()
+--> Adds class if absent.
+--> Removes class if present.
+
+//*Example
+box.classList.toggle("dark");
+
+//! classList.contains()
+--> Checks whether a class exists.
+--> Returns true or false.
+
+//*Example
+console.log(
+   box.classList.contains("active")
+);
+
+//! Creating Elements
+
+//! createElement()
+--> Creates a new HTML element.
+
+//*Example
+let para =
+document.createElement("p");
+
+para.innerText =
+"New Paragraph";
+
+//! appendChild()
+--> Adds element at the end.
+
+//*Example
+document.body.appendChild(para);
+
+//! prepend()
+--> Adds element at the beginning.
+
+//*Example
+document.body.prepend(para);
+
+//! remove()
+--> Removes an element.
+
+//*Example
+para.remove();
+
+
+//! DOM Traversing
+
+//! parentElement
+--> Returns parent element.
+
+//*Example
+console.log(
+   box.parentElement
+);
+
+//! children
+--> Returns child elements.
+
+//*Example
+console.log(
+   document.body.children
+);
+
+//! firstElementChild
+--> Returns first child element.
+
+//*Example
+console.log(
+   document.body.firstElementChild
+);
+
+//! lastElementChild
+--> Returns last child element.
+
+//*Example
+console.log(
+   document.body.lastElementChild
+);
+
+//! nextElementSibling
+--> Returns next sibling element.
+
+//*Example
+console.log(
+   box.nextElementSibling
+);
+
+//! previousElementSibling
+--> Returns previous sibling element.
+
+//*Example
+console.log(
+   box.previousElementSibling
+);

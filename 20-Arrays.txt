@@ -97,7 +97,6 @@ let arr2 = ["Red","Green","Blue"]
 console.log(arr2.toString()) //Red,Green,Blue
 console.log(typeof arr2.toString()) //string
 
-
 //!3) concat(...arr)
 --> Used to merge two or more arrays.
 --> Does not modify the original arrays.
@@ -118,7 +117,6 @@ console.log(sub2.concat(sub1,"React")) //['Js', 'Html', 'Css', 'React']
 let arr4 = ["rcb","srh","csk","dc"]
 console.log(arr4.join("☠️")) //rcb☠️srh☠️csk☠️dc
 console.log(arr4.join("-")) //rcb-srh-csk-dc
-
 
 //!5) reverse()
 --> Reverses the order of elements in an array.
@@ -143,7 +141,6 @@ console.log(arr6.includes("Js",4)) //false
 console.log(arr6.includes("Css",3)) //true
 console.log(arr6.includes("React",-5)) //true
 console.log(arr6.includes("Java",-500)) //true
-
 
 //!7) indexOf(searchElement,startIndex)
 --> Returns the index of the first matching element.

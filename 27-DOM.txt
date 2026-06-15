@@ -32,9 +32,7 @@ console.log(document);
 --> Returns a single element.
 
 //*Example
-let heading =
-document.getElementById("title");
-
+let heading = document.getElementById("title");
 console.log(heading);
 
 //! getElementsByClassName()
@@ -42,9 +40,7 @@ console.log(heading);
 --> Returns HTMLCollection.
 
 //*Example
-let items =
-document.getElementsByClassName("box");
-
+let items = document.getElementsByClassName("box");
 console.log(items);
 
 //! getElementsByTagName()
@@ -52,57 +48,59 @@ console.log(items);
 --> Returns HTMLCollection.
 
 //*Example
-let paras =
-document.getElementsByTagName("p");
-
+let paras = document.getElementsByTagName("p");
 console.log(paras);
 
 //! querySelector()
 --> Selects the first matching element.
---> Uses CSS Selectors.
+--> Uses CSS Selectors like id,class etc...
 
-//*Example
-let element =
-document.querySelector(".box");
+//*Example:
 
-console.log(element);
+//*ID
+let headingTag = document.querySelector("#heading")
+console.log(headingTag)
+//*CLASS
+let divContent = document.querySelector(".content")
+console.log(divContent)
+//*TAGNAME
+let paragraphs = document.querySelector("p")
+console.log(paragraphs)
 
 //! querySelectorAll()
 --> Selects all matching elements.
 --> Returns NodeList.
 
-//*Example
-let elements =
-document.querySelectorAll(".box");
+//*Example:
 
-console.log(elements);
+//*ID
+let buttonTag = document.querySelectorAll("#btn")
+console.log(buttonTag)
+//*CLASS
+let contents = document.querySelectorAll(".content")
+console.log(contents)
+//*TAGNAME
+let paraContents = document.querySelectorAll("p")
+console.log(paraContents)
 
 //! Changing Content
 
 //! innerText
 --> Gets or sets visible text content.
-
 //*Example
-let heading =
-document.getElementById("title");
-
-heading.innerText =
-"Welcome Student";
+let heading = document.getElementById("title");
+heading.innerText = "Welcome Student";
 
 //! textContent
 --> Gets or sets all text content.
 --> Includes hidden text.
-
 //*Example
-heading.textContent =
-"JavaScript DOM";
+heading.textContent = "JavaScript DOM";
 
 //! innerHTML
 --> Gets or sets HTML content.
-
 //*Example
-heading.innerHTML =
-"<i>Hello Student</i>";
+heading.innerHTML = "<i>Hello Student</i>";
 
 //! Changing Styles
 

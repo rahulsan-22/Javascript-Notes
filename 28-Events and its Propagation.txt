@@ -1,0 +1,410 @@
+//! EVENTS
+--> Events are actions or occurrences that happen in the Browser.
+--> JavaScript can detect these events and execute specific code.
+--> Events make web pages interactive and dynamic.
+--> Events can be triggered by Users or by the Browser itself.
+
+//*Examples
+--> Clicking a Button
+--> Typing in an Input Field
+--> Submitting a Form
+--> Pressing a Keyboard Key
+--> Loading a Page
+--> Moving the Mouse
+
+//! Event Handling
+--> Event Handling means responding to an Event using JavaScript.
+--> The function that executes when an event occurs is called an Event Handler.
+
+//*Example
+<button onclick="showMsg()">Click Me</button>
+
+function showMsg(){
+   alert("Button Clicked");
+}
+
+//! Ways to Attach Events
+
+//! 1. Inline Event Handling
+--> Event is written directly inside HTML.
+
+//*Example
+<button onclick="alert('Hello')">
+   Click Me
+</button>
+
+//! 2. DOM Property Method
+--> Event is assigned using JavaScript.
+--> Only one handler can be attached.
+
+//*Example
+let btn = document.querySelector("button");
+
+btn.onclick = function(){
+   console.log("Clicked");
+};
+
+//! 3. addEventListener()
+--> Recommended Approach.
+--> Allows multiple event handlers.
+--> Does not overwrite existing handlers.
+
+//*Example
+let btn = document.querySelector("button");
+
+btn.addEventListener(
+   "click",
+   () => {
+      console.log("Clicked");
+   }
+);
+
+//! Event Object
+--> Whenever an Event occurs, JavaScript automatically creates an Event Object.
+--> It contains information about the Event.
+
+//*Example
+btn.addEventListener(
+   "click",
+   (event) => {
+      console.log(event);
+   }
+);
+
+//! Common Event Object Properties
+
+//! target
+--> Returns the element that triggered the Event.
+
+//*Example
+btn.addEventListener(
+   "click",
+   (event) => {
+      console.log(event.target);
+   }
+);
+
+//! type
+--> Returns the Event Type.
+
+//*Example
+btn.addEventListener(
+   "click",
+   (event) => {
+      console.log(event.type);
+   }
+);
+
+//*Output
+click
+
+//! preventDefault()
+--> Prevents the default browser behavior.
+
+//*Example
+let form = document.querySelector("form");
+
+form.addEventListener(
+   "submit",
+   (event) => {
+      event.preventDefault();
+      console.log("Form Submitted");
+   }
+);
+
+//! Common Events
+
+//! click
+--> Fires when an element is clicked.
+--> Most frequently used Event.
+
+//*Example
+btn.addEventListener(
+   "click",
+   () => {
+      console.log("Button Clicked");
+   }
+);
+
+//! input
+--> Fires whenever the value changes.
+--> Executes on every keystroke.
+--> Used in Search Bars and Live Validation.
+
+//*Example
+let input = document.querySelector("input");
+
+input.addEventListener(
+   "input",
+   (event) => {
+      console.log(event.target.value);
+   }
+);
+
+//*Output While Typing Rahul
+R
+Ra
+Rah
+Rahu
+Rahul
+
+//! change
+--> Fires when value changes and focus is lost.
+--> Commonly used with Select, Checkbox and Radio.
+
+//*Example
+input.addEventListener(
+   "change",
+   (event) => {
+      console.log(event.target.value);
+   }
+);
+
+//*Note
+--> User types data.
+--> Event fires after leaving the field.
+
+//! Difference Between input and change
+
+input
+--> Fires immediately on every change.
+--> Used for Live Search and Validation.
+
+change
+--> Fires after value change is completed.
+--> Used for Dropdowns and Form Controls.
+
+//! submit
+--> Fires when a Form is submitted.
+--> Used for Validation and API Calls.
+
+//*Example
+form.addEventListener(
+   "submit",
+   (event) => {
+      event.preventDefault();
+      console.log("Submitted");
+   }
+);
+
+//! focus
+--> Fires when an element gains focus.
+
+//*Example
+input.addEventListener(
+   "focus",
+   () => {
+      console.log("Focused");
+   }
+);
+
+//! blur
+--> Fires when an element loses focus.
+
+//*Example
+input.addEventListener(
+   "blur",
+   () => {
+      console.log("Blurred");
+   }
+);
+
+//! keydown
+--> Fires when a key is pressed.
+
+//*Example
+document.addEventListener(
+   "keydown",
+   (event) => {
+      console.log(event.key);
+   }
+);
+
+//! keyup
+--> Fires when a key is released.
+
+//*Example
+document.addEventListener(
+   "keyup",
+   (event) => {
+      console.log(event.key);
+   }
+);
+
+//! DOMContentLoaded
+--> Fires when HTML is completely loaded.
+--> Used to ensure DOM is ready before accessing elements.
+
+//*Example
+document.addEventListener(
+   "DOMContentLoaded",
+   () => {
+      console.log("DOM Loaded");
+   }
+);
+
+//! Event Propagation
+--> Event Propagation is the process that determines how an Event travels through the DOM.
+--> When an Event occurs on a nested element, it passes through different phases.
+
+1. Capturing Phase
+2. Target Phase
+3. Bubbling Phase
+
+//! Event Propagation Flow
+
+window
+ ↓
+document
+ ↓
+html
+ ↓
+body
+ ↓
+parent
+ ↓
+child (Target)
+ ↑
+parent
+ ↑
+body
+ ↑
+html
+ ↑
+document
+ ↑
+window
+
+//! Capturing Phase
+--> Event travels from Window to Target Element.
+--> Also called Trickling Phase.
+--> By default, Event Listeners do not execute during Capturing.
+
+//*Example
+parent.addEventListener(
+   "click",
+   () => {
+      console.log("Parent Capturing");
+   },
+   true
+);
+
+//*Note
+true => Capturing Phase
+
+//! Target Phase
+--> Event reaches the actual element where it occurred.
+
+//*Example
+child.addEventListener(
+   "click",
+   () => {
+      console.log("Child");
+   }
+);
+
+//! Bubbling Phase
+--> Event travels from Target Element back to Window.
+--> Bubbling is the Default Behavior.
+
+//*Example
+parent.addEventListener(
+   "click",
+   () => {
+      console.log("Parent");
+   }
+);
+
+//! Bubbling Example
+
+<div id="parent">
+   <button id="child">
+      Click
+   </button>
+</div>
+
+//*JavaScript
+
+let parent =
+document.getElementById("parent");
+
+let child =
+document.getElementById("child");
+
+parent.addEventListener(
+   "click",
+   () => {
+      console.log("Parent");
+   }
+);
+
+child.addEventListener(
+   "click",
+   () => {
+      console.log("Child");
+   }
+);
+
+//*Output
+Child
+Parent
+
+//*Note
+--> Child executes first.
+--> Event then bubbles to Parent.
+
+//! stopPropagation()
+--> Stops Event Propagation.
+--> Parent Events will not execute.
+
+//*Example
+child.addEventListener(
+   "click",
+   (event) => {
+      event.stopPropagation();
+      console.log("Child");
+   }
+);
+
+//*Output
+Child
+
+//! Event Delegation
+--> Event Delegation means attaching a single Event Listener to a Parent Element.
+--> Parent handles Events of Child Elements using Bubbling.
+--> Improves Performance and Reduces Memory Usage.
+--> Very Important Interview Question.
+
+//*Example
+
+<ul id="courses">
+   <li>HTML</li>
+   <li>CSS</li>
+   <li>JavaScript</li>
+</ul>
+
+let courses =
+document.getElementById("courses");
+
+courses.addEventListener(
+   "click",
+   (event) => {
+      console.log(
+         event.target.textContent
+      );
+   }
+);
+
+//*Output
+HTML
+CSS
+JavaScript
+
+//! Advantages of Event Delegation
+--> Fewer Event Listeners.
+--> Better Performance.
+--> Less Memory Consumption.
+--> Works for Dynamically Added Elements.
+
+
+

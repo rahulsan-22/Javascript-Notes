@@ -347,7 +347,6 @@ console.log(everyOutput) //false
 --> All elements must satisfy the condition.
 --> Logical AND behavior.
 
-
 //!7) reduce(fn(accumulator,element,index,array),initialValue)
 --> Used to reduce an array into a single value.
 --> Can perform sum, product, average, counting, grouping etc.
@@ -366,7 +365,6 @@ let result = arr7.reduce((sum,ele) => {
 }, 0)
 let avg = result / arr7.length
 console.log(avg) //30
-
 
 //!8) sort(compareFn)
 --> Used to sort array elements.

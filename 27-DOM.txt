@@ -107,38 +107,33 @@ heading.innerHTML = "<i>Hello Student</i>";
 //! style Property
 --> Used to apply inline CSS styles.
 
-//*Example
-let box =
-document.querySelector(".box");
+//!Example:
 
-box.style.color = "red";
-box.style.backgroundColor = "yellow";
+//*Single Element
+let carImg = document.querySelector("img")
+carImg.style.border = "10px solid red"
+
+//*Collection
+let carImgAgain = document.querySelectorAll("img")
+for (let i = 0; i < carImgAgain.length; i++){
+  carImgAgain[i].style.borderRadius="50%"
+}
 
 //! Working with Attributes
+let link = document.querySelector("a");
 
 //! getAttribute()
 --> Returns attribute value.
-
 //*Example
-let link =
-document.querySelector("a");
-
-console.log(
-   link.getAttribute("href")
-);
+console.log(link.getAttribute("href"));
 
 //! setAttribute()
 --> Sets or updates an attribute.
-
 //*Example
-link.setAttribute(
-   "href",
-   "https://www.google.com"
-);
+link.setAttribute("href","https://www.google.com");
 
 //! removeAttribute()
 --> Removes an attribute.
-
 //*Example
 link.removeAttribute("target");
 
@@ -146,109 +141,77 @@ link.removeAttribute("target");
 
 //! classList.add()
 --> Adds a class.
-
 //*Example
 box.classList.add("active");
 
 //! classList.remove()
 --> Removes a class.
-
 //*Example
 box.classList.remove("active");
 
 //! classList.toggle()
 --> Adds class if absent.
 --> Removes class if present.
-
 //*Example
 box.classList.toggle("dark");
 
 //! classList.contains()
 --> Checks whether a class exists.
 --> Returns true or false.
-
 //*Example
-console.log(
-   box.classList.contains("active")
-);
+console.log(box.classList.contains("active"));
 
 //! Creating Elements
 
 //! createElement()
 --> Creates a new HTML element.
-
 //*Example
-let para =
-document.createElement("p");
+let para = document.createElement("p");
+para.innerText = "New Paragraph";
 
-para.innerText =
-"New Paragraph";
-
-//! appendChild()
+//! append()
 --> Adds element at the end.
-
 //*Example
-document.body.appendChild(para);
+document.body.append(para);
 
 //! prepend()
 --> Adds element at the beginning.
-
 //*Example
 document.body.prepend(para);
 
 //! remove()
 --> Removes an element.
-
 //*Example
 para.remove();
-
 
 //! DOM Traversing
 
 //! parentElement
 --> Returns parent element.
-
 //*Example
-console.log(
-   box.parentElement
-);
+console.log(box.parentElement);
 
 //! children
 --> Returns child elements.
-
 //*Example
-console.log(
-   document.body.children
-);
+console.log(document.body.children);
 
 //! firstElementChild
 --> Returns first child element.
-
 //*Example
-console.log(
-   document.body.firstElementChild
-);
+console.log(document.body.firstElementChild);
 
 //! lastElementChild
 --> Returns last child element.
-
 //*Example
-console.log(
-   document.body.lastElementChild
-);
+console.log(document.body.lastElementChild);
 
 //! nextElementSibling
 --> Returns next sibling element.
-
 //*Example
-console.log(
-   box.nextElementSibling
-);
+console.log(box.nextElementSibling);
 
 //! previousElementSibling
 --> Returns previous sibling element.
-
 //*Example
-console.log(
-   box.previousElementSibling
-);
+console.log(box.previousElementSibling);

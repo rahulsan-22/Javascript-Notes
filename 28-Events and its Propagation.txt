@@ -29,9 +29,7 @@ function showMsg(){
 --> Event is written directly inside HTML.
 
 //*Example
-<button onclick="alert('Hello')">
-   Click Me
-</button>
+<button onclick="alert('Hello')">Click Me</button>
 
 //! 2. DOM Property Method
 --> Event is assigned using JavaScript.
@@ -100,13 +98,10 @@ click
 
 //! preventDefault()
 --> Prevents the default browser behavior.
-
 //*Example
 let form = document.querySelector("form");
 
-form.addEventListener(
-   "submit",
-   (event) => {
+form.addEventListener("submit",(event) => {
       event.preventDefault();
       console.log("Form Submitted");
    }
@@ -133,7 +128,6 @@ btn.addEventListener(
 
 //*Example
 let input = document.querySelector("input");
-
 input.addEventListener(
    "input",
    (event) => {
@@ -246,13 +240,11 @@ document.addEventListener(
 //! Event Propagation
 --> Event Propagation is the process that determines how an Event travels through the DOM.
 --> When an Event occurs on a nested element, it passes through different phases.
-
 1. Capturing Phase
 2. Target Phase
 3. Bubbling Phase
 
 //! Event Propagation Flow
-
 window
  ↓
 document
@@ -281,117 +273,75 @@ window
 --> By default, Event Listeners do not execute during Capturing.
 
 //*Example
-parent.addEventListener(
-   "click",
-   () => {
-      console.log("Parent Capturing");
-   },
-   true
-);
+outerBox.addEventListener("click", () => {
+  alert("OUTER BOX CLICKED")
+},true)
+innerBox.addEventListener("click", () => {
+  alert("INNER BOX CLICKED")
+},true)
 
 //*Note
 true => Capturing Phase
 
 //! Target Phase
 --> Event reaches the actual element where it occurred.
-
 //*Example
-child.addEventListener(
-   "click",
-   () => {
-      console.log("Child");
-   }
-);
+innerBox.addEventListener("click", () => {
+  alert("INNER BOX CLICKED")
+})
 
 //! Bubbling Phase
 --> Event travels from Target Element back to Window.
 --> Bubbling is the Default Behavior.
 
-//*Example
-parent.addEventListener(
-   "click",
-   () => {
-      console.log("Parent");
-   }
-);
-
-//! Bubbling Example
-
-<div id="parent">
-   <button id="child">
-      Click
-   </button>
-</div>
-
-//*JavaScript
-
-let parent =
-document.getElementById("parent");
-
-let child =
-document.getElementById("child");
-
-parent.addEventListener(
-   "click",
-   () => {
-      console.log("Parent");
-   }
-);
-
-child.addEventListener(
-   "click",
-   () => {
-      console.log("Child");
-   }
-);
+//* Example
+outerBox.addEventListener("click", () => {
+  alert("OUTER BOX CLICKED")
+},false)
+innerBox.addEventListener("click", () => {
+  alert("INNER BOX CLICKED")
+},false)
 
 //*Output
-Child
-Parent
+INNER BOX CLICKED
+OUTER BOX CLICKED
 
 //*Note
 --> Child executes first.
 --> Event then bubbles to Parent.
+--> false => Bubbling Phase
 
 //! stopPropagation()
 --> Stops Event Propagation.
 --> Parent Events will not execute.
 
 //*Example
-child.addEventListener(
-   "click",
-   (event) => {
-      event.stopPropagation();
-      console.log("Child");
-   }
-);
+outerBox.addEventListener("click", () => {
+  alert("OUTER BOX CLICKED")
+},false)
+innerBox.addEventListener("click", (e) => {
+  e.stopPropagation()
+  alert("INNER BOX CLICKED")
+},false)
 
 //*Output
-Child
+INNER BOX CLICKED
 
 //! Event Delegation
 --> Event Delegation means attaching a single Event Listener to a Parent Element.
---> Parent handles Events of Child Elements using Bubbling.
+--> Parent handles Events of Child Elem ents usingBubbling.
 --> Improves Performance and Reduces Memory Usage.
---> Very Important Interview Question.
 
 //*Example
-
 <ul id="courses">
    <li>HTML</li>
    <li>CSS</li>
    <li>JavaScript</li>
 </ul>
 
-let courses =
-document.getElementById("courses");
-
-courses.addEventListener(
-   "click",
-   (event) => {
-      console.log(
-         event.target.textContent
-      );
+let courses = document.getElementById("courses");
+courses.addEventListener("click",(event) => {
+ console.log(event.target.textContent);
    }
 );
 
@@ -399,12 +349,3 @@ courses.addEventListener(
 HTML
 CSS
 JavaScript
-
-//! Advantages of Event Delegation
---> Fewer Event Listeners.
---> Better Performance.
---> Less Memory Consumption.
---> Works for Dynamically Added Elements.
-
-
-

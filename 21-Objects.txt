@@ -52,7 +52,7 @@ console.log(bioData2.skills) //['Python', 'Singing', 'Dance']
 console.log(bioData1.fun()) //Core Java Trainer
 console.log(bioData2.address.place) //Gulbarga
 
-//*2) Bracket Notation
+//*2) Box/Bracket Notation
 console.log(bioData1["name"]) //Pavan
 console.log(bioData2["skills"]) //['Python', 'Singing', 'Dance']
 console.log(bioData1["fun"]()) //Core Java Trainer
@@ -62,6 +62,18 @@ console.log(bioData2["address"]["place"]) //Gulbarga
 --> If property does not exist, JavaScript returns undefined.
 --> Dot notation is commonly used.
 --> Bracket notation is useful when property name is dynamic.
+
+//!Why Box / Bracket Notation
+let simpleObj = {
+  name: "Someone",
+  age:18
+}
+for (let keys in simpleObj) {
+  console.log(keys) //name //age
+  console.log(typeof keys) //string //string
+  console.log(simpleObj[keys]) //Someone //18
+}
+//*Answer: Bracket notation is useful when property name is dynamic.
 
 //!Adding Properties
 let movie = {
@@ -86,19 +98,7 @@ let vehicle = {
   endPoint:"LB Nagar"
 }
 delete vehicle.name
-console.log(vehicle) //startPoint: 'Dilsukhnagar', endPoint: 'LB Nagar'}
-
-//!Why Box / Bracket Notation
-let simpleObj = {
-  name: "Someone",
-  age:18
-}
-for (let keys in simpleObj) {
-  console.log(keys) //name //age
-  console.log(typeof keys) //string //string
-  console.log(simpleObj[keys]) //Someone //18
-}
-//*Answer: Bracket notation is useful when property name is dynamic.
+console.log(vehicle) //{startPoint: 'Dilsukhnagar', endPoint: 'LB Nagar'}
 
 //!Methods
 
@@ -120,7 +120,6 @@ console.log(Object.keys(student3)) //['name','age','city']
 --> Does not modify original object.
 //*Example:
 console.log(Object.values(student3)) //['Rahul',25,'Hyderabad']
-
 
 //!3) Object.entries(obj)
 --> Converts object into array of arrays.

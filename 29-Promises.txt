@@ -1,0 +1,256 @@
+//! PROMISES
+--> A Promise is a JavaScript object used to handle asynchronous operations.
+--> It represents a value that may be available now, later, or never.
+--> Promises help avoid Callback Hell and make asynchronous code easier to manage.
+--> Introduced in ES6 (ECMAScript 2015).
+
+//! Why Promises?
+--> JavaScript is Single Threaded.
+--> Time-consuming tasks (API calls, Database calls, Timers, File operations) should not block execution.
+--> Promises handle such asynchronous tasks efficiently.
+
+//*Example:
+console.log("Start");
+
+setTimeout(() => {
+   console.log("Task Completed");
+}, 2000);
+
+console.log("End");
+
+//*Output:
+Start
+End
+Task Completed
+
+//! Promise States
+--> A Promise can be in one of three states:
+1. Pending
+2. Fulfilled (Resolved)
+3. Rejected
+
+//! Pending
+--> Initial state.
+--> Operation is still in progress.
+
+//! Fulfilled (Resolved)
+--> Operation completed successfully.
+--> Returns a value.
+
+//! Rejected
+--> Operation failed.
+--> Returns an error/reason.
+
+//! Promise Syntax
+let promise = new Promise((resolve, reject) => {
+   let success = true;
+   if(success){
+      resolve("Data Fetched Successfully");
+   }
+   else{
+      reject("Failed To Fetch Data");
+  }
+});
+
+//! resolve()
+--> Used when the operation is successful.
+--> Changes Promise state from Pending → Fulfilled.
+
+//! reject()
+--> Used when the operation fails.
+--> Changes Promise state from Pending → Rejected.
+
+//! Consuming a Promise
+--> To handle Promise results, use:
+1. then()
+2. catch()
+3. finally()
+
+//! then()
+--> Executes when Promise is fulfilled.
+--> Receives resolved value.
+
+//*Example:
+promise.then((data)=>{
+   console.log(data);
+});
+
+//! catch()
+--> Executes when Promise is rejected.
+--> Receives error/reason.
+
+//*Example:
+promise.catch((error)=>{
+   console.log(error);
+});
+
+//! finally()
+--> Executes regardless of success or failure.
+--> Commonly used for cleanup operations.
+
+//*Example:
+promise.finally(()=>{
+   console.log("Operation Finished");
+});
+
+//! Complete Example
+let promise = new Promise((resolve,reject)=>{
+   let success = true;
+   if(success){
+      resolve("Login Successful");
+   }
+   else{
+      reject("Invalid Credentials");
+   }
+});
+
+promise.then((data)=>{
+   console.log(data);
+}).catch((error)=>{
+   console.log(error);
+}).finally(()=>{
+   console.log("Done");
+});
+
+//! Promise Chaining
+--> Multiple then() methods can be chained.
+--> Each then() returns a new Promise.
+--> Useful when one async task depends on another.
+
+//*Example:
+Promise.resolve(10)
+.then((num)=>{
+   return num * 2;
+})
+.then((num)=>{
+   return num + 5;
+})
+
+.then((result)=>{
+   console.log(result);
+});
+
+//*Output:
+25
+
+//! Promise.resolve()
+--> Creates a fulfilled Promise immediately.
+
+//*Example:
+Promise.resolve("Success")
+.then((data)=>{
+   console.log(data);
+});
+
+//! Promise.reject()
+--> Creates a rejected Promise immediately.
+
+//*Example:
+Promise.reject("Something Went Wrong")
+.catch((error)=>{
+   console.log(error);
+});
+
+//! Promise.all()
+--> Executes multiple Promises in parallel.
+--> Returns results only if ALL Promises are fulfilled.
+--> If any Promise fails, entire Promise.all() fails.
+
+//*Example:
+Promise.all([
+   Promise.resolve("HTML"),
+   Promise.resolve("CSS"),
+   Promise.resolve("JavaScript")
+])
+.then((data)=>{
+   console.log(data);
+});
+
+//*Output:
+["HTML","CSS","JavaScript"]
+
+//! Promise.race()
+--> Returns result of the first Promise that settles.
+--> Ignores remaining Promises.
+
+//*Example:
+Promise.race([
+   new Promise(resolve =>
+      setTimeout(()=>resolve("First"),1000)
+   ),
+   new Promise(resolve =>
+      setTimeout(()=>resolve("Second"),2000)
+   )
+])
+.then((data)=>{
+   console.log(data);
+});
+
+//*Output:
+First
+
+//! Promise.allSettled()
+--> Waits for all Promises to complete.
+--> Returns both fulfilled and rejected results.
+--> Does not fail if one Promise rejects.
+
+//*Example:
+Promise.allSettled([
+   Promise.resolve("Success"),
+   Promise.reject("Failed")
+])
+.then((result)=>{
+   console.log(result);
+});
+
+//! Promise.any()
+--> Returns first fulfilled Promise.
+--> Ignores rejected Promises.
+--> Rejects only if all Promises fail.
+
+//*Example:
+Promise.any([
+   Promise.reject("Error"),
+   Promise.resolve("Data Found")
+])
+.then((data)=>{
+   console.log(data);
+});
+
+//*Output:
+Data Found
+
+//! Difference Between Synchronous and Asynchronous?
+--> Synchronous:
+    Executes line by line.
+    Next statement waits for previous statement.
+
+--> Asynchronous:
+    Does not wait.
+    Executes independently when task completes.
+
+//! Callback vs Promise
+Callback:
+--> Leads to Callback Hell.
+--> Difficult to read and maintain.
+
+Promise:
+--> Cleaner and more readable.
+--> Supports chaining.
+--> Better error handling.
+
+//! What is Callback Hell?
+--> Nested callbacks inside callbacks.
+--> Makes code difficult to read and maintain.
+
+//*Example:
+loginUser(()=>{
+   getProfile(()=>{
+      getOrders(()=>{
+         makePayment(()=>{
+            console.log("Done");
+         });
+      });
+   });
+});
+

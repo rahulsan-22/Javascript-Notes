@@ -2,7 +2,7 @@
 --> Date is a built-in object in JavaScript used to work with dates and times.
 --> Date stores date and time information in milliseconds.
 --> Internally, JavaScript counts milliseconds from:
-    January 1, 1970, 00:00:00 UTC (Unix Epoch)
+    January 1, 1970, 00:00:00 UTC (Unix approach)
 --> Date is a constructor function, so objects are created using new Date().
 
 //! Creating Date Objects
@@ -20,7 +20,7 @@ let date2 = new Date("2026-08-15T10:30:00");
 console.log(date2);
 
 //* Using Parameters
-//@Syntax: new Date(year, month, day, hours, minutes, seconds, milliseconds)
+//@Syntax: new Date(year, month, date, hours, minutes, seconds, milliseconds)
 let date3 = new Date(2026, 7, 15, 10, 30, 0);
 console.log(date3);
 

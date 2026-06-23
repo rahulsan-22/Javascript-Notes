@@ -125,7 +125,6 @@ Promise.resolve(10)
 .then((num)=>{
    return num + 5;
 })
-
 .then((result)=>{
    console.log(result);
 });
@@ -170,7 +169,7 @@ Promise.all([
 ["HTML","CSS","JavaScript"]
 
 //! Promise.race()
---> Returns result of the first Promise that settles.
+--> Returns result of the first Promise that settles.(resolved or rejected)
 --> Ignores remaining Promises.
 
 //*Example:
@@ -228,29 +227,3 @@ Data Found
 --> Asynchronous:
     Does not wait.
     Executes independently when task completes.
-
-//! Callback vs Promise
-Callback:
---> Leads to Callback Hell.
---> Difficult to read and maintain.
-
-Promise:
---> Cleaner and more readable.
---> Supports chaining.
---> Better error handling.
-
-//! What is Callback Hell?
---> Nested callbacks inside callbacks.
---> Makes code difficult to read and maintain.
-
-//*Example:
-loginUser(()=>{
-   getProfile(()=>{
-      getOrders(()=>{
-         makePayment(()=>{
-            console.log("Done");
-         });
-      });
-   });
-});
-

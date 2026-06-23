@@ -1,0 +1,366 @@
+//! Async & Await
+--> Async and Await are ES8 (ES2017) features.
+--> They provide a cleaner and more readable way to work with Promises.
+--> Async/Await is built on top of Promises.
+--> It helps avoid long Promise chaining using then() and catch().
+
+//! async Keyword
+--> async keyword is used before a function.
+--> An async function always returns a Promise.
+--> Even if you return a normal value, JavaScript automatically wraps it inside a Promise.
+
+//*Example:
+async function demo(){
+   return "Hello";
+}
+
+console.log(demo());
+
+//*Output:
+Promise { "Hello" }
+
+//! Accessing Returned Value
+
+async function demo(){
+   return "Hello";
+}
+
+demo()
+.then((data)=>{
+   console.log(data);
+});
+
+//*Output:
+Hello
+
+//! await Keyword
+--> await keyword is used inside async functions only.
+--> It pauses the execution of the async function until the Promise is resolved or rejected.
+--> It does NOT block the entire JavaScript program.
+--> It only pauses the current async function.
+
+//*Syntax:
+await promise;
+
+//! Example Without await
+
+function getData(){
+
+   return new Promise((resolve)=>{
+      setTimeout(()=>{
+         resolve("Data Received");
+      },2000);
+   });
+
+}
+
+getData()
+.then((data)=>{
+   console.log(data);
+});
+
+//*Output After 2 Seconds:
+Data Received
+
+//! Example Using await
+
+function getData(){
+
+   return new Promise((resolve)=>{
+      setTimeout(()=>{
+         resolve("Data Received");
+      },2000);
+   });
+
+}
+
+async function fetchData(){
+
+   let result = await getData();
+
+   console.log(result);
+
+}
+
+fetchData();
+
+//*Output After 2 Seconds:
+Data Received
+
+//! How await Works
+
+async function demo(){
+
+   console.log("Start");
+
+   let data = await Promise.resolve("Hello");
+
+   console.log(data);
+
+   console.log("End");
+
+}
+
+demo();
+
+//*Output:
+Start
+Hello
+End
+
+//! Real-Time API Example
+
+async function getUsers(){
+
+   let response = await fetch(
+      "https://dummyjson.com/users"
+   );
+
+   let data = await response.json();
+
+   console.log(data);
+
+}
+
+getUsers();
+
+//! Why Two await Statements?
+
+--> fetch() returns a Promise.
+--> response.json() also returns a Promise.
+
+let response = await fetch(url);
+let data = await response.json();
+
+//! Error Handling Using try...catch
+
+--> Used to handle rejected Promises.
+--> Similar to catch() in Promise chaining.
+
+//*Example:
+
+async function getData(){
+
+   try{
+
+      let response = await fetch(
+         "https://dummyjson.com/users"
+      );
+
+      let data = await response.json();
+
+      console.log(data);
+
+   }
+   catch(error){
+
+      console.log(error);
+
+   }
+
+}
+
+getData();
+
+//! try Block
+--> Contains code that may throw an error.
+
+//! catch Block
+--> Executes if an error occurs inside try block.
+
+//! finally Block
+--> Executes whether error occurs or not.
+
+//*Example:
+
+try{
+   console.log("Try Block");
+}
+catch(error){
+   console.log(error);
+}
+finally{
+   console.log("Always Executes");
+}
+
+//! Promise vs Async/Await
+
+// Promise Style
+fetch("https://dummyjson.com/users")
+
+.then((response)=>{
+   return response.json();
+})
+
+.then((data)=>{
+   console.log(data);
+})
+
+.catch((error)=>{
+   console.log(error);
+});
+
+// Async/Await Style
+
+async function getUsers(){
+
+   try{
+
+      let response = await fetch(
+         "https://dummyjson.com/users"
+      );
+
+      let data = await response.json();
+
+      console.log(data);
+
+   }
+   catch(error){
+
+      console.log(error);
+
+   }
+
+}
+
+getUsers();
+
+//! Multiple Await Example
+
+function task1(){
+
+   return new Promise((resolve)=>{
+      setTimeout(()=>{
+         resolve("Task 1 Completed");
+      },1000);
+   });
+
+}
+
+function task2(){
+
+   return new Promise((resolve)=>{
+      setTimeout(()=>{
+         resolve("Task 2 Completed");
+      },2000);
+   });
+
+}
+
+async function executeTasks(){
+
+   let result1 = await task1();
+   console.log(result1);
+
+   let result2 = await task2();
+   console.log(result2);
+
+}
+
+executeTasks();
+
+//*Output:
+Task 1 Completed
+Task 2 Completed
+
+//! Important Note
+
+--> await waits for one Promise to complete before moving to the next line.
+--> Multiple await statements execute sequentially.
+--> Sequential execution may increase total execution time.
+
+//! Running Multiple Promises in Parallel
+
+async function executeTasks(){
+
+   let results = await Promise.all([
+      task1(),
+      task2()
+   ]);
+
+   console.log(results);
+
+}
+
+executeTasks();
+
+//*Output After 2 Seconds:
+["Task 1 Completed","Task 2 Completed"]
+
+//! Advantages of Async/Await
+
+--> Cleaner syntax.
+--> Easy to read and understand.
+--> Avoids Promise chaining.
+--> Better error handling using try...catch.
+--> Makes asynchronous code look synchronous.
+--> Easier debugging.
+
+//! Limitations of Async/Await
+
+--> await can only be used inside async functions.
+--> Multiple await statements run sequentially.
+--> For parallel execution use Promise.all().
+
+//! Common Interview Questions
+
+//! What is async?
+
+--> async makes a function return a Promise automatically.
+
+//! What is await?
+
+--> await pauses execution of an async function until a Promise settles.
+
+//! Can await be used without async?
+
+--> No.
+--> Using await outside an async function throws an error.
+
+//*Example:
+let data = await fetch(url);
+
+//*Error:
+SyntaxError
+
+//! Does await block JavaScript?
+
+--> No.
+--> It only pauses the current async function.
+--> Other code continues executing.
+
+//! What does async function return?
+
+--> Always returns a Promise.
+
+//*Example:
+
+async function demo(){
+   return 100;
+}
+
+console.log(demo());
+
+//*Output:
+Promise {100}
+
+//! Difference Between then() and await?
+
+then():
+--> Uses callback functions.
+--> Leads to chaining.
+
+await:
+--> Looks like synchronous code.
+--> Easier to read and maintain.
+
+//! Async/Await Interview Points
+
+--> Async/Await introduced in ES8 (ES2017).
+--> Built on top of Promises.
+--> async always returns a Promise.
+--> await can only be used inside async functions.
+--> await pauses only the current async function.
+--> try...catch is used for error handling.
+--> Promise.all() is used for parallel execution.
+--> Async/Await makes asynchronous code easier to read.

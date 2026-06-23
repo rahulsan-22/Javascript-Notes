@@ -1,0 +1,68 @@
+//! Fetch API
+--> Fetch API is used to make HTTP requests to a server.
+--> It allows JavaScript to communicate with APIs.
+--> Fetch API returns a Promise.
+--> Introduced as a modern replacement for XMLHttpRequest (XHR).
+--> Commonly used to GET, POST, PUT, PATCH, and DELETE data.
+
+//! Syntax
+fetch(url)
+.then((response)=>{
+   return response.json();
+})
+.then((data)=>{
+   console.log(data);
+})
+.catch((error)=>{
+   console.log(error);
+});
+
+
+//! Fetch API Flow
+Client
+   ↓
+fetch()
+   ↓
+Server/API
+   ↓
+Response
+   ↓
+.json()
+   ↓
+JavaScript Object
+
+//! Making a GET Request
+--> GET is used to retrieve data from a server.
+
+//*Example
+fetch("https://dummyjson.com/users")
+.then((response)=>{
+   return response.json();
+})
+.then((data)=>{
+   console.log(data);
+})
+.catch((error)=>{
+   console.log(error);
+});
+
+//! Why response.json()?
+--> Data received from server is in JSON format.
+--> response.json() converts JSON into JavaScript object.
+--> response.json() also returns a Promise.
+
+//! Fetch Using Async/Await
+async function getUsers(){
+   try{
+      let response = await fetch(
+         "https://dummyjson.com/users"
+      );
+      let data = await response.json();
+      console.log(data);
+   }
+   catch(error){
+      console.log(error);
+   }
+}
+getUsers();
+

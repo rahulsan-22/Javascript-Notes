@@ -31,10 +31,8 @@ console.log(y); //20
 let p = 10;
 let q = 20;
 [p, q] = [q, p];
-
 console.log(p); //20
 console.log(q); //10
-
 
 //! Object Destructuring
 let student = {

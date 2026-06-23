@@ -35,6 +35,3 @@
 30.Async and Await
 31.Fetch API
 32.Form Validation
-
-
-

@@ -13,7 +13,6 @@
 async function demo(){
    return "Hello";
 }
-
 console.log(demo());
 
 //*Output:
@@ -23,9 +22,7 @@ Promise { "Hello" }
 async function demo(){
    return "Hello";
 }
-
-demo()
-.then((data)=>{
+demo().then((data)=>{
    console.log(data);
 });
 
@@ -76,13 +73,9 @@ fetchData();
 //*Output After 2 Seconds:
 Data Received
 
-//! Error Handling Using try...catch
-
+//! Error Handling Using try...catch...finally
 --> Used to handle rejected Promises.
 --> Similar to catch() in Promise chaining.
-
-//*Example:
-
 
 //! try Block
 --> Contains code that may throw an error.
@@ -94,41 +87,23 @@ Data Received
 --> Executes whether error occurs or not.
 
 //*Example:
-try{
-   console.log("Try Block");
+let weather = new Promise((resolve, reject) => {
+  let isRaining = false;
+  if (isRaining) {
+    resolve("Yes, Its Raining..")
+  } else {
+    reject("No, Its not Raining")
+  }
+})
+console.log(weather)
+async function handlingWeather() {
+  try {
+    let result = await weather
+    console.log(result)
+  } catch (error) {
+    console.log(error)
+  } finally {
+    console.log("Done")
+  }
 }
-catch(error){
-   console.log(error);
-}
-finally{
-   console.log("Always Executes");
-}
-
-//! Multiple Await Example
-function task1(){
-   return new Promise((resolve)=>{
-      setTimeout(()=>{
-         resolve("Task 1 Completed");
-      },1000);
-   });
-}
-
-function task2(){
-   return new Promise((resolve)=>{
-      setTimeout(()=>{
-         resolve("Task 2 Completed");
-      },2000);
-   });
-}
-
-async function executeTasks(){
-   let result1 = await task1();
-   console.log(result1);
-   let result2 = await task2();
-   console.log(result2);
-}
-executeTasks();
-
-//*Output:
-Task 1 Completed
-Task 2 Completed
+handlingWeather()

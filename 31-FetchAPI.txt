@@ -17,7 +17,6 @@ fetch(url)
    console.log(error);
 });
 
-
 //! Fetch API Flow
 Client
    ↓

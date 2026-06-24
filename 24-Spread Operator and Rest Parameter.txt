@@ -18,7 +18,6 @@ console.log(copiedColors); //["Red", "Green", "Blue"]
 //! Merging Arrays
 let frontend = ["HTML", "CSS"];
 let javascript = ["JavaScript", "ReactJS"];
-
 let courses = [...frontend, ...javascript];
 
 console.log(courses); //["HTML","CSS","JavaScript","ReactJS"]
@@ -98,7 +97,6 @@ function sum(...numbers) {
    }
    return total;
 }
-
 console.log(sum(10, 20)); //30
 console.log(sum(10, 20, 30, 40)); //100
 

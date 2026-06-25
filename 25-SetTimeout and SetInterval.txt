@@ -9,7 +9,7 @@
 //! setTimeout()
 --> setTimeout() executes a function only once after the specified delay.
 
-//@ Syntax:
+//! Syntax:
 setTimeout(function, delay);
 
 //! Example 1
@@ -38,7 +38,7 @@ setTimeout(display, 3000, "Rahul");
 Output:(after 3 seconds)
 Hello Rahul
 
-//! clearTimeout()
+//! clearTimeout(id)
 --> Used to stop/cancel a setTimeout() before it executes.
 
 //!Example
@@ -57,7 +57,7 @@ Its Raining,Cricket Cancelled
 //! setInterval()
 --> setInterval() executes a function repeatedly after every specified delay.
 
-//@ Syntax:
+//! Syntax:
 setInterval(function, delay);
 
 //! Example 1
@@ -82,7 +82,17 @@ Output:
 Current Date & Time
 (Current Date & Time repeats every second)
 
-//! clearInterval()
+//!Example 3:
+function displayOTP(min, max) {
+  console.log(`Your 4 Digit OTP Is: ${Math.floor(Math.random() * (max - min + 1)) + min}`);
+}
+setInterval(displayOTP,3000,1000,9999)
+
+Output:
+Your 4 Digit OTP Is : (random value between 1000 to 99999)
+(4 Digit OTP repeats 3 seconds)
+
+//! clearInterval(id)
 --> Used to stop/cancel a setInterval().
 
 let intervalId = setInterval(() => {

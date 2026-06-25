@@ -5,18 +5,6 @@
 --> Introduced as a modern replacement for XMLHttpRequest (XHR).
 --> Commonly used to GET, POST, PUT, PATCH, and DELETE data.
 
-//! Syntax
-fetch(url)
-.then((response)=>{
-   return response.json();
-})
-.then((data)=>{
-   console.log(data);
-})
-.catch((error)=>{
-   console.log(error);
-});
-
 //! Fetch API Flow
 Client
    ↓
@@ -33,7 +21,7 @@ JavaScript Object
 //! Making a GET Request
 --> GET is used to retrieve data from a server.
 
-//*Example
+//!Fetch Using then() , catch() and finally()
 fetch("https://dummyjson.com/users")
 .then((response)=>{
    return response.json();
@@ -43,6 +31,9 @@ fetch("https://dummyjson.com/users")
 })
 .catch((error)=>{
    console.log(error);
+})
+.finally(()=>{
+   console.log("Done");
 });
 
 //! Why response.json()?
@@ -62,6 +53,48 @@ async function getUsers(){
    catch(error){
       console.log(error);
    }
+   finally{
+       console.log("Done");
+   }
 }
 getUsers();
 
+//! Fetching and Displaying API Data in HTML
+--> After fetching data from an API, we can display it dynamically inside HTML elements.
+--> The API response is converted into a JavaScript object using response.json().
+--> We can loop through the data using forEach() and create HTML dynamically.
+--> innerHTML is commonly used to insert fetched data into the webpage.
+
+//! Example: Fetch Recipes and Display in Table
+let fetchData = async () => {
+  try {
+    let response = await fetch("https://dummyjson.com/recipes");
+    let { recipes } = await response.json();
+
+    console.log(recipes);
+
+    let tbody = document.getElementById("tbody1");
+
+    recipes.forEach((item) => {
+      tbody.innerHTML += `
+      <tr>
+        <td>${item.id}</td>
+        <td>${item.name}</td>
+        <td>${item.cuisine}</td>
+        <td>${item.ingredients}</td>
+        <td>${item.instructions}</td>
+        <td>
+          <img src="${item.image}" alt="${item.name}" height="200" width="200">
+        </td>
+      </tr>
+      `;
+    });
+  }
+  catch(error){
+    console.log(error);
+  }
+  finally{
+    console.log("Done");
+  }
+}
+fetchData();

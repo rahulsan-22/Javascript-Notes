@@ -79,7 +79,7 @@ console.log(window.innerHeight);
 //*Example
 console.log(location);
 
-//! Common Location Properties
+//! Location Object Properties
 
 //!href
 --> Returns complete URL.
@@ -103,7 +103,7 @@ console.log(location.pathname);
 
 //*Example: /search
 
-//! Location Methods
+//! Location Object Methods
 
 //!reload()
 --> Reloads the current page.

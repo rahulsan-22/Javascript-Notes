@@ -1,4 +1,4 @@
-//! Document Object Model (DOM)
+//! DOM 
 --> DOM stands for Document Object Model.
 --> DOM represents the HTML document as a tree-like structure of objects.
 --> Using DOM, JavaScript can access, modify, add, delete, and style HTML elements dynamically.
@@ -53,16 +53,18 @@ console.log(paras);
 
 //! querySelector()
 --> Selects the first matching element.
---> Uses CSS Selectors like id,class etc...
+--> Uses CSS Selectors like id,class,tagname etc...
 
 //*Example:
 
 //*ID
 let headingTag = document.querySelector("#heading")
 console.log(headingTag)
+
 //*CLASS
 let divContent = document.querySelector(".content")
 console.log(divContent)
+
 //*TAGNAME
 let paragraphs = document.querySelector("p")
 console.log(paragraphs)
@@ -76,14 +78,16 @@ console.log(paragraphs)
 //*ID
 let buttonTag = document.querySelectorAll("#btn")
 console.log(buttonTag)
+
 //*CLASS
 let contents = document.querySelectorAll(".content")
 console.log(contents)
+
 //*TAGNAME
 let paraContents = document.querySelectorAll("p")
 console.log(paraContents)
 
-//! Changing Content
+//! Accessing and Changing Content
 
 //! innerText
 --> Gets or sets visible text content.

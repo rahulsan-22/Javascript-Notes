@@ -50,9 +50,7 @@ btn.onclick = function(){
 //*Example
 let btn = document.querySelector("button");
 
-btn.addEventListener(
-   "click",
-   () => {
+btn.addEventListener("click",() => {
       console.log("Clicked");
    }
 );

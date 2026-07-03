@@ -225,6 +225,3 @@ sessionStorage.removeItem(
 
 //*Remove All Items
 sessionStorage.clear();
-
-
-

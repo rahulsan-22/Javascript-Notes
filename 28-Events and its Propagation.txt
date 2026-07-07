@@ -327,7 +327,7 @@ INNER BOX CLICKED
 
 //! Event Delegation
 --> Event Delegation means attaching a single Event Listener to a Parent Element.
---> Parent handles Events of Child Elem ents usingBubbling.
+--> Parent handles Events of Child Elements using Bubbling.
 --> Improves Performance and Reduces Memory Usage.
 
 //*Example

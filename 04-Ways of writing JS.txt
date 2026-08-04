@@ -1,14 +1,14 @@
-Ways of Adding JavaScript:
+//!Ways of Adding JavaScript:
 JavaScript can be added to HTML in three ways:
 i)Inline JavaScript
 ii)Internal JavaScript
 iii)External JavaScript
 
-1)Inline Javascript:
+//!1)Inline Javascript:
 -->JavaScript is written inside HTML tags
 Ex: <button onclick="alert('Hello')">Click Me</button>
 
-2)Internal Javascript:
+//!2)Internal Javascript:
 -->JavaScript is written inside <script> tag within HTML file
 Ex:<!DOCTYPE html>
    <html>
@@ -20,7 +20,7 @@ Ex:<!DOCTYPE html>
       </body>
    </html>
 
-3)External JavaScript:
+//!3)External JavaScript:
 -->JavaScript is written in a separate .js file
 Ex: HTML File (index.html):
        <script src="script.js"></script>

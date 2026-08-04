@@ -1,9 +1,8 @@
-Comments:
+//!Comments:
 -->Comments are lines in the code that are not executed by JavaScript.
 -->They are used to explain code and improve readability.
 
-Types of Comments in JavaScript:
-
+//!Types of Comments in JavaScript:
 1)Single Line Comment:
 -->Used to write a comment in one line
 Ex: //This is a single-line comment

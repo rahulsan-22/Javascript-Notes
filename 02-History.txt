@@ -1,15 +1,16 @@
-History:
+//!History:
 -->JavaScript was created by Brendan Eich in 1995.
 -->Developed in just 10 days.
 -->Originally named: Mocha → LiveScript → JavaScript
 -->Ryan Dahl created Node.js, which allows JavaScript to run outside the browser.
 
-Why “JavaScript”?
+//!Why “JavaScript”?
 -->Name inspired by Java (for marketing purposes)
 -->But JavaScript and Java are completely different
 
-Standardization
+//!Standardization
 -->Standardized as ECMAScript (ES) and Managed by ECMA International(European Computer Manufacturing Association) 
 
-Note: ES6 (2015) → Major update (let, const, arrow functions....)
+//!Note: 
+ES6 (2015) → Major update (let, const, arrow functions....)
 

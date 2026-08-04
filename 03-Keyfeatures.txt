@@ -1,20 +1,18 @@
-Keyfeatures of Javascript:
+//!Keyfeatures of Javascript:
 
-i)Interpreted:
+//!i)Interpreted:
 -->Runs line by line, no compilation needed and runs directly in the browser
 
-ii)Dynamic Typing:
+//!ii)Dynamic Typing:
 -->No need to declare variable type
 Ex:let data = "Hello";
        data = 100;  // Allowed
 
-iii)Event-Driven Programming:
+//!iii)Event-Driven Programming:
 -->Code runs based on user actions
-Ex:button.onclick = () => {
-     console.log("Clicked");
-   }
+Ex:<button ondblclick="alert('Welcome to JavaScript')">Click</button>
 
-iv)Synchronous and Asynchronous Behavior:
+//!iv)Synchronous and Asynchronous Behavior:
 Synchronous:
 -->Code runs line by line
 Ex:console.log("1");
@@ -28,10 +26,11 @@ Ex:console.log("1");
    }, 2000);
    console.log("3");
 
-v)Platform Independent:
+//!v)Platform Independent:
 -->Runs everywhere in all operating systems and inside browser and on server (Node.js)
 
-Note:
-Scripting Language vs Programming Language
+//!Note:
+
+//!Scripting Language vs Programming Language
 -->A scripting language is used to automate tasks and usually runs inside another environment (like a browser) where as A programming language is used to build complete applications/software.
 -->JavaScript is primarily a Scripting Language but it is also considered a full-fledged programming language (because of Node.js)

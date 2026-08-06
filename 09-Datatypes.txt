@@ -1,16 +1,16 @@
-Datatypes:
+//!Datatypes:
 -->A Data Type specifies the type of value a variable can store.
 
-Classification of Data Types:
+//!Classification of Data Types:
 -->JavaScript data types are mainly divided into:
 1) Primitive Data Types
 2) Non-Primitive (Reference) Data Types
 
-1) Primitive Data Types
+//!1) Primitive Data Types
 -->Primitive data types store single/simple values.
 -->They are immutable (cannot be changed directly).
 
-Types of Primitive Data Types
+//!Types of Primitive Data Types
 -->JavaScript has 7 primitive data types:
 i)Number
 ii)String
@@ -81,7 +81,7 @@ console.log(name) //Symbol(Pavan)
 console.log(typeof name) //symbol
 console.log(name == coreJavaTrainer) //false
 
-Non-Primitive Data Types
+//!Non-Primitive Data Types
 -->Non-primitive data types can store multiple values or complex data.
 -->Mutable (can be changed)
 -->They are also called Reference Types Because they store reference/address.

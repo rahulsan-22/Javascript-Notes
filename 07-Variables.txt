@@ -1,10 +1,10 @@
-Variables:
+//!Variables:
 -->A variable is a container used to store data.
    Ex: let name = "Pavan";
        name → variable name 
        "Pavan" → value inside the variable
 
-Declaration vs Initialization in JavaScript:
+//!Declaration vs Initialization in JavaScript:
 -->Declaration means creating a variable (reserving memory)
    Ex: let name;
 -->Initialization means assigning a value to a variable
@@ -12,7 +12,7 @@ Declaration vs Initialization in JavaScript:
 -->Declaration + Initialization:
    Ex: let name = "Pavan";
 
-How to Declare Variables?
+//!How to Declare Variables?
 -->In JavaScript, we use 3 keywords:
 i)var (Old way)
   var age = 25;

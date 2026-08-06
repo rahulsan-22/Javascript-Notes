@@ -1,7 +1,7 @@
-Tokens:
+//!Tokens:
 -->Tokens are the smallest individual units (pieces) of a JavaScript program that have meaning.
 
-Types of Tokens in JavaScript:
+//!Types of Tokens in JavaScript:
 There are mainly 5 types of tokens:
 i)Keywords
 ii)Identifiers
@@ -9,29 +9,27 @@ iii)Literals
 iv)Operators
 v)Separators
 
-1) Keywords:
+//!1) Keywords:
 -->Keywords are reserved words in JavaScript that already have predefined meanings.
 -->Should always be written in lowercase
 Ex:let,var,const,if,else,for,while etc....
 
-2) Identifiers:
+//!2) Identifiers:
 -->Identifiers are the names given to Variables,Functions,Classes,Arrays,Objects
-Rules for Identifiers:
+//!Rules for Identifiers:
 i)Cannot start with number but allowed after first character.
 ii)Cannot use keywords.
 iii)Except _ and $ no other special characters are allowed
 Ex:name,age,skills,salary etc...
 
-3) Literals:
+//!3) Literals:
 -->Literals are values directly written in the program.
 Ex:10,"Hello",true etc
 
-4) Operators:
+//!4) Operators:
 -->Operators are predefined symbols used to perform operations.
 Ex:+,-,*,=,/,> etc...
 
-5) Separators:
+//!5) Separators:
 -->Separators are symbols used to separate code parts.
 Ex: ; , () {} [] etc...
-
-

@@ -1,43 +1,43 @@
-JavaScript Engine:
+//!JavaScript Engine:
 -->A JavaScript Engine is a program that executes JavaScript code.
 -->It converts your JavaScript code into something the computer understands and runs it.
 
-Real-Time Examples of JS Engines:
+//!Real-Time Examples of JS Engines:
 i)V8 → Used in Chrome & Node.js
 ii)SpiderMonkey → Used in Firefox
 iii)JavaScriptCore → Used in Safari
 
-Why JS Engine is Needed?
+//!Why JS Engine is Needed?
 -->Browsers don’t understand JavaScript directly, so JS Engine acts as a translator + executor.
 
-How JS Engine Works?
+//!How JS Engine Works?
 
 JavaScript Source Code
         │
         ▼
  ┌──────────────────────┐
- │   JavaScript Engine        │
- │                            │
- │  ┌───────────────┐    │
- │  │   Parser          │
- │  │ (Code → AST)      │
+ │   JavaScript Engine           │
+ │                                │
+ │  ┌───────────────┐     │
+ │  │   Parser             │
+ │  │ (Code → AST)       │
  │  └───────────────┘
  │          │
  │          ▼
  │  ┌───────────────┐
- │  │ Interpreter       │
+ │  │ Interpreter         │
  │  │ (AST → Bytecode)
  │  └───────────────┘
  │          │
  │          ▼
  │  ┌───────────────┐
- │  │ JIT Compiler      │
- │  │ (Optimizes →      │
- │  │ Machine Code)     │
+ │  │ JIT Compiler        │
+ │  │ (Optimizes →         │
+ │  │ Machine Code)       │
  │  └───────────────┘
  │
  │  ┌───────────────┐
- │  │ Call Stack        │ ← Execution
+ │  │ Call Stack           │ ← Execution
  │  └───────────────┘
  │
  │  ┌───────────────┐
@@ -61,5 +61,5 @@ vi)Memory Allocation → Variables & objects stored in Heap while Functions are 
 vii)Machine code is sent to CPU and CPU performs operations
 viii)Result shown in: Browser console or Webpage UI.
 
-Final Flow:
+//!Final Flow:
 JavaScript code → Parsed → Converted to AST → Interpreted to Bytecode → Optimized by JIT → Stored in Memory → Executed using Call Stack → Output shown

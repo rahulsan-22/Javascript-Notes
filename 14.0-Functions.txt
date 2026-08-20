@@ -104,6 +104,7 @@ let variableName = function(){
 }
 
 //*Example:
+
 //*Normal Anonymous function
 let anonymous1 = function () {
   console.log("Good Morning....")

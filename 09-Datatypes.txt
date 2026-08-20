@@ -20,7 +20,7 @@ v)Null
 vi)BigInt
 vii)Symbol
 
-1. Number
+//!1. Number
 -->Used to store numeric values.
 -->Both integers and decimal numbers come under Number type.
 Examples:
@@ -30,7 +30,7 @@ console.log(typeof 100); //number
 
 Note:JavaScript does not have separate types for int,float,double everything is treated as Number.
 
-2. String:
+//!2. String:
 -->Used to store textual data.
 -->Strings are written inside:
    Single quotes ''
@@ -42,7 +42,7 @@ let city = 'Hyderabad';
 let msg = `Hello`;
 console.log(typeof "JavaScript"); //string
 
-3. Boolean
+//!3. Boolean
 -->Stores only two logical values i.e true or false.
 -->Mostly used in conditions and decision making.
 Examples:
@@ -50,7 +50,7 @@ let isLoggedIn = true;
 let isAdmin = false;
 console.log(typeof true); //Boolean
 
-4. Undefined
+//!4. Undefined
 -->When a variable is declared but not assigned a value, JavaScript automatically assigns undefined.
 -->In simple words, it represents uninitialized variable.
 Example:
@@ -58,13 +58,13 @@ let age;
 console.log(age); //undefined
 console.log(typeof undefined); //undefined
 
-5. Null
+//!5. Null
 -->Represents intentional absence of value.
 Example:
 let data = null;
 console.log(typeof null); //object (This is a historical bug in JavaScript).
 
-6. BigInt
+//!6. BigInt
 -->Used to store very large integers beyond Number limit(2^53-1).
 Note: The n at the end represents BigInt.
 Example:
@@ -72,7 +72,7 @@ let accountNo = 12345678912345612345n
 console.log(accountNo) //12345678912345612345n
 console.log(typeof accountNo) //bigint
 
-7. Symbol
+//!7. Symbol
 -->Used to create unique values.
 Example:
 let name = Symbol("Pavan")
@@ -86,12 +86,12 @@ console.log(name == coreJavaTrainer) //false
 -->Mutable (can be changed)
 -->They are also called Reference Types Because they store reference/address.
 
-Types of Non-Primitive Data Types:
+//!Types of Non-Primitive Data Types:
 i)Object
 ii)Array
 iii)Function
 
-1. Object
+//!1. Object
 -->Objects store data in key-value pairs.
 Example:
 let student = {
@@ -100,19 +100,19 @@ let student = {
 };
 console.log(typeof student); //object
 
-2. Array
+//!2. Array
 -->Array stores multiple values into [].
 Example:
 let colors = ["red", "blue", "green"];
 console.log(typeof colors); //object (Because arrays are internally objects)
 
-3. Function
+//!3. Function
 -->Functions are reusable blocks of code used to perform a specific task.
 Example:
 function greet() {
    console.log("Hello");
 }
-greet()4
+greet()
 console.log(typeof greet); //function (In JavaScript, functions are treated as objects).
 
 Note:

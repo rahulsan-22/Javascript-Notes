@@ -1,20 +1,20 @@
-Scope:
+//!Scope:
 -->The area or region where a variable can be accessed or used.
 
-Types of Scope in JavaScript
+//!Types of Scope in JavaScript
 JavaScript has mainly:
 i)Global Scope
 ii)Function Scope
 iii)Block Scope
 
-1) Global Scope
+//!1) Global Scope
 -->A variable declared outside all functions and blocks belongs to Global Scope.
 -->It can be accessed from anywhere in the program.
 
-Note:
-Global Scope vs Script Scope:
+//!Note:
+//!Global Scope vs Script Scope:
 -->Variables declared using var at the top level become part of the Global Scope and are attached to the global object (window in browsers) whereas Variables declared using let and const at the top level belong to the Script Scope and are NOT attached to the global object.
-Example:
+//!Example:
 var a = 10;
 let b = 20;
 const c = 30;
@@ -22,17 +22,17 @@ console.log(window.a); //10
 console.log(window.b); //undefined
 console.log(window.c); //undefined
 
-2) Function Scope:
+//!2) Function Scope:
 -->Variables declared inside a function can only be accessed inside that function.
 -->var follows Function Scope.
 
-3) Block Scope:
+//!3) Block Scope:
 -->Variables declared using inside {} are accessible only inside that block.
 -->let and const follows Block Scope.
 
-Note:
+//!Note:
 -->Lexical Scope means inner functions can access variables from outer functions.
-Example:
+//!Example:
 function outer() {
     let username = "Rahul";
     function inner() {

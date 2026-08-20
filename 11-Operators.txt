@@ -21,8 +21,8 @@ vii)Unary Operator
 -->Arithmetic operators are used to perform mathematical calculations.
 Ex: +,-,*,/,%,**
 
-Note:
-Rules of +
+//!Note:
+//*Rules of +
 >If one operand is string → Concatenation happens.
 >Boolean values convert into numbers.
  i.e. true → 1
@@ -30,7 +30,7 @@ Rules of +
 >null behaves like 0 whereas undefined converts into NaN.
 >Result becomes string if concatenation happens.
 
-Rules of - , * , / , %
+//*Rules of - , * , / , %
 >Always tries to convert values into numbers and Invalid conversion gives NaN.
 >Division by 0 gives Infinity.
 
@@ -234,13 +234,13 @@ Syntax:
 condition ? trueBlock : falseBlock
 
 //* EXAMPLE 1
-let trainer = "Pavan"
-trainer==="Rahul" ? console.log("Sleep in the class") : console.log("Respond Properly") //Respond Properly
+let understandingJs = false;
+understandingJs ? console.log("Meeke Manchidi") : console.log("ni chavu nuvvu chavu") //ni chavu nuvvu chavu
 
 //* EXAMPLE 2
-let amount = 100
-let result = amount>=250 ? "Eat Pista House Chicken Biryani" : "Mooskoni PG lo Tinnu"
-console.log(result) //Eat Pista House Chicken Biryani
+let amount = 200
+let result = amount >= 150 ? "Eat Chicken Biryani" : "Muskoni Pg lo Tinnu"
+console.log(result) //Eat Chicken Biryani
 
 //!7.Unary Operators
 -->Unary operators work with single operand.
@@ -275,17 +275,8 @@ console.log(10 === "10") //false
 false
 0
 -0
-0n
-""
+0n (Zero n)
+"" (Empty String)
 null
 undefined
 NaN  
-
-
-
-
-
-
-
-
-

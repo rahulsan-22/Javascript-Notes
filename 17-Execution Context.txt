@@ -31,6 +31,3 @@ During this phase:
 --> Variable values are assigned.
 --> Functions are invoked.
 --> New Function Execution Context gets created for every function call.
-
-
-

@@ -246,5 +246,3 @@ console.log(juice.hasOwnProperty("toString")) //false
 -->Checks Own + Inherited Properties
 //*hasOwnProperty()
 -->Checks Only Own Properties 
-
-

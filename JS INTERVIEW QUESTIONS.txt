@@ -1,0 +1,201 @@
+JS INTERVIEW QUESTIONS
+
+1. What is JavaScript?
+
+2. What are the key features of JavaScript?
+
+3. What are the different ways to add JavaScript to a web page?
+
+4. What is the difference between Internal, Inline, and External JavaScript?
+
+5. What are comments in JavaScript?
+
+6. What is a JavaScript Engine?
+
+7. Name some popular JavaScript Engines.
+
+8. What are variables in JavaScript?
+
+9. What is the difference between declaring and initializing a variable?
+
+10. What are tokens in JavaScript?
+
+11. What are the different data types in JavaScript?
+
+12. What is the difference between primitive and non-primitive data types?
+
+13. What is the difference between null and undefined?
+
+14. What is typeof operator?
+
+15. What is scope in JavaScript?
+
+16. What is the difference between Global Scope, Function Scope, and Block Scope?
+
+17. What are operators in JavaScript?
+
+18. What are Arithmetic Operators?
+
+19. What are Comparison Operators?
+
+20. What are Logical Operators?
+
+21. What are Assignment Operators?
+
+22. What are Decision Statements?
+
+23. What is the difference between if, else if, and switch?
+
+24. What are loops in JavaScript?
+
+25. What is the difference between for, while, and do-while loops?
+
+26. What are functions in JavaScript?
+
+27. What is the difference between Function Declaration and Function Expression?
+
+28. What are parameters and arguments?
+
+29. What is a return statement?
+
+30. What is hoisting in JavaScript?
+
+31. What is the Temporal Dead Zone (TDZ)?
+
+32. What is the difference between var, let, and const?
+
+33. Why can var be accessed before initialization?
+
+34. Why are let and const not accessible before initialization?
+
+35. What is an Execution Context?
+
+36. What are the phases of Execution Context?
+
+37. What is the Memory Creation Phase?
+
+38. What is the Code Execution Phase?
+
+39. What is a Closure?
+
+40. Why are closures useful?
+
+41. What is lexical scope?
+
+42. What are strings in JavaScript?
+
+43. What are some commonly used string methods?
+
+44. What is the difference between slice(), substring(), and substr()?
+
+45. How do you convert a string to uppercase and lowercase?
+
+46. What are arrays in JavaScript?
+
+47. How do you create an array?
+
+48. What is the difference between push() and pop()?
+
+49. What is the difference between shift() and unshift()?
+
+50. What is the difference between slice() and splice()?
+
+51. What are map(), filter(), and reduce()?
+
+52. What is the difference between map() and forEach()?
+
+53. What is the difference between filter() and find()?
+
+54. What are objects in JavaScript?
+
+55. How do you create an object?
+
+56. What is the difference between dot notation and bracket notation?
+
+57. How do you add, update, and delete properties in an object?
+
+58. What is object destructuring?
+
+59. What is array destructuring?
+
+60. What is the spread operator?
+
+61. What is the rest parameter?
+
+62. What is the difference between spread operator and rest parameter?
+
+63. What is the Math object?
+
+64. Name some commonly used Math methods.
+
+65. What is the Date object?
+
+66. How do you get the current date and time?
+
+67. What is setTimeout()?
+
+68. What is setInterval()?
+
+69. What is the difference between setTimeout() and setInterval()?
+
+70. How do you stop setTimeout() and setInterval()?
+
+71. What is BOM (Browser Object Model)?
+
+72. What are the commonly used BOM objects?
+
+73. What is the difference between window, document, and navigator?
+
+74. What is DOM (Document Object Model)?
+
+75. What is the difference between BOM and DOM?
+
+76. How do you select elements in the DOM?
+
+77. What is the difference between getElementById() and querySelector()?
+
+78. How do you create an element using JavaScript?
+
+79. How do you add and remove elements from the DOM?
+
+80. What are events in JavaScript?
+
+81. What is Event Propagation?
+
+82. What is Event Bubbling?
+
+83. What is Event Capturing?
+
+84. What is the difference between Event Bubbling and Event Capturing?
+
+85. What is preventDefault()?
+
+86. What is stopPropagation()?
+
+87. What is a Promise?
+
+88. What are the states of a Promise?
+
+89. What is the difference between resolve() and reject()?
+
+90. What is Promise Chaining?
+
+91. What is async and await?
+
+92. What is the difference between Promises and async/await?
+
+93. What is the Fetch API?
+
+94. How do you make a GET request using Fetch API?
+
+95. How do you handle errors in Fetch API?
+
+96. What is form validation?
+
+97. What is the difference between client-side and server-side validation?
+
+98. What is the difference between required, pattern, minlength, and maxlength validation?
+
+99. How do you validate a form using JavaScript?
+
+100. What is the difference between HTML validation and JavaScript validation?

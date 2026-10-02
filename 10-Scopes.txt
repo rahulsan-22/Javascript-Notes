@@ -27,7 +27,7 @@ console.log(window.c); //undefined
 -->var follows Function Scope.
 
 //!3) Block Scope:
--->Variables declared using inside {} are accessible only inside that block.
+-->Variables declared inside {} are accessible only inside that block.
 -->let and const follows Block Scope.
 
 //!Note:

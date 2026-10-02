@@ -98,7 +98,7 @@ console.log(10 ** 2) //100
 | -------- | --------- |
 | `++`     | Increment |
 | `--`     | Decrement |
--->PRE INCREMENT (++a): First increments then returns value 
+-->PRE INCREMENT (a++): First increments then returns value 
 -->POST INCREMENT (a++): First returns value then increments.
 -->PRE DECREMENT (--a):First decrements then returns value 
 -->POST DECREMENT (a--):First returns value then decrements.

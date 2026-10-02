@@ -65,7 +65,7 @@ let data = null;
 console.log(typeof null); //object (This is a historical bug in JavaScript).
 
 //!6. BigInt
--->Used to store very large integers beyond Number limit(2^53-1).
+-->Used to store very large integers beyond Number limit.
 Note: The n at the end represents BigInt.
 Example:
 let accountNo = 12345678912345612345n
@@ -115,7 +115,7 @@ function greet() {
 greet()
 console.log(typeof greet); //function (In JavaScript, functions are treated as objects).
 
-Note:
+//!Note:
 typeof Operator
 -->typeof operator is used to check the data type of a value.
 Example:

@@ -44,6 +44,7 @@ let j = 1;
 while(j<=3){
    document.writeln("<h2>I LOVE YOU TOO 💝</h2>")
    j++
+}
 
 //!3) do while Loop:
 -->The do while loop executes the code at least one time even if the condition is false.

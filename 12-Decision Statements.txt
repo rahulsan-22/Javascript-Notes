@@ -27,8 +27,7 @@ if(age >= 18){
 //*Syntax:
 if(condition){
     true block
-}
-//*else{
+}else{
     false block
 }
 //*Example:

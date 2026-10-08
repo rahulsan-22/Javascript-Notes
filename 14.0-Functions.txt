@@ -139,6 +139,7 @@ console.log(anonymous3(5,5))
 -->They provide a shorter syntax for writing functions.
 -->Arrow Functions do not use the function keyword and function name
 -->Mostly used in modern JavaScript and ReactJS.
+-->"lambda expressions" are officially called arrow function expressions.
 
 //*Syntax:
 let variableName = ()=>{
@@ -240,6 +241,7 @@ function greet(name,msg) {
    console.log(msg+" "+name) 
 }
 user("Monty", "Good Morning", greet)
+
 //*Output:
 Good Morning Monty
 
